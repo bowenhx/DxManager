@@ -60,6 +60,11 @@
 			children = (
 				B5B76D551D7BFA2100B06414 /* AppDelegate.h */,
 				B5B76D561D7BFA2100B06414 /* AppDelegate.m */,
+				B5B76D6D1D7C03C200B06414 /* BaseVC */,
+				B5B76D6A1D7C02FB00B06414 /* HomeVC */,
+				B5B76D6C1D7C02FB00B06414 /* WorkVC */,
+				B5B76D691D7C02FB00B06414 /* DirectoriesVC */,
+				B5B76D6B1D7C02FB00B06414 /* MoreVC */,
 				B5B76D581D7BFA2100B06414 /* ViewController.h */,
 				B5B76D591D7BFA2100B06414 /* ViewController.m */,
 				B5B76D5B1D7BFA2100B06414 /* Main.storyboard */,
@@ -77,6 +82,41 @@
 				B5B76D531D7BFA2100B06414 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5B76D691D7C02FB00B06414 /* DirectoriesVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DirectoriesVC;
+			sourceTree = "<group>";
+		};
+		B5B76D6A1D7C02FB00B06414 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		B5B76D6B1D7C02FB00B06414 /* MoreVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MoreVC;
+			sourceTree = "<group>";
+		};
+		B5B76D6C1D7C02FB00B06414 /* WorkVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WorkVC;
+			sourceTree = "<group>";
+		};
+		B5B76D6D1D7C03C200B06414 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
