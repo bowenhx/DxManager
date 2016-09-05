@@ -8,8 +8,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="36k-Gp-vOo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ih7-T0-Y0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController id="RpD-U0-KV8" sceneMemberID="viewController">
+                <tabBarController id="RpD-U0-KV8" customClass="BTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZGL-0r-FrW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,8 +21,9 @@
                         <segue destination="rdW-LB-ATE" kind="relationship" relationship="viewControllers" id="CYu-KI-hnm"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ih7-T0-Y0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100" y="828"/>
+            <point key="canvasLocation" x="29" y="763"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Mkz-5s-dZ5">
@@ -144,7 +144,7 @@
         <!--更多-->
         <scene sceneID="7ie-9k-Xx3">
             <objects>
-                <navigationController id="rdW-LB-ATE" sceneMemberID="viewController">
+                <navigationController id="rdW-LB-ATE" customClass="BNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="更多" id="fIO-ja-PK0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T1O-gs-lKQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -161,7 +161,7 @@
         <!--通讯录-->
         <scene sceneID="mYE-rx-1D5">
             <objects>
-                <navigationController id="sye-Zh-lhF" sceneMemberID="viewController">
+                <navigationController id="sye-Zh-lhF" customClass="BNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="通讯录" id="nkk-UO-1Aq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rsE-hv-gjO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -178,7 +178,7 @@
         <!--工作-->
         <scene sceneID="cxv-eA-Bls">
             <objects>
-                <navigationController id="5uH-Xa-s3C" sceneMemberID="viewController">
+                <navigationController id="5uH-Xa-s3C" customClass="BNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="工作" id="yW9-Us-ey2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="com-WU-ZD6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -195,7 +195,7 @@
         <!--动态-->
         <scene sceneID="VJr-Bg-yMP">
             <objects>
-                <navigationController id="vIb-Gh-ssI" sceneMemberID="viewController">
+                <navigationController id="vIb-Gh-ssI" customClass="BNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="动态" id="N6o-0p-VXT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MDf-6Z-eCr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

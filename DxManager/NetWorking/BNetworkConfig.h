@@ -2,7 +2,7 @@
 //  BNetworkConfig.h
 //  BKMobile
 //
-//  Created by Guibin on 15/2/9.
+//  Created by Guibin on 14/2/9.
 //  Copyright (c) 2015年 com.mobile-kingdom.bkapps All rights reserved.
 //
 

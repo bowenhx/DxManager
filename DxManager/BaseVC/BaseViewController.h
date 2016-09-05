@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UIColor+app.h"
-#import "AppDefine.h"
-#import "NSArray+Util.h"
-#import <WebKit/WebKit.h>
 #import "UIView+Ex.h"
 
 @interface BaseViewController : UIViewController

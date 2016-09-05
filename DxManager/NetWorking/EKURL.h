@@ -8,7 +8,7 @@
 
 #ifndef EKURL_h
 #define EKURL_h
-#import "EKNotification.h"
+
 
 
 #endif /* EKURL_h */

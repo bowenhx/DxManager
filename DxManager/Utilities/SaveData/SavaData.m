@@ -47,16 +47,24 @@ static SavaData * _shareInstance = nil;
     
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
+
+- (BOOL)isStringBlank:(NSString *)string {
+    if ([string isKindOfClass:[NSNull class]]) return YES;
+    if (string ==nil && [string length] == 0)return YES;
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) return YES;
+    return NO;
+}
+
 - (NSString *)usidString{
     NSString *userid =  [self printDataStr:USER_ID_KEY];
-    if ([@"" isStringBlank:userid]) {
+    if ([self isStringBlank:userid]) {
         return @"";
     }else
         return userid;
 }
 - (NSString *)tokenString{
     NSString *appToken = [self printDataStr:TOKEN_KEY];
-    if ([@"" isStringBlank:appToken]) {
+    if ([self isStringBlank:appToken]) {
         return @"";
     }else
         return appToken;

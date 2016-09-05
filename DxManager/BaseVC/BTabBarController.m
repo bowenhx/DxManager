@@ -1,24 +1,22 @@
 //
-//  EKTabBarController.m
-//  Demo
+//  BTabBarController.m
+//  BKMobile
 //
-//  Created by HY on 16/6/27.
-//  Copyright © 2016年 HY. All rights reserved.
+//  Created by ligb on 15/2/4.
+//  Copyright (c) 2015年 com.mobile-kingdom.bkapps All rights reserved.
 //
 
-#import "EKTabBarController.h"
-#import "BKNavigationController.h"
-
-
+#import "BTabBarController.h"
+#import "BNavigationController.h"
 #import "LoginViewController.h"
 #import "UIColor+app.h"
 
 
-@interface EKTabBarController ()
+@interface BTabBarController ()
 
 @end
 
-@implementation EKTabBarController
+@implementation BTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

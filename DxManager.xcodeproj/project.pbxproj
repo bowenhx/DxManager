@@ -7,15 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D551D7D10AA00DD509C /* BaseViewController.m */; };
+		92627D5B1D7D10AA00DD509C /* BNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D571D7D10AA00DD509C /* BNavigationController.m */; };
+		92627D5C1D7D10AA00DD509C /* BTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D591D7D10AA00DD509C /* BTabBarController.m */; };
+		92627DC41D7D154D00DD509C /* NSString+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D9F1D7D154D00DD509C /* NSString+UIColor.m */; };
+		92627DC51D7D154D00DD509C /* UIColor+app.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DA11D7D154D00DD509C /* UIColor+app.m */; };
+		92627DC61D7D154D00DD509C /* NSObject+BeeNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DA51D7D154D00DD509C /* NSObject+BeeNotification.m */; };
+		92627DC71D7D154D00DD509C /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DA81D7D154D00DD509C /* MBProgressHUD+Add.m */; };
+		92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92627DA91D7D154D00DD509C /* MBProgressHUD.bundle */; };
+		92627DCA1D7D154D00DD509C /* CustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DAE1D7D154D00DD509C /* CustomBarButtonItem.m */; };
+		92627DCB1D7D154D00DD509C /* UIButton+EXCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DB11D7D154D00DD509C /* UIButton+EXCell.m */; };
+		92627DCC1D7D154D00DD509C /* UIImage+UIImageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DB41D7D154D00DD509C /* UIImage+UIImageExt.m */; };
+		92627DCD1D7D154D00DD509C /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DB71D7D154D00DD509C /* UIView+Ex.m */; };
+		92627DCE1D7D154D00DD509C /* ANet.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DBA1D7D154D00DD509C /* ANet.m */; };
+		92627DCF1D7D154D00DD509C /* BNetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DBC1D7D154D00DD509C /* BNetData.m */; };
+		92627DD01D7D154D00DD509C /* BNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DBE1D7D154D00DD509C /* BNetworkConfig.m */; };
+		92627DD11D7D154D00DD509C /* SavaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DC31D7D154D00DD509C /* SavaData.m */; };
+		92627DD51D7D19C900DD509C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DD41D7D19C900DD509C /* HomeViewController.m */; };
+		92627DD81D7D19EF00DD509C /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DD71D7D19EF00DD509C /* WorkViewController.m */; };
+		92627DDB1D7D1A0300DD509C /* DirectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DDA1D7D1A0200DD509C /* DirectorViewController.m */; };
+		92627DDE1D7D1A1000DD509C /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DDD1D7D1A1000DD509C /* MoreViewController.m */; };
 		B5B76D541D7BFA2100B06414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D531D7BFA2100B06414 /* main.m */; };
 		B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D561D7BFA2100B06414 /* AppDelegate.m */; };
 		B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D591D7BFA2100B06414 /* ViewController.m */; };
 		B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B76D5B1D7BFA2100B06414 /* Main.storyboard */; };
 		B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B76D5E1D7BFA2100B06414 /* Assets.xcassets */; };
 		B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B76D601D7BFA2100B06414 /* LaunchScreen.storyboard */; };
+		B5B76D781D7C1AA000B06414 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D761D7C1AA000B06414 /* LoginViewController.m */; };
+		B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B76D771D7C1AA000B06414 /* LoginViewController.xib */; };
+		F9192936035667B22E570D7B /* libPods-DxManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4334DBE38CEA3D41125B098B /* libPods-DxManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4334DBE38CEA3D41125B098B /* libPods-DxManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DxManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92627D541D7D10AA00DD509C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		92627D551D7D10AA00DD509C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		92627D561D7D10AA00DD509C /* BNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNavigationController.h; sourceTree = "<group>"; };
+		92627D571D7D10AA00DD509C /* BNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNavigationController.m; sourceTree = "<group>"; };
+		92627D581D7D10AA00DD509C /* BTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTabBarController.h; sourceTree = "<group>"; };
+		92627D591D7D10AA00DD509C /* BTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTabBarController.m; sourceTree = "<group>"; };
+		92627D9E1D7D154D00DD509C /* NSString+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UIColor.h"; sourceTree = "<group>"; };
+		92627D9F1D7D154D00DD509C /* NSString+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UIColor.m"; sourceTree = "<group>"; };
+		92627DA01D7D154D00DD509C /* UIColor+app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+app.h"; sourceTree = "<group>"; };
+		92627DA11D7D154D00DD509C /* UIColor+app.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+app.m"; sourceTree = "<group>"; };
+		92627DA31D7D154D00DD509C /* Bee_Precompile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_Precompile.h; sourceTree = "<group>"; };
+		92627DA41D7D154D00DD509C /* NSObject+BeeNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BeeNotification.h"; sourceTree = "<group>"; };
+		92627DA51D7D154D00DD509C /* NSObject+BeeNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BeeNotification.m"; sourceTree = "<group>"; };
+		92627DA71D7D154D00DD509C /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		92627DA81D7D154D00DD509C /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		92627DA91D7D154D00DD509C /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		92627DAD1D7D154D00DD509C /* CustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBarButtonItem.h; sourceTree = "<group>"; };
+		92627DAE1D7D154D00DD509C /* CustomBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBarButtonItem.m; sourceTree = "<group>"; };
+		92627DB01D7D154D00DD509C /* UIButton+EXCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EXCell.h"; sourceTree = "<group>"; };
+		92627DB11D7D154D00DD509C /* UIButton+EXCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EXCell.m"; sourceTree = "<group>"; };
+		92627DB31D7D154D00DD509C /* UIImage+UIImageExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageExt.h"; sourceTree = "<group>"; };
+		92627DB41D7D154D00DD509C /* UIImage+UIImageExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageExt.m"; sourceTree = "<group>"; };
+		92627DB61D7D154D00DD509C /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
+		92627DB71D7D154D00DD509C /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
+		92627DB91D7D154D00DD509C /* ANet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANet.h; sourceTree = "<group>"; };
+		92627DBA1D7D154D00DD509C /* ANet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANet.m; sourceTree = "<group>"; };
+		92627DBB1D7D154D00DD509C /* BNetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNetData.h; sourceTree = "<group>"; };
+		92627DBC1D7D154D00DD509C /* BNetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNetData.m; sourceTree = "<group>"; };
+		92627DBD1D7D154D00DD509C /* BNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNetworkConfig.h; sourceTree = "<group>"; };
+		92627DBE1D7D154D00DD509C /* BNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNetworkConfig.m; sourceTree = "<group>"; };
+		92627DBF1D7D154D00DD509C /* EKURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKURL.h; sourceTree = "<group>"; };
+		92627DC21D7D154D00DD509C /* SavaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavaData.h; sourceTree = "<group>"; };
+		92627DC31D7D154D00DD509C /* SavaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavaData.m; sourceTree = "<group>"; };
+		92627DD21D7D174000DD509C /* AppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
+		92627DD31D7D19C900DD509C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		92627DD41D7D19C900DD509C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		92627DD61D7D19EF00DD509C /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
+		92627DD71D7D19EF00DD509C /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
+		92627DD91D7D1A0200DD509C /* DirectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorViewController.h; sourceTree = "<group>"; };
+		92627DDA1D7D1A0200DD509C /* DirectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorViewController.m; sourceTree = "<group>"; };
+		92627DDC1D7D1A1000DD509C /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		92627DDD1D7D1A1000DD509C /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.debug.xcconfig"; sourceTree = "<group>"; };
+		B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.release.xcconfig"; sourceTree = "<group>"; };
 		B5B76D4F1D7BFA2100B06414 /* DxManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B76D531D7BFA2100B06414 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5B76D551D7BFA2100B06414 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +94,9 @@
 		B5B76D5E1D7BFA2100B06414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B76D611D7BFA2100B06414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5B76D631D7BFA2100B06414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5B76D751D7C1AA000B06414 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B5B76D761D7C1AA000B06414 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B5B76D771D7C1AA000B06414 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +104,160 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9192936035667B22E570D7B /* libPods-DxManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3768AADF8218B136A07D252E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */,
+				B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91ACA53CFEA03B9536F4390C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4334DBE38CEA3D41125B098B /* libPods-DxManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92627D5D1D7D11BE00DD509C /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+				92627DD21D7D174000DD509C /* AppDefine.h */,
+				92627D9C1D7D154D00DD509C /* Extension */,
+				92627DB81D7D154D00DD509C /* NetWorking */,
+				92627DC01D7D154D00DD509C /* Utilities */,
+			);
+			name = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		92627D9C1D7D154D00DD509C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92627D9D1D7D154D00DD509C /* Color */,
+				92627DA21D7D154D00DD509C /* EKNotification */,
+				92627DA61D7D154D00DD509C /* MBProgressHUD+Add */,
+				92627DAC1D7D154D00DD509C /* UIBarItem */,
+				92627DAF1D7D154D00DD509C /* UIButton+EXCell */,
+				92627DB21D7D154D00DD509C /* UIImage+EXT */,
+				92627DB51D7D154D00DD509C /* UIView+Ex */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		92627D9D1D7D154D00DD509C /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				92627D9E1D7D154D00DD509C /* NSString+UIColor.h */,
+				92627D9F1D7D154D00DD509C /* NSString+UIColor.m */,
+				92627DA01D7D154D00DD509C /* UIColor+app.h */,
+				92627DA11D7D154D00DD509C /* UIColor+app.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		92627DA21D7D154D00DD509C /* EKNotification */ = {
+			isa = PBXGroup;
+			children = (
+				92627DA31D7D154D00DD509C /* Bee_Precompile.h */,
+				92627DA41D7D154D00DD509C /* NSObject+BeeNotification.h */,
+				92627DA51D7D154D00DD509C /* NSObject+BeeNotification.m */,
+			);
+			path = EKNotification;
+			sourceTree = "<group>";
+		};
+		92627DA61D7D154D00DD509C /* MBProgressHUD+Add */ = {
+			isa = PBXGroup;
+			children = (
+				92627DA71D7D154D00DD509C /* MBProgressHUD+Add.h */,
+				92627DA81D7D154D00DD509C /* MBProgressHUD+Add.m */,
+				92627DA91D7D154D00DD509C /* MBProgressHUD.bundle */,
+			);
+			path = "MBProgressHUD+Add";
+			sourceTree = "<group>";
+		};
+		92627DAC1D7D154D00DD509C /* UIBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				92627DAD1D7D154D00DD509C /* CustomBarButtonItem.h */,
+				92627DAE1D7D154D00DD509C /* CustomBarButtonItem.m */,
+			);
+			path = UIBarItem;
+			sourceTree = "<group>";
+		};
+		92627DAF1D7D154D00DD509C /* UIButton+EXCell */ = {
+			isa = PBXGroup;
+			children = (
+				92627DB01D7D154D00DD509C /* UIButton+EXCell.h */,
+				92627DB11D7D154D00DD509C /* UIButton+EXCell.m */,
+			);
+			path = "UIButton+EXCell";
+			sourceTree = "<group>";
+		};
+		92627DB21D7D154D00DD509C /* UIImage+EXT */ = {
+			isa = PBXGroup;
+			children = (
+				92627DB31D7D154D00DD509C /* UIImage+UIImageExt.h */,
+				92627DB41D7D154D00DD509C /* UIImage+UIImageExt.m */,
+			);
+			path = "UIImage+EXT";
+			sourceTree = "<group>";
+		};
+		92627DB51D7D154D00DD509C /* UIView+Ex */ = {
+			isa = PBXGroup;
+			children = (
+				92627DB61D7D154D00DD509C /* UIView+Ex.h */,
+				92627DB71D7D154D00DD509C /* UIView+Ex.m */,
+			);
+			path = "UIView+Ex";
+			sourceTree = "<group>";
+		};
+		92627DB81D7D154D00DD509C /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				92627DBF1D7D154D00DD509C /* EKURL.h */,
+				92627DB91D7D154D00DD509C /* ANet.h */,
+				92627DBA1D7D154D00DD509C /* ANet.m */,
+				92627DBB1D7D154D00DD509C /* BNetData.h */,
+				92627DBC1D7D154D00DD509C /* BNetData.m */,
+				92627DBD1D7D154D00DD509C /* BNetworkConfig.h */,
+				92627DBE1D7D154D00DD509C /* BNetworkConfig.m */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		92627DC01D7D154D00DD509C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				92627DC11D7D154D00DD509C /* SaveData */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		92627DC11D7D154D00DD509C /* SaveData */ = {
+			isa = PBXGroup;
+			children = (
+				92627DC21D7D154D00DD509C /* SavaData.h */,
+				92627DC31D7D154D00DD509C /* SavaData.m */,
+			);
+			path = SaveData;
+			sourceTree = "<group>";
+		};
 		B5B76D461D7BFA2100B06414 = {
 			isa = PBXGroup;
 			children = (
 				B5B76D511D7BFA2100B06414 /* DxManager */,
 				B5B76D501D7BFA2100B06414 /* Products */,
+				3768AADF8218B136A07D252E /* Pods */,
+				91ACA53CFEA03B9536F4390C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +279,11 @@
 				B5B76D6C1D7C02FB00B06414 /* WorkVC */,
 				B5B76D691D7C02FB00B06414 /* DirectoriesVC */,
 				B5B76D6B1D7C02FB00B06414 /* MoreVC */,
+				B5B76D741D7C1A7F00B06414 /* LoginVC */,
 				B5B76D581D7BFA2100B06414 /* ViewController.h */,
 				B5B76D591D7BFA2100B06414 /* ViewController.m */,
 				B5B76D5B1D7BFA2100B06414 /* Main.storyboard */,
+				92627D5D1D7D11BE00DD509C /* Tools(工具) */,
 				B5B76D5E1D7BFA2100B06414 /* Assets.xcassets */,
 				B5B76D601D7BFA2100B06414 /* LaunchScreen.storyboard */,
 				B5B76D631D7BFA2100B06414 /* Info.plist */,
@@ -87,6 +303,8 @@
 		B5B76D691D7C02FB00B06414 /* DirectoriesVC */ = {
 			isa = PBXGroup;
 			children = (
+				92627DD91D7D1A0200DD509C /* DirectorViewController.h */,
+				92627DDA1D7D1A0200DD509C /* DirectorViewController.m */,
 			);
 			path = DirectoriesVC;
 			sourceTree = "<group>";
@@ -94,6 +312,8 @@
 		B5B76D6A1D7C02FB00B06414 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				92627DD31D7D19C900DD509C /* HomeViewController.h */,
+				92627DD41D7D19C900DD509C /* HomeViewController.m */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -101,6 +321,8 @@
 		B5B76D6B1D7C02FB00B06414 /* MoreVC */ = {
 			isa = PBXGroup;
 			children = (
+				92627DDC1D7D1A1000DD509C /* MoreViewController.h */,
+				92627DDD1D7D1A1000DD509C /* MoreViewController.m */,
 			);
 			path = MoreVC;
 			sourceTree = "<group>";
@@ -108,6 +330,8 @@
 		B5B76D6C1D7C02FB00B06414 /* WorkVC */ = {
 			isa = PBXGroup;
 			children = (
+				92627DD61D7D19EF00DD509C /* WorkViewController.h */,
+				92627DD71D7D19EF00DD509C /* WorkViewController.m */,
 			);
 			path = WorkVC;
 			sourceTree = "<group>";
@@ -115,8 +339,24 @@
 		B5B76D6D1D7C03C200B06414 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
+				92627D541D7D10AA00DD509C /* BaseViewController.h */,
+				92627D551D7D10AA00DD509C /* BaseViewController.m */,
+				92627D561D7D10AA00DD509C /* BNavigationController.h */,
+				92627D571D7D10AA00DD509C /* BNavigationController.m */,
+				92627D581D7D10AA00DD509C /* BTabBarController.h */,
+				92627D591D7D10AA00DD509C /* BTabBarController.m */,
 			);
 			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		B5B76D741D7C1A7F00B06414 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				B5B76D751D7C1AA000B06414 /* LoginViewController.h */,
+				B5B76D761D7C1AA000B06414 /* LoginViewController.m */,
+				B5B76D771D7C1AA000B06414 /* LoginViewController.xib */,
+			);
+			path = LoginVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +366,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5B76D661D7BFA2100B06414 /* Build configuration list for PBXNativeTarget "DxManager" */;
 			buildPhases = (
+				96E480B60659C53BE7A332FA /* [CP] Check Pods Manifest.lock */,
 				B5B76D4B1D7BFA2100B06414 /* Sources */,
 				B5B76D4C1D7BFA2100B06414 /* Frameworks */,
 				B5B76D4D1D7BFA2100B06414 /* Resources */,
+				73A75F36F6E172589751D821 /* [CP] Embed Pods Frameworks */,
+				2D70CC216FDA43709942509B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,7 +419,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
+				92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */,
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
 				B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */,
 			);
@@ -184,12 +429,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D70CC216FDA43709942509B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DxManager/Pods-DxManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73A75F36F6E172589751D821 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DxManager/Pods-DxManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96E480B60659C53BE7A332FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5B76D4B1D7BFA2100B06414 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92627D5C1D7D10AA00DD509C /* BTabBarController.m in Sources */,
+				92627D5B1D7D10AA00DD509C /* BNavigationController.m in Sources */,
+				92627DDE1D7D1A1000DD509C /* MoreViewController.m in Sources */,
+				92627DD11D7D154D00DD509C /* SavaData.m in Sources */,
+				92627DD51D7D19C900DD509C /* HomeViewController.m in Sources */,
+				92627DCF1D7D154D00DD509C /* BNetData.m in Sources */,
+				B5B76D781D7C1AA000B06414 /* LoginViewController.m in Sources */,
+				92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */,
+				92627DCE1D7D154D00DD509C /* ANet.m in Sources */,
+				92627DC51D7D154D00DD509C /* UIColor+app.m in Sources */,
+				92627DC61D7D154D00DD509C /* NSObject+BeeNotification.m in Sources */,
+				92627DC71D7D154D00DD509C /* MBProgressHUD+Add.m in Sources */,
+				92627DD01D7D154D00DD509C /* BNetworkConfig.m in Sources */,
+				92627DCD1D7D154D00DD509C /* UIView+Ex.m in Sources */,
+				92627DCA1D7D154D00DD509C /* CustomBarButtonItem.m in Sources */,
+				92627DDB1D7D1A0300DD509C /* DirectorViewController.m in Sources */,
 				B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */,
+				92627DCB1D7D154D00DD509C /* UIButton+EXCell.m in Sources */,
+				92627DCC1D7D154D00DD509C /* UIImage+UIImageExt.m in Sources */,
+				92627DD81D7D19EF00DD509C /* WorkViewController.m in Sources */,
+				92627DC41D7D154D00DD509C /* NSString+UIColor.m in Sources */,
 				B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */,
 				B5B76D541D7BFA2100B06414 /* main.m in Sources */,
 			);
@@ -303,6 +616,7 @@
 		};
 		B5B76D671D7BFA2100B06414 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DxManager/Info.plist;
@@ -314,6 +628,7 @@
 		};
 		B5B76D681D7BFA2100B06414 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DxManager/Info.plist;
@@ -342,6 +657,7 @@
 				B5B76D681D7BFA2100B06414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

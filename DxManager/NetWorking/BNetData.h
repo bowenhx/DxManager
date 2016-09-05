@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ANet.h"
 #import "EKURL.h"
-#import "AppDefine.h"
+
 
 @interface BNetData : NSObject
 

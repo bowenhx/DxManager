@@ -16,7 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"登陆";
+    
+    UIImage *image = [[UIImage imageNamed:@"导航栏"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    
+    
+    for (UIView *view in self.view.subviews) {
+        view.layer.borderWidth = 1;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

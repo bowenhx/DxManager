@@ -1,13 +1,13 @@
 //
-//  EKTabBarController.h
-//  Demo
+//  BTabBarController.h
+//  BKMobile
 //
-//  Created by HY on 16/6/27.
-//  Copyright © 2016年 HY. All rights reserved.
+//  Created by ligb on 15/2/4.
+//  Copyright (c) 2015年 com.mobile-kingdom.bkapps All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface EKTabBarController : UITabBarController<UITabBarControllerDelegate>
+@interface BTabBarController : UITabBarController<UITabBarControllerDelegate>
 
 @end

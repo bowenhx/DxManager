@@ -1,19 +1,19 @@
 //
-//  BKNavigationController.m
+//  BNavigationController.m
 //  BKMobile
 //
-//  Created by Guibin on 15/2/4.
+//  Created by ligb on 15/2/4.
 //  Copyright (c) 2015年 com.mobile-kingdom.bkapps All rights reserved.
 //
 
-#import "BKNavigationController.h"
+#import "BNavigationController.h"
 #import "UIColor+app.h"
 
-@interface BKNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
+@interface BNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 
 @end
 
-@implementation BKNavigationController
+@implementation BNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
