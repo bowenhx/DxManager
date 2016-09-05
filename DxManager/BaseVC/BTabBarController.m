@@ -1,0 +1,80 @@
+//
+//  EKTabBarController.m
+//  Demo
+//
+//  Created by HY on 16/6/27.
+//  Copyright © 2016年 HY. All rights reserved.
+//
+
+#import "EKTabBarController.h"
+#import "BKNavigationController.h"
+
+
+#import "LoginViewController.h"
+#import "UIColor+app.h"
+
+
+@interface EKTabBarController ()
+
+@end
+
+@implementation EKTabBarController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    //设置tabBar的半透明阴影色效果，不让他显示
+    self.tabBar.translucent = NO;
+    //設置tabBar 背景
+    self.tabBar.barTintColor = [UIColor colorTabBar];
+    
+    [self setSelectedIndex:0];
+    self.delegate = self;
+    
+    [self setTabBarImage]; //设置图片
+    
+}
+
+//设置tabbar上的按钮图片
+-(void)setTabBarImage{
+   NSArray *imgs = @[@"def_btn_Home_unpressed",
+                       @"def_btn_School_unpressed",
+                       @"def_btn_Forum_unpressed",
+                       @"def_btn_news_unpressed",
+                       @"def_btn_My_unpressed"];
+    
+    NSArray *selectImgs = @[@"def_btn_Home_pressed",
+                            @"def_btn_School_pressed",
+                            @"def_btn_Forum_pressed",
+                            @"def_btn_news_pressed",
+                            @"def_btn_My_pressed"];
+    
+    for (int i= 0; i<self.tabBar.items.count; i++) {
+        UITabBarItem *item = self.tabBar.items[i];
+        item.image = [[UIImage imageNamed:imgs[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        item.selectedImage = [[UIImage imageNamed:selectImgs[i]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        item.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+    }
+}
+
+- (void)notificationForTabbarChangeSelectIndex:(NSNotification *)notification{
+    NSInteger nowIndex = [notification.object integerValue];
+    dispatch_time_t waitTime = dispatch_time(DISPATCH_TIME_NOW, 0.0 * NSEC_PER_SEC);
+    dispatch_after(waitTime, dispatch_get_main_queue(), ^(void){
+        self.selectedIndex = nowIndex;
+    });
+}
+
+#pragma mark - UITabBarDelegate
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController NS_AVAILABLE_IOS(3_0){
+    return YES;
+    
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+}
+
+
+
+
+@end
