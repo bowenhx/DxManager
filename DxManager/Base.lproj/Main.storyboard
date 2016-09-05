@@ -112,35 +112,6 @@
             </objects>
             <point key="canvasLocation" x="1550" y="1232"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="esf-2a-x7W">
-            <objects>
-                <tableViewController id="Bhe-W9-CdL" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YXT-7v-3yU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Zjl-VV-4Vf">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zjl-VV-4Vf" id="A5w-6g-vWr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Bhe-W9-CdL" id="v5V-yB-KRP"/>
-                            <outlet property="delegate" destination="Bhe-W9-CdL" id="2RA-gK-G3Z"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="clp-HC-kxZ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ckp-1x-piM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1550" y="1980"/>
-        </scene>
         <!--更多-->
         <scene sceneID="7ie-9k-Xx3">
             <objects>
@@ -151,12 +122,44 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Bhe-W9-CdL" kind="relationship" relationship="rootViewController" id="cEr-9L-fVs"/>
+                        <segue destination="YY9-pe-hMF" kind="relationship" relationship="rootViewController" id="ehk-1F-ucS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sj0-PI-P93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="810" y="1980"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="Jim-vn-7Gd">
+            <objects>
+                <viewController id="YY9-pe-hMF" customClass="MoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D7U-z4-2HM"/>
+                        <viewControllerLayoutGuide type="bottom" id="IuX-Vi-W6a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6lC-g2-5em">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOF-tc-lIg">
+                                <rect key="frame" x="270" y="190" width="60" height="30"/>
+                                <state key="normal" title="退出登陆"/>
+                                <connections>
+                                    <action selector="logOutAction:" destination="YY9-pe-hMF" eventType="touchUpInside" id="sgK-sK-9e8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZOF-tc-lIg" firstAttribute="centerX" secondItem="6lC-g2-5em" secondAttribute="centerX" id="aWm-Lc-prb"/>
+                            <constraint firstItem="ZOF-tc-lIg" firstAttribute="top" secondItem="D7U-z4-2HM" secondAttribute="bottom" constant="126" id="gU3-QR-YVE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i2H-YZ-1me"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUz-cJ-C6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="1945"/>
         </scene>
         <!--通讯录-->
         <scene sceneID="mYE-rx-1D5">

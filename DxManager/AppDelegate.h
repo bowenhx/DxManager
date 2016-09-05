@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (AppDelegate *)getAppDelegate;
+- (void)showLoginVC;
 
 @end
 

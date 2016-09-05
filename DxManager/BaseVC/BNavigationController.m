@@ -17,8 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置导航条背景
+    //self.navigationController.navigationBar.barTintColor = [UIColor colorAppBg];
+    UIImage *image = [[UIImage imageNamed:@"导航栏"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+
+    //设置导航文字颜色
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    
     self.navigationController.delegate = self;
-    self.navigationBar.barTintColor = [UIColor colorAppBg];
+    
     __weak typeof (self)weakSelf = self;
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.interactivePopGestureRecognizer.delegate = weakSelf;

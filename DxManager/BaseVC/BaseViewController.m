@@ -15,10 +15,7 @@
 @implementation BaseViewController
 
 - (void)loadNavBar{
-    //设置导航条背景
-    self.navigationController.navigationBar.barTintColor = [UIColor colorAppBg];
-    //设置导航文字颜色
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
    
     //当不是首个控制器时显示返回按钮
     NSInteger count = self.navigationController.viewControllers.count;

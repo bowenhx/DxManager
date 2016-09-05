@@ -1,44 +1,53 @@
 //
-//  MoreViewController.m
+//  ForgetPwViewController.m
 //  DxManager
 //
 //  Created by ligb on 16/9/5.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
 
-#import "MoreViewController.h"
-#import "AppDefine.h"
-#import "AppDelegate.h"
+#import "ForgetPwViewController.h"
 
-@interface MoreViewController ()
-
+@interface ForgetPwViewController ()
+{
+    __weak IBOutlet UITextField *_textFieldPhone;
+    __weak IBOutlet UITextField *_textFieldCode;
+    
+    __weak IBOutlet UITextField *_textFieldNewPw;
+    __weak IBOutlet UITextField *_textFieldNewPw2;
+    
+}
 @end
 
-@implementation MoreViewController
+@implementation ForgetPwViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"忘记密码";
+    
+    for (UIView *view in self.view.subviews) {
+        view.layer.borderWidth = 1;
+    }
+
+    
 }
+//获取验证码
+- (IBAction)getVerifyCodeAction:(id)sender {
+    
+}
+//确认修改
+- (IBAction)affirmChangeAction:(id)sender {
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
-//退出登陆
-- (IBAction)logOutAction:(id)sender {
-    //标记登陆
-    [[SavaData shareInstance] savaDataInteger:1 KeyString:@"finishGuide"];
-    
-    //清除用户信息
-    //TODO
-    
-    
-    //退出登陆代理
-    [[AppDelegate getAppDelegate] showLoginVC];
-}
 /*
 #pragma mark - Navigation
 

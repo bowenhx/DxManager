@@ -27,6 +27,12 @@
 		92627DD81D7D19EF00DD509C /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DD71D7D19EF00DD509C /* WorkViewController.m */; };
 		92627DDB1D7D1A0300DD509C /* DirectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DDA1D7D1A0200DD509C /* DirectorViewController.m */; };
 		92627DDE1D7D1A1000DD509C /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DDD1D7D1A1000DD509C /* MoreViewController.m */; };
+		92627DE51D7D406C00DD509C /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DE31D7D406C00DD509C /* GuideViewController.m */; };
+		92627DEA1D7D41DC00DD509C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92627DE71D7D41DC00DD509C /* Default-568h@2x.png */; };
+		92627DEB1D7D41DC00DD509C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92627DE81D7D41DC00DD509C /* Default@2x.png */; };
+		92627DEC1D7D41DC00DD509C /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92627DE91D7D41DC00DD509C /* Default@3x.png */; };
+		92627DF01D7D5AA400DD509C /* ForgetPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DEE1D7D5AA400DD509C /* ForgetPwViewController.m */; };
+		92627DF11D7D5AA400DD509C /* ForgetPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92627DEF1D7D5AA400DD509C /* ForgetPwViewController.xib */; };
 		B5B76D541D7BFA2100B06414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D531D7BFA2100B06414 /* main.m */; };
 		B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D561D7BFA2100B06414 /* AppDelegate.m */; };
 		B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D591D7BFA2100B06414 /* ViewController.m */; };
@@ -82,6 +88,14 @@
 		92627DDA1D7D1A0200DD509C /* DirectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorViewController.m; sourceTree = "<group>"; };
 		92627DDC1D7D1A1000DD509C /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		92627DDD1D7D1A1000DD509C /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		92627DE21D7D406C00DD509C /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		92627DE31D7D406C00DD509C /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		92627DE71D7D41DC00DD509C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		92627DE81D7D41DC00DD509C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		92627DE91D7D41DC00DD509C /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
+		92627DED1D7D5AA400DD509C /* ForgetPwViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwViewController.h; sourceTree = "<group>"; };
+		92627DEE1D7D5AA400DD509C /* ForgetPwViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwViewController.m; sourceTree = "<group>"; };
+		92627DEF1D7D5AA400DD509C /* ForgetPwViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwViewController.xib; sourceTree = "<group>"; };
 		AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.release.xcconfig"; sourceTree = "<group>"; };
 		B5B76D4F1D7BFA2100B06414 /* DxManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +300,9 @@
 				92627D5D1D7D11BE00DD509C /* Tools(工具) */,
 				B5B76D5E1D7BFA2100B06414 /* Assets.xcassets */,
 				B5B76D601D7BFA2100B06414 /* LaunchScreen.storyboard */,
+				92627DE71D7D41DC00DD509C /* Default-568h@2x.png */,
+				92627DE81D7D41DC00DD509C /* Default@2x.png */,
+				92627DE91D7D41DC00DD509C /* Default@3x.png */,
 				B5B76D631D7BFA2100B06414 /* Info.plist */,
 				B5B76D521D7BFA2100B06414 /* Supporting Files */,
 			);
@@ -355,6 +372,11 @@
 				B5B76D751D7C1AA000B06414 /* LoginViewController.h */,
 				B5B76D761D7C1AA000B06414 /* LoginViewController.m */,
 				B5B76D771D7C1AA000B06414 /* LoginViewController.xib */,
+				92627DED1D7D5AA400DD509C /* ForgetPwViewController.h */,
+				92627DEE1D7D5AA400DD509C /* ForgetPwViewController.m */,
+				92627DEF1D7D5AA400DD509C /* ForgetPwViewController.xib */,
+				92627DE21D7D406C00DD509C /* GuideViewController.h */,
+				92627DE31D7D406C00DD509C /* GuideViewController.m */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -420,10 +442,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
+				92627DF11D7D5AA400DD509C /* ForgetPwViewController.xib in Resources */,
+				92627DEC1D7D41DC00DD509C /* Default@3x.png in Resources */,
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
 				92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */,
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
 				B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */,
+				92627DEB1D7D41DC00DD509C /* Default@2x.png in Resources */,
+				92627DEA1D7D41DC00DD509C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +524,8 @@
 				92627DCD1D7D154D00DD509C /* UIView+Ex.m in Sources */,
 				92627DCA1D7D154D00DD509C /* CustomBarButtonItem.m in Sources */,
 				92627DDB1D7D1A0300DD509C /* DirectorViewController.m in Sources */,
+				92627DE51D7D406C00DD509C /* GuideViewController.m in Sources */,
+				92627DF01D7D5AA400DD509C /* ForgetPwViewController.m in Sources */,
 				B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */,
 				92627DCB1D7D154D00DD509C /* UIButton+EXCell.m in Sources */,
 				92627DCC1D7D154D00DD509C /* UIImage+UIImageExt.m in Sources */,
