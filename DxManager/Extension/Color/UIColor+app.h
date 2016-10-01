@@ -15,20 +15,23 @@
 
 @interface UIColor (AppUIColor)
 
-//app 全局主色调，包括导航背景 （深绿）
+//app 全局主色调，包括导航背景 （浅蓝）
 + (UIColor *)colorAppBg;
 
 //底部tabbar 背景
 + (UIColor *)colorTabBar;
 
-//文字颜色--- > 类别颜色 <----(浅绿)
-+ (UIColor *)colorGreen;
+//文字颜色--- > 类别颜色 <----(浅蓝)
++ (UIColor *)colorBlue;
 
-//文字颜色--- > 描述文字颜色 < （黄）
-+ (UIColor *)colorYellow;
+//文字颜色--- > 数字颜色颜色 < （淡红）
++ (UIColor *)colorRed;
 
 //文字颜色--- > 内容文字颜色 < 黑
 + (UIColor *)colorBlack;
+
+//cell 中间线条颜色 （灰色）
++ (UIColor *)colorGray;
 
 //设置view 背景及tabView 的背景颜色
 + (UIColor *)colorViewBg;

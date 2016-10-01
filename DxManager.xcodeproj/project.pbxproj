@@ -23,7 +23,6 @@
 		92627DCF1D7D154D00DD509C /* BNetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DBC1D7D154D00DD509C /* BNetData.m */; };
 		92627DD01D7D154D00DD509C /* BNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DBE1D7D154D00DD509C /* BNetworkConfig.m */; };
 		92627DD11D7D154D00DD509C /* SavaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DC31D7D154D00DD509C /* SavaData.m */; };
-		92627DD51D7D19C900DD509C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DD41D7D19C900DD509C /* HomeViewController.m */; };
 		92627DD81D7D19EF00DD509C /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DD71D7D19EF00DD509C /* WorkViewController.m */; };
 		92627DDB1D7D1A0300DD509C /* DirectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DDA1D7D1A0200DD509C /* DirectorViewController.m */; };
 		92627DDE1D7D1A1000DD509C /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DDD1D7D1A1000DD509C /* MoreViewController.m */; };
@@ -41,6 +40,11 @@
 		B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B76D601D7BFA2100B06414 /* LaunchScreen.storyboard */; };
 		B5B76D781D7C1AA000B06414 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D761D7C1AA000B06414 /* LoginViewController.m */; };
 		B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B76D771D7C1AA000B06414 /* LoginViewController.xib */; };
+		B5BECE561D9F9A8A00B30DA7 /* CustomItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECE4E1D9F9A8A00B30DA7 /* CustomItemView.m */; };
+		B5BECE571D9F9A8A00B30DA7 /* HomeCustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECE501D9F9A8A00B30DA7 /* HomeCustomTableView.m */; };
+		B5BECE581D9F9A8A00B30DA7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECE521D9F9A8A00B30DA7 /* HomeViewController.m */; };
+		B5BECE591D9F9A8A00B30DA7 /* TrendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECE541D9F9A8A00B30DA7 /* TrendsTableViewCell.m */; };
+		B5BECE5A1D9F9A8A00B30DA7 /* TrendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BECE551D9F9A8A00B30DA7 /* TrendsTableViewCell.xib */; };
 		F9192936035667B22E570D7B /* libPods-DxManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4334DBE38CEA3D41125B098B /* libPods-DxManager.a */; };
 /* End PBXBuildFile section */
 
@@ -80,8 +84,6 @@
 		92627DC21D7D154D00DD509C /* SavaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavaData.h; sourceTree = "<group>"; };
 		92627DC31D7D154D00DD509C /* SavaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavaData.m; sourceTree = "<group>"; };
 		92627DD21D7D174000DD509C /* AppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
-		92627DD31D7D19C900DD509C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		92627DD41D7D19C900DD509C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		92627DD61D7D19EF00DD509C /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
 		92627DD71D7D19EF00DD509C /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
 		92627DD91D7D1A0200DD509C /* DirectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorViewController.h; sourceTree = "<group>"; };
@@ -111,6 +113,15 @@
 		B5B76D751D7C1AA000B06414 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B5B76D761D7C1AA000B06414 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B5B76D771D7C1AA000B06414 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B5BECE4D1D9F9A8A00B30DA7 /* CustomItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItemView.h; sourceTree = "<group>"; };
+		B5BECE4E1D9F9A8A00B30DA7 /* CustomItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomItemView.m; sourceTree = "<group>"; };
+		B5BECE4F1D9F9A8A00B30DA7 /* HomeCustomTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCustomTableView.h; sourceTree = "<group>"; };
+		B5BECE501D9F9A8A00B30DA7 /* HomeCustomTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCustomTableView.m; sourceTree = "<group>"; };
+		B5BECE511D9F9A8A00B30DA7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B5BECE521D9F9A8A00B30DA7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		B5BECE531D9F9A8A00B30DA7 /* TrendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendsTableViewCell.h; sourceTree = "<group>"; };
+		B5BECE541D9F9A8A00B30DA7 /* TrendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendsTableViewCell.m; sourceTree = "<group>"; };
+		B5BECE551D9F9A8A00B30DA7 /* TrendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,8 +340,15 @@
 		B5B76D6A1D7C02FB00B06414 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				92627DD31D7D19C900DD509C /* HomeViewController.h */,
-				92627DD41D7D19C900DD509C /* HomeViewController.m */,
+				B5BECE4D1D9F9A8A00B30DA7 /* CustomItemView.h */,
+				B5BECE4E1D9F9A8A00B30DA7 /* CustomItemView.m */,
+				B5BECE4F1D9F9A8A00B30DA7 /* HomeCustomTableView.h */,
+				B5BECE501D9F9A8A00B30DA7 /* HomeCustomTableView.m */,
+				B5BECE511D9F9A8A00B30DA7 /* HomeViewController.h */,
+				B5BECE521D9F9A8A00B30DA7 /* HomeViewController.m */,
+				B5BECE531D9F9A8A00B30DA7 /* TrendsTableViewCell.h */,
+				B5BECE541D9F9A8A00B30DA7 /* TrendsTableViewCell.m */,
+				B5BECE551D9F9A8A00B30DA7 /* TrendsTableViewCell.xib */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -442,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
+				B5BECE5A1D9F9A8A00B30DA7 /* TrendsTableViewCell.xib in Resources */,
 				92627DF11D7D5AA400DD509C /* ForgetPwViewController.xib in Resources */,
 				92627DEC1D7D41DC00DD509C /* Default@3x.png in Resources */,
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
@@ -511,8 +530,8 @@
 				92627D5C1D7D10AA00DD509C /* BTabBarController.m in Sources */,
 				92627D5B1D7D10AA00DD509C /* BNavigationController.m in Sources */,
 				92627DDE1D7D1A1000DD509C /* MoreViewController.m in Sources */,
+				B5BECE571D9F9A8A00B30DA7 /* HomeCustomTableView.m in Sources */,
 				92627DD11D7D154D00DD509C /* SavaData.m in Sources */,
-				92627DD51D7D19C900DD509C /* HomeViewController.m in Sources */,
 				92627DCF1D7D154D00DD509C /* BNetData.m in Sources */,
 				B5B76D781D7C1AA000B06414 /* LoginViewController.m in Sources */,
 				92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */,
@@ -527,9 +546,12 @@
 				92627DE51D7D406C00DD509C /* GuideViewController.m in Sources */,
 				92627DF01D7D5AA400DD509C /* ForgetPwViewController.m in Sources */,
 				B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */,
+				B5BECE591D9F9A8A00B30DA7 /* TrendsTableViewCell.m in Sources */,
 				92627DCB1D7D154D00DD509C /* UIButton+EXCell.m in Sources */,
 				92627DCC1D7D154D00DD509C /* UIImage+UIImageExt.m in Sources */,
+				B5BECE561D9F9A8A00B30DA7 /* CustomItemView.m in Sources */,
 				92627DD81D7D19EF00DD509C /* WorkViewController.m in Sources */,
+				B5BECE581D9F9A8A00B30DA7 /* HomeViewController.m in Sources */,
 				92627DC41D7D154D00DD509C /* NSString+UIColor.m in Sources */,
 				B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */,
 				B5B76D541D7BFA2100B06414 /* main.m in Sources */,

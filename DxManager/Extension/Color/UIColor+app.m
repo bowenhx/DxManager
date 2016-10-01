@@ -12,23 +12,27 @@
 
 + (UIColor *)colorAppBg
 {
-    return @"#35bd6c".color;
+    return @"#49b7da".color;
 }
 
 + (UIColor *)colorTabBar{
     return @"#f9f9f9".color;
 }
 
-+ (UIColor *)colorGreen{
-    return @"#34be6e".color;
++ (UIColor *)colorBlue{
+    return @"#1489b0".color;
 }
 
-+ (UIColor *)colorYellow{
-    return @"#ff994d".color;
++ (UIColor *)colorRed{
+    return @"#db73b4".color;
 }
 
 + (UIColor *)colorBlack{
     return @"#555555".color;
+}
+
++ (UIColor *)colorGray{
+    return @"#cccccc".color;
 }
 
 + (UIColor *)colorCellGreenBg{

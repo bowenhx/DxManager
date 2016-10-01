@@ -15,6 +15,8 @@
     __weak IBOutlet UITextField *_phoneNumTextField;
     
     __weak IBOutlet UITextField *_passwordTextField;
+    
+    CGFloat         _viewY;
 }
 @end
 
@@ -22,20 +24,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _viewY = self.view.y;
     self.title = @"登陆";
+//    self.view.backgroundColor = [UIColor colorViewBg];
     
-    UIImage *image = [[UIImage imageNamed:@"导航栏"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
+    UIImage *image = [[UIImage imageNamed:@"dte_nav_icon"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
     //设置导航文字颜色
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
    
+    _phoneNumTextField.layer.borderWidth = .5;
+    _passwordTextField.layer.borderWidth = .5;
+    _phoneNumTextField.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _passwordTextField.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _phoneNumTextField.layer.cornerRadius = 5;
+    _passwordTextField.layer.cornerRadius = 5;
     
-    for (UIView *view in self.view.subviews) {
-        view.layer.borderWidth = 1;
-    }
-    
+    UIButton *btn = [self.view viewWithTag:10];
+    btn.backgroundColor = [UIColor colorAppBg];
+    btn.layer.cornerRadius = 5;
     [[SavaData shareInstance] savaDataInteger:1 KeyString:@"finishGuide"];
    
 }
@@ -62,17 +70,36 @@
     }
     
     [self.view showHUDActivityView:@"正在登錄..." shade:YES];
+//    
+//    [[ANet share] get:@"?action=doLogin&username=15806381115&password=admin888" completion:^(BNetData *model, NSString *netErr) {
+//         [self.view removeHUDActivity];
+//    }];
+
+    [[ANet share] post:BASE_URL params:@{@"action":@"doLogin",@"username":_phoneNumTextField.text,@"password":_passwordTextField.text} completion:^(BNetData *model, NSString *netErr) {
+         [self.view removeHUDActivity];
+        //保存用户信息
+        if (model.status == 0) {
+            //请求成功
+            NSDictionary *info = model.data;
+            [[SavaData shareInstance] savaDictionary:info keyString:User_File];
+            
+            //跳转登陆页面
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            [self presentViewController:[mainStoryboard instantiateInitialViewController] animated:YES completion:^{
+                [[SavaData shareInstance] savaDataInteger:2 KeyString:@"finishGuide"];
+            }];
+
+            
+        }
+        
+    }];
     
-    //模拟登陆，后面需要与接口对接
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.view removeHUDActivity];
-        
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        [self presentViewController:[mainStoryboard instantiateInitialViewController] animated:YES completion:^{
-             [[SavaData shareInstance] savaDataInteger:2 KeyString:@"finishGuide"];
-        }];
-        
-    });
+//    //模拟登陆，后面需要与接口对接
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.view removeHUDActivity];
+//        
+//
+//    });
     
 }
 
@@ -85,7 +112,7 @@
 #pragma mark UITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if ( self.view.y == 64 ) {
+    if ( self.view.y == _viewY ) {
         [UIView animateWithDuration:.38f animations:^{
             CGRect rect = self.view.frame;
             rect.origin.y -= 120;
@@ -105,7 +132,7 @@
     return YES;
 }
 - (void)changeViewSize{
-    if (self.view.y != 64) {
+    if (self.view.y != _viewY) {
         [UIView animateWithDuration:.38f animations:^{
             CGRect rect = self.view.frame;
             rect.origin.y += 120;
@@ -119,10 +146,9 @@
         [_phoneNumTextField resignFirstResponder];
     }else if ([_passwordTextField isFirstResponder]){
         [_passwordTextField resignFirstResponder];
-       
     }
     
-    [self changeViewSize];
+     [self changeViewSize];
 }
 
 

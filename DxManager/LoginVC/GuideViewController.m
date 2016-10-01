@@ -39,27 +39,15 @@
     _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(100, self.screen_H-45, self.screen_W-200, 30)];
     _pageControl.numberOfPages = 3;
     
-//    if (self.screen_H > 480) {
-        for (int i =0; i<3; i++) {
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.screen_W*i, 0, _scrollView.bounds.size.width, _scrollView.bounds.size.height)];
-            imageView.userInteractionEnabled = YES;
-            imageView.backgroundColor = [SavaData randomColor];
-            if (i==2) {
-                [imageView addSubview:[self buttonAccessRootViewPage]];
-            }
-            [_scrollView addSubview:imageView];
+    for (int i =0; i<3; i++) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.screen_W*i, 0, _scrollView.bounds.size.width, _scrollView.bounds.size.height)];
+        imageView.userInteractionEnabled = YES;
+        imageView.backgroundColor = [SavaData randomColor];
+        if (i==2) {
+            [imageView addSubview:[self buttonAccessRootViewPage]];
         }
-//    }else{
-//        for (int i =0; i<3; i++) {
-//            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.screen_W*i, 0, _scrollView.bounds.size.width, _scrollView.bounds.size.height)];
-//            imageView.userInteractionEnabled = YES;
-//            imageView.backgroundColor = [SavaData randomColor];
-//            if (i==2) {
-//                [imageView addSubview:[self buttonAccessRootViewPage]];
-//            }
-//            [_scrollView addSubview:imageView];
-//        }
-//    }
+        [_scrollView addSubview:imageView];
+    }
     
     [self.view addSubview:_scrollView];
     [self.view addSubview:_pageControl];

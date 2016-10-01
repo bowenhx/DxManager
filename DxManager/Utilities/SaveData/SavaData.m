@@ -56,7 +56,7 @@ static SavaData * _shareInstance = nil;
 }
 
 - (NSString *)usidString{
-    NSString *userid =  [self printDataStr:USER_ID_KEY];
+    NSString *userid =  [self printDataStr:USER_INFO_KEY];
     if ([self isStringBlank:userid]) {
         return @"";
     }else
@@ -71,8 +71,8 @@ static SavaData * _shareInstance = nil;
 }
 
 -(NSString *)currentUid {
-    return [NSString stringWithFormat:@"%ld", (long)[[NSUserDefaults standardUserDefaults] integerForKey:USER_ID_KEY]];
-    //    return [[NSUserDefaults standardUserDefaults] stringForKey:USER_ID_KEY];
+    return [NSString stringWithFormat:@"%ld", (long)[[NSUserDefaults standardUserDefaults] integerForKey:USER_INFO_KEY]];
+    //    return [[NSUserDefaults standardUserDefaults] stringForKey:USER_INFO_KEY];
 }
 
 -(NSMutableDictionary *)dataForUser:(NSString *)uid
@@ -92,7 +92,7 @@ static SavaData * _shareInstance = nil;
 - (void)savaDataBool:(BOOL)dataBool KeyString:(NSString *)key{
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([key isEqualToString:USER_ID_KEY]) {
+    if ([key isEqualToString:USER_INFO_KEY]) {
         
         [defaults setBool:dataBool forKey:key];
         
@@ -123,7 +123,7 @@ static SavaData * _shareInstance = nil;
 //保存nsinteger
 - (void)savaDataInteger:(NSInteger)dataInt KeyString:(NSString*)key{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([key isEqualToString:USER_ID_KEY]) {
+    if ([key isEqualToString:USER_INFO_KEY]) {
         [defaults setInteger:dataInt forKey:key];
     }
     NSMutableDictionary *dict = [self dataForUser:[self currentUid]];
@@ -149,7 +149,7 @@ static SavaData * _shareInstance = nil;
 - (void)savadataStr:(NSString*)dataStr KeyString:(NSString*)key{
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([key isEqualToString:USER_ID_KEY]) {//保存用户ID
+    if ([key isEqualToString:USER_INFO_KEY]) {//保存用户ID
         
         [defaults setValue:dataStr forKey:key];
         
