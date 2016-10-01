@@ -63,7 +63,7 @@
 - (UIButton *)backBtn{
     if (nil == _backBtn) {
         //返回按钮
-        UIImage *backImage = [UIImage imageNamed:@"def_btn_Return_unpressed"];
+        UIImage *backImage = [UIImage imageNamed:@"dte_vi_Bitmap"];
         _backBtn = [UIButton buttonWithType: UIButtonTypeCustom];
         _backBtn.frame = CGRectMake(0, 0, backImage.size.width, backImage.size.height);
         [_backBtn setImage: backImage forState: UIControlStateNormal];
@@ -88,6 +88,14 @@
     }
     return _rightBtn;
 }
+
+- (NSMutableArray *)dataSource{
+    if (nil == _dataSource) {
+        _dataSource = [[NSMutableArray alloc] initWithCapacity:0];
+    }
+    return _dataSource;
+}
+
 - (void)tapBackBtn{
     [self.navigationController popViewControllerAnimated:YES];
 }

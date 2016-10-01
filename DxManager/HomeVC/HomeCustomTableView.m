@@ -86,7 +86,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
     }
     
-    
+    cell.info = self.dataSource[indexPath.row];
     
     return cell;
 }

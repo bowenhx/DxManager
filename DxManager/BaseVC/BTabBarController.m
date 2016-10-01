@@ -35,17 +35,15 @@
 
 //设置tabbar上的按钮图片
 -(void)setTabBarImage{
-   NSArray *imgs = @[@"def_btn_Home_unpressed",
-                       @"def_btn_School_unpressed",
-                       @"def_btn_Forum_unpressed",
-                       @"def_btn_news_unpressed",
-                       @"def_btn_My_unpressed"];
+   NSArray *imgs = @[@"dte_btn_dt_unpressed",
+                     @"dte_btn_gz_unpressed",
+                     @"dte_btn_txl_unpressed",
+                     @"dte_btn_gd_unpressed"];
     
-    NSArray *selectImgs = @[@"def_btn_Home_pressed",
-                            @"def_btn_School_pressed",
-                            @"def_btn_Forum_pressed",
-                            @"def_btn_news_pressed",
-                            @"def_btn_My_pressed"];
+    NSArray *selectImgs = @[@"dte_btn_dt_pressed",
+                            @"dte_btn_gz_pressed",
+                            @"dte_btn_txl_pressed",
+                            @"dte_btn_gd_pressed"];
     
     for (int i= 0; i<self.tabBar.items.count; i++) {
         UITabBarItem *item = self.tabBar.items[i];
@@ -70,6 +68,9 @@
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    
+ 
+    
 }
 
 

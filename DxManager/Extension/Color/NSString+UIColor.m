@@ -78,7 +78,23 @@
     }
     return count;
 }
-
++ (NSString *)getDateStringWithString:(NSString *)string{
+    NSRange range1 = [string rangeOfString:@"("];
+    NSRange range;
+    range.location = range1.location+range1.length;
+    range.length = 13;
+    NSString *strin = [string substringWithRange:range];//substringWithRange:  这个方法是截取字符串的值，从第6 位开始（0开始数） ，取13位，得到“1445340103367”
+    //    NSLog(@"strin1: %@", strin);
+    double_t doub = [strin doubleValue];// 把字符串转换成 double型
+    //    NSDate *nd = [NSDate dateWithTimeIntervalSince1970:毫秒值]/1000.0];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:doub/1000.0];//  doub/1000.0 把毫秒级转成秒
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    //    [ViewController getSystemDateAndTime];// 得到系统时间
+    return dateString;// 返回的字符串就是 2015-10-20 19:21 时间格式值
+}
 @end
 @implementation NSObject (string)
 

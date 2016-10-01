@@ -464,7 +464,7 @@ static NSString *ViewCellIdentifier = @"ViewCell";
 
     if (self.selectionIndicatorStyle == HTHorizontalSelectionIndicatorStyleButtonBorder) {
         if ([self.delegate respondsToSelector:@selector(selectionList:viewForItemWithIndex:)]) {
-            ((HTHorizontalSelectionListCustomViewCell *)cell).customView.layer.borderWidth = 1.0;
+            //((HTHorizontalSelectionListCustomViewCell *)cell).customView.layer.borderWidth = 1.0;
             ((HTHorizontalSelectionListCustomViewCell *)cell).customView.layer.cornerRadius = 3.0;
             ((HTHorizontalSelectionListCustomViewCell *)cell).customView.layer.borderColor = isSelected ? self.selectionIndicatorColor.CGColor : [UIColor clearColor].CGColor;
             ((HTHorizontalSelectionListCustomViewCell *)cell).customView.layer.masksToBounds = YES;

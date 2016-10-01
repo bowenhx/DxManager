@@ -18,6 +18,10 @@
 
 @property (nonatomic , strong) UIButton *rightBtn;
 
+@property (nonatomic , strong) NSMutableArray *dataSource;
+
+
+
 //初始化view
 - (void)loadNewView;
 

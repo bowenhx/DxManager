@@ -14,9 +14,13 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.headImg.layer.borderWidth = 1;
+    self.headImg.layer.cornerRadius = 35;
     
     self.labLineBg.backgroundColor = [UIColor colorGray];
-    
+    self.labCheck.textColor = @"ff0000".color;
+    self.labCheck.layer.borderWidth = 1;
+    self.labCheck.layer.borderColor = @"ff0000".color.CGColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -27,6 +31,19 @@
 
 
 - (void)setInfo:(NSDictionary *)info{
+    //头像
+    [self.headImg img_setImageWithURL:info[@"img_url"] placeholderImage:nil];
+    
+    //用户
+    self.labName.text = info[@"user_name"];
+    
+    //时间
+    self.labTime.text = [NSString getDateStringWithString:info[@"add_time"]];
+   
+    //0表示已审核，其他都是未审核
+    self.labCheck.text = [info[@"status"] integerValue] ? @"未审核" : @"已审核";
+    
+    
     
 }
 

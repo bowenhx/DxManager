@@ -27,6 +27,9 @@
  *  @return 个数
  */
 - (NSInteger)stringRangeCHNum;
+
++ (NSString *)getDateStringWithString:(NSString *)string;
+
 @end
 
 @interface NSObject (string)

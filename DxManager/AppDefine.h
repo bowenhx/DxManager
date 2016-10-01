@@ -16,6 +16,7 @@
 #import "ANet.h"
 #import "EKURL.h"
 #import "BNetData.h"
+#import "UIImageView+NSString.h"
 
 
 /**
