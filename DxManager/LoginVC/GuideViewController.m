@@ -27,7 +27,6 @@
 }
 - (void)addScrollView{
     _scrollView= [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    _scrollView.layer.borderWidth = 1;
     _scrollView.contentSize = CGSizeMake(self.screen_W*3, self.view.h);
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
@@ -42,7 +41,7 @@
     for (int i =0; i<3; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.screen_W*i, 0, _scrollView.bounds.size.width, _scrollView.bounds.size.height)];
         imageView.userInteractionEnabled = YES;
-        imageView.backgroundColor = [SavaData randomColor];
+        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"vi_yd_%d",i+1]];
         if (i==2) {
             [imageView addSubview:[self buttonAccessRootViewPage]];
         }
@@ -57,22 +56,21 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
 }
-- (UIButton *)buttonAccessRootViewPage
-{
+- (UIButton *)buttonAccessRootViewPage{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(80, self.self.screen_H-100, self.screen_W-160, 40);
+    button.frame = CGRectMake(80, self.screen_H-100, self.screen_W-160, 40);
     [button setTitle:@"进入" forState:UIControlStateNormal];
-    button.layer.borderWidth = 1;
-    button.layer.borderColor = [UIColor whiteColor].CGColor;
+    [button setTitleColor:[UIColor whiteColor] forState:0];
+    button.backgroundColor = [UIColor colorBlue];
+    button.layer.cornerRadius = 3;
+    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
     [button addTarget:self action:@selector(accessRootViewAction) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     int page = scrollView.contentOffset.x / self.screen_W;
     _pageControl.currentPage = page;
-    
 }
 
 - (void)accessRootViewAction

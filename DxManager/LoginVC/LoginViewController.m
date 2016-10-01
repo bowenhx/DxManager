@@ -81,7 +81,7 @@
         if (model.status == 0) {
             //请求成功
             NSDictionary *info = model.data;
-            [[SavaData shareInstance] savaDictionary:info keyString:User_File];
+            [SavaData writeDicToFile:info FileName:User_File];
             
             //跳转登陆页面
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -148,7 +148,7 @@
         [_passwordTextField resignFirstResponder];
     }
     
-     [self changeViewSize];
+    [self changeViewSize];
 }
 
 

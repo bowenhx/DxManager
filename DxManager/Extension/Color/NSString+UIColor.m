@@ -92,7 +92,7 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSString *dateString = [dateFormat stringFromDate:date];
-    //    [ViewController getSystemDateAndTime];// 得到系统时间
+    //[ViewController getSystemDateAndTime];// 得到系统时间
     return dateString;// 返回的字符串就是 2015-10-20 19:21 时间格式值
 }
 @end

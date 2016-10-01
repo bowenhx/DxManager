@@ -15,7 +15,7 @@
     [super awakeFromNib];
     // Initialization code
     self.headImg.layer.borderWidth = 1;
-    self.headImg.layer.cornerRadius = 35;
+//    self.headImg.layer.cornerRadius = 35;
     
     self.labLineBg.backgroundColor = [UIColor colorGray];
     self.labCheck.textColor = @"ff0000".color;
@@ -35,13 +35,19 @@
     [self.headImg img_setImageWithURL:info[@"img_url"] placeholderImage:nil];
     
     //用户
-    self.labName.text = info[@"user_name"];
+    self.labName.text = info[@"fields"][@"author"];
     
     //时间
     self.labTime.text = [NSString getDateStringWithString:info[@"add_time"]];
    
+    //班级
+    self.labClass.text = info[@"fields"][@"source"];
+    
     //0表示已审核，其他都是未审核
     self.labCheck.text = [info[@"status"] integerValue] ? @"未审核" : @"已审核";
+    
+    //描述
+    self.labDescription.text = info[@"zhaiyao"];
     
     
     
