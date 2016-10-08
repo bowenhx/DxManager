@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIColor+app.h"
 #import "UIView+Ex.h"
+#import "AppDefine.h"
 
 @interface BaseViewController : UIViewController
 

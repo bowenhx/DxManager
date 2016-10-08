@@ -46,6 +46,8 @@
     btn.layer.cornerRadius = 5;
     [[SavaData shareInstance] savaDataInteger:1 KeyString:@"finishGuide"];
    
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -68,6 +70,11 @@
         [self.view showHUDTitleView:@"密码不能为空" image:nil];
         return;
     }
+    
+    /**
+     登陆接口地址
+     http://dx.sitemn.com/Ser/Managers.ashx?action=doLogin&username=manager&password=admin888
+     */
     
     [self.view showHUDActivityView:@"正在登錄..." shade:YES];
 //    

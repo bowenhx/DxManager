@@ -9,7 +9,7 @@
 #import "UIImageView+NSString.h"
 #import "UIImageView+WebCache.h"
 //图片 根地址
-#define BASE_IMG_URL  @"http://dx.sitemn.com/upload/201609/29/201609291440212547.png"
+#define BASE_IMG_URL  @"http://dx.sitemn.com"
 
 @implementation UIImageView (Image_URL)
 

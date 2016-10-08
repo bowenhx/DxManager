@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		924247021DA8DF1800AC2133 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924247001DA8DF1800AC2133 /* TeacherViewController.m */; };
+		924247031DA8DF1800AC2133 /* TeacherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924247011DA8DF1800AC2133 /* TeacherViewController.xib */; };
+		924247071DA8DFAE00AC2133 /* TeacherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */; };
+		924247081DA8DFAE00AC2133 /* TeacherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */; };
 		92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D551D7D10AA00DD509C /* BaseViewController.m */; };
 		92627D5B1D7D10AA00DD509C /* BNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D571D7D10AA00DD509C /* BNavigationController.m */; };
 		92627D5C1D7D10AA00DD509C /* BTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D591D7D10AA00DD509C /* BTabBarController.m */; };
@@ -75,6 +79,12 @@
 
 /* Begin PBXFileReference section */
 		4334DBE38CEA3D41125B098B /* libPods-DxManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DxManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		924246FF1DA8DF1800AC2133 /* TeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherViewController.h; sourceTree = "<group>"; };
+		924247001DA8DF1800AC2133 /* TeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
+		924247011DA8DF1800AC2133 /* TeacherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherViewController.xib; sourceTree = "<group>"; };
+		924247041DA8DFAE00AC2133 /* TeacherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherTableViewCell.h; sourceTree = "<group>"; };
+		924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherTableViewCell.m; sourceTree = "<group>"; };
+		924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherTableViewCell.xib; sourceTree = "<group>"; };
 		92627D541D7D10AA00DD509C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		92627D551D7D10AA00DD509C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		92627D561D7D10AA00DD509C /* BNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNavigationController.h; sourceTree = "<group>"; };
@@ -413,6 +423,12 @@
 			children = (
 				92627DD91D7D1A0200DD509C /* DirectorViewController.h */,
 				92627DDA1D7D1A0200DD509C /* DirectorViewController.m */,
+				924246FF1DA8DF1800AC2133 /* TeacherViewController.h */,
+				924247001DA8DF1800AC2133 /* TeacherViewController.m */,
+				924247011DA8DF1800AC2133 /* TeacherViewController.xib */,
+				924247041DA8DFAE00AC2133 /* TeacherTableViewCell.h */,
+				924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */,
+				924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */,
 			);
 			path = DirectoriesVC;
 			sourceTree = "<group>";
@@ -607,10 +623,12 @@
 				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
 				B5BECE5A1D9F9A8A00B30DA7 /* TrendsTableViewCell.xib in Resources */,
 				92627DF11D7D5AA400DD509C /* ForgetPwViewController.xib in Resources */,
+				924247031DA8DF1800AC2133 /* TeacherViewController.xib in Resources */,
 				92627DEC1D7D41DC00DD509C /* Default@3x.png in Resources */,
 				B5BECEA81D9FBAE500B30DA7 /* CheckManageViewController.xib in Resources */,
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
 				92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */,
+				924247081DA8DFAE00AC2133 /* TeacherTableViewCell.xib in Resources */,
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
 				B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */,
 				B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */,
@@ -711,9 +729,11 @@
 				B5BECE911D9FAE4800B30DA7 /* SDWebImageManager+MJ.m in Sources */,
 				92627DF01D7D5AA400DD509C /* ForgetPwViewController.m in Sources */,
 				B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */,
+				924247021DA8DF1800AC2133 /* TeacherViewController.m in Sources */,
 				B5BECE591D9F9A8A00B30DA7 /* TrendsTableViewCell.m in Sources */,
 				92627DCB1D7D154D00DD509C /* UIButton+EXCell.m in Sources */,
 				92627DCC1D7D154D00DD509C /* UIImage+UIImageExt.m in Sources */,
+				924247071DA8DFAE00AC2133 /* TeacherTableViewCell.m in Sources */,
 				B5BECE891D9FAE4800B30DA7 /* MKAnnotationView+WebCache.m in Sources */,
 				B5BECE561D9F9A8A00B30DA7 /* CustomItemView.m in Sources */,
 				B5BECE941D9FAE4800B30DA7 /* UIButton+WebCache.m in Sources */,
