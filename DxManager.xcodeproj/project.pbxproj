@@ -11,6 +11,10 @@
 		924247031DA8DF1800AC2133 /* TeacherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924247011DA8DF1800AC2133 /* TeacherViewController.xib */; };
 		924247071DA8DFAE00AC2133 /* TeacherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */; };
 		924247081DA8DFAE00AC2133 /* TeacherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */; };
+		9254858F1DA9EC2500C3CE23 /* GenearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9254858D1DA9EC2500C3CE23 /* GenearchViewController.m */; };
+		925485901DA9EC2500C3CE23 /* GenearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9254858E1DA9EC2500C3CE23 /* GenearchViewController.xib */; };
+		925485941DAA182A00C3CE23 /* GenearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 925485921DAA182A00C3CE23 /* GenearchTableViewCell.m */; };
+		925485951DAA182A00C3CE23 /* GenearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925485931DAA182A00C3CE23 /* GenearchTableViewCell.xib */; };
 		92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D551D7D10AA00DD509C /* BaseViewController.m */; };
 		92627D5B1D7D10AA00DD509C /* BNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D571D7D10AA00DD509C /* BNavigationController.m */; };
 		92627D5C1D7D10AA00DD509C /* BTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627D591D7D10AA00DD509C /* BTabBarController.m */; };
@@ -85,6 +89,12 @@
 		924247041DA8DFAE00AC2133 /* TeacherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherTableViewCell.h; sourceTree = "<group>"; };
 		924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherTableViewCell.m; sourceTree = "<group>"; };
 		924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherTableViewCell.xib; sourceTree = "<group>"; };
+		9254858C1DA9EC2400C3CE23 /* GenearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenearchViewController.h; sourceTree = "<group>"; };
+		9254858D1DA9EC2500C3CE23 /* GenearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenearchViewController.m; sourceTree = "<group>"; };
+		9254858E1DA9EC2500C3CE23 /* GenearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenearchViewController.xib; sourceTree = "<group>"; };
+		925485911DAA182A00C3CE23 /* GenearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenearchTableViewCell.h; sourceTree = "<group>"; };
+		925485921DAA182A00C3CE23 /* GenearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenearchTableViewCell.m; sourceTree = "<group>"; };
+		925485931DAA182A00C3CE23 /* GenearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenearchTableViewCell.xib; sourceTree = "<group>"; };
 		92627D541D7D10AA00DD509C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		92627D551D7D10AA00DD509C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		92627D561D7D10AA00DD509C /* BNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNavigationController.h; sourceTree = "<group>"; };
@@ -426,9 +436,15 @@
 				924246FF1DA8DF1800AC2133 /* TeacherViewController.h */,
 				924247001DA8DF1800AC2133 /* TeacherViewController.m */,
 				924247011DA8DF1800AC2133 /* TeacherViewController.xib */,
+				9254858C1DA9EC2400C3CE23 /* GenearchViewController.h */,
+				9254858D1DA9EC2500C3CE23 /* GenearchViewController.m */,
+				9254858E1DA9EC2500C3CE23 /* GenearchViewController.xib */,
 				924247041DA8DFAE00AC2133 /* TeacherTableViewCell.h */,
 				924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */,
 				924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */,
+				925485911DAA182A00C3CE23 /* GenearchTableViewCell.h */,
+				925485921DAA182A00C3CE23 /* GenearchTableViewCell.m */,
+				925485931DAA182A00C3CE23 /* GenearchTableViewCell.xib */,
 			);
 			path = DirectoriesVC;
 			sourceTree = "<group>";
@@ -628,7 +644,9 @@
 				B5BECEA81D9FBAE500B30DA7 /* CheckManageViewController.xib in Resources */,
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
 				92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */,
+				925485901DA9EC2500C3CE23 /* GenearchViewController.xib in Resources */,
 				924247081DA8DFAE00AC2133 /* TeacherTableViewCell.xib in Resources */,
+				925485951DAA182A00C3CE23 /* GenearchTableViewCell.xib in Resources */,
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
 				B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */,
 				B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */,
@@ -702,6 +720,7 @@
 				B5BECE901D9FAE4800B30DA7 /* SDWebImageDownloaderOperation.m in Sources */,
 				92627DD11D7D154D00DD509C /* SavaData.m in Sources */,
 				B5BECE961D9FAE4800B30DA7 /* UIImage+MultiFormat.m in Sources */,
+				925485941DAA182A00C3CE23 /* GenearchTableViewCell.m in Sources */,
 				92627DCF1D7D154D00DD509C /* BNetData.m in Sources */,
 				B5BECEA91D9FBAE500B30DA7 /* CheckTableViewCell.m in Sources */,
 				B5B76D781D7C1AA000B06414 /* LoginViewController.m in Sources */,
@@ -711,6 +730,7 @@
 				B5BECE951D9FAE4800B30DA7 /* UIImage+GIF.m in Sources */,
 				92627DCE1D7D154D00DD509C /* ANet.m in Sources */,
 				92627DC51D7D154D00DD509C /* UIColor+app.m in Sources */,
+				9254858F1DA9EC2500C3CE23 /* GenearchViewController.m in Sources */,
 				B5BECE8D1D9FAE4800B30DA7 /* SDWebImageCompat.m in Sources */,
 				92627DC61D7D154D00DD509C /* NSObject+BeeNotification.m in Sources */,
 				B5BECE981D9FAE4800B30DA7 /* UIImageView+HighlightedWebCache.m in Sources */,

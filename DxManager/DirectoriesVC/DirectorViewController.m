@@ -11,6 +11,7 @@
 #import "DirectorViewController.h"
 #import "ItemViewBtn.h"
 #import "TeacherViewController.h"
+#import "GenearchViewController.h"
 
 @interface DirectorViewController ()
 
@@ -51,7 +52,9 @@
 }
 - (void)didSelectIndex:(UIButton *)btn{
     if (btn.tag == 0) {
-        
+        //家长通讯录
+        GenearchViewController *genearchVC = [[GenearchViewController alloc] initWithNibName:@"GenearchViewController" bundle:nil];
+        [self.navigationController pushViewController:genearchVC animated:YES];
     }else{
         //园所通讯录
         TeacherViewController *teacherVC = [[TeacherViewController alloc] initWithNibName:@"TeacherViewController" bundle:nil];
