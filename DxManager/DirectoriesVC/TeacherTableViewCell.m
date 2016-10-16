@@ -25,8 +25,8 @@
 - (void)setInfo:(NSDictionary *)info{
     [self.icon img_setImageWithURL:info[@"avatar"] placeholderImage:nil];
     
-    self.name.text = info[@"user_name"];
-    self.job.text = info[@"nick_name"];
+    self.name.text = info[@"teachername"];
+    self.job.text = info[@"teachertel"];
    
 }
 

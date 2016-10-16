@@ -24,7 +24,7 @@
 
 #define TIMEOUT 40                      //超时时间
 #define KEY_BOUNDARY @"------kingdombkapp"    //分隔符
-#define UPLOAD_IMAGE @"Filedata"        //标示上传类型为图片
+#define UPLOAD_IMAGE @"file"        //标示上传类型为图片
 #define UPLOAD_TYPE  @"myimage.jpg"     //标示上传文件格式
 
 

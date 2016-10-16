@@ -9,7 +9,7 @@
 #import "TeacherViewController.h"
 #import "TeacherTableViewCell.h"
 
-@interface TeacherViewController ()
+@interface TeacherViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     __weak IBOutlet UITableView *_tableView;
     
@@ -58,17 +58,41 @@
 }
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return self.dataSource.count;
+}
+- (NSArray *)itemsArr:(NSInteger)section{
+    NSArray *items = self.dataSource[section][@"teachers"];
+    if ([items isKindOfClass:[NSArray class]] && items.count) {
+        return items;
+    }else{
+        return @[];
+    }
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSource.count;
+    return [[self itemsArr:section] count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TeacherTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"teacherCell" forIndexPath:indexPath];
-    cell.info = self.dataSource[indexPath.row];
+    if ([[self itemsArr:indexPath.section] count]) {
+        cell.info = [self itemsArr:indexPath.section][indexPath.row];
+    }
     return cell;
 }
-
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, 35)];
+    //headView.backgroundColor = [UIColor colorCellLineBg];
+    UILabel *labTitle = [[UILabel alloc] initWithFrame:CGRectMake(8, 5, 60, 25)];
+    labTitle.backgroundColor = [UIColor colorAppBg];
+    labTitle.textColor = [UIColor whiteColor];
+    labTitle.font = [UIFont systemFontOfSize:14];
+    labTitle.textAlignment = NSTextAlignmentCenter;
+    labTitle.layer.cornerRadius = 5;
+    labTitle.text = self.dataSource[section][@"grade"];
+    [headView addSubview:labTitle];
+    
+    
+    return headView;
+}
 
 /*
 #pragma mark - Navigation

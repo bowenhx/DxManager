@@ -11,6 +11,7 @@
 #import "WorkViewController.h"
 #import "ItemViewBtn.h"
 #import "CheckManageViewController.h"
+#import "AppDefine.h"
 
 @interface WorkViewController ()
 
@@ -83,7 +84,12 @@
             break;
         case 2:
         {
-            
+            UIImage *image = [UIImage imageNamed:@"det_vi_dl"];
+            [[ANet share] upload:@"http://dx.sitemn.com/ser/Managers.ashx" params:@{@"action":@"saveFile"} image:image precent:^(float precent) {
+                
+            } completion:^(BNetData *model, NSString *netErr) {
+                
+            }];
         }
             break;
         case 3:

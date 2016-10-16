@@ -31,6 +31,20 @@
     
     UINib *nibCell = [UINib nibWithNibName:@"GenearchTableViewCell" bundle:nil];
     [_tableView registerNib:nibCell forCellReuseIdentifier:@"genearchCell"];
+    
+    [_tableView setTableHeaderView:[self searchView]];
+    
+}
+- (UIView *)searchView{
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, 40)];
+    headView.backgroundColor = [UIColor colorCellLineBg];
+    UITextField *filed = [[UITextField alloc] initWithFrame:CGRectMake(30, 5, self.screen_W-60, 30)];
+    filed.borderStyle = UITextBorderStyleRoundedRect;
+    filed.keyboardType = UIKeyboardTypeWebSearch;
+    filed.placeholder = @"班级";
+    [headView addSubview:filed];
+    
+    return headView;
 }
 - (void)loadNewData{
     [self.view showHUDActivityView:@"正在加载" shade:NO];
@@ -55,29 +69,44 @@
 }
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSource.count;
+}
+- (NSArray *)itemsArr:(NSInteger)section{
+    NSArray *items = self.dataSource[section][@"childrens"];
+    if ([items isKindOfClass:[NSArray class]] && items.count) {
+        return items;
+    }else{
+        return @[];
+    }
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[self itemsArr:section] count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     GenearchTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"genearchCell" forIndexPath:indexPath];
-    cell.info = self.dataSource[indexPath.row];
+    if ([[self itemsArr:indexPath.section] count]) {
+        cell.info = [self itemsArr:indexPath.section][indexPath.row];
+    }
     return cell;
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, 40)];
-    headView.backgroundColor = [UIColor colorCellLineBg];
-    UITextField *filed = [[UITextField alloc] initWithFrame:CGRectMake(30, 5, self.screen_W-60, 30)];
-    filed.borderStyle = UITextBorderStyleRoundedRect;
-    filed.keyboardType = UIKeyboardTypeWebSearch;
-    filed.placeholder = @"班级";
-    [headView addSubview:filed];
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, 35)];
+    //headView.backgroundColor = [UIColor colorCellLineBg];
+    UILabel *labTitle = [[UILabel alloc] initWithFrame:CGRectMake(8, 5, 60, 25)];
+    labTitle.backgroundColor = [UIColor colorAppBg];
+    labTitle.textColor = [UIColor whiteColor];
+    labTitle.font = [UIFont systemFontOfSize:14];
+    labTitle.textAlignment = NSTextAlignmentCenter;
+    labTitle.layer.cornerRadius = 5;
+    labTitle.text = self.dataSource[section][@"grade"];
+    [headView addSubview:labTitle];
+    
     
     return headView;
 }
+
+
 /*
 #pragma mark - Navigation
 
