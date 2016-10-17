@@ -8,21 +8,26 @@
 
 #import "TrendsTableViewCell.h"
 #import "AppDefine.h"
+#import "ItemVIewsHeight.h"
 
 @implementation TrendsTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.headImg.layer.borderWidth = 1;
-    self.headImg.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    self.headImg.layer.borderWidth = 1;
+//    self.headImg.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.headImg.layer.cornerRadius = 5;
 //    self.headImg.layer.cornerRadius = 35;
+    
+//    self.imagesView.layer.borderWidth = 1;
     
     self.labLineBg.backgroundColor = [UIColor colorGray];
     self.labCheck.textColor = @"ff0000".color;
     self.labCheck.layer.borderWidth = 1;
     self.labCheck.layer.borderColor = @"ff0000".color.CGColor;
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -48,11 +53,17 @@
     //0表示已审核，其他都是未审核
     self.labCheck.text = [info[@"status"] integerValue] ? @"未审核" : @"已审核";
     
+    //title
+    self.labTitle.text = info[@"title"];
+    
     //描述
     self.labDescription.text = info[@"zhaiyao"];
     
+    NSArray *items = info[@"albums"];
+    self.imagesView.imgItems = items;
     
-    
+    //计算图片height
+    self.imagesHeight.constant = [ItemVIewsHeight loadItmesCounts:items.count];
 }
 
 @end

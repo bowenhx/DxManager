@@ -9,10 +9,11 @@
 #import "GenearchViewController.h"
 #import "GenearchTableViewCell.h"
 
-@interface GenearchViewController ()
+@interface GenearchViewController ()<UITextFieldDelegate>
 {
     __weak IBOutlet UITableView *_tableView;
     
+    UITextField                 *_searchFiled;//要搜索的关键字
 }
 @end
 
@@ -26,8 +27,8 @@
 
 - (void)loadNewView{
 
-    _tableView.layer.borderWidth = 1;
-    _tableView.layer.borderColor = [UIColor redColor].CGColor;
+//    _tableView.layer.borderWidth = 1;
+//    _tableView.layer.borderColor = [UIColor redColor].CGColor;
     
     UINib *nibCell = [UINib nibWithNibName:@"GenearchTableViewCell" bundle:nil];
     [_tableView registerNib:nibCell forCellReuseIdentifier:@"genearchCell"];
@@ -38,12 +39,21 @@
 - (UIView *)searchView{
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, 40)];
     headView.backgroundColor = [UIColor colorCellLineBg];
-    UITextField *filed = [[UITextField alloc] initWithFrame:CGRectMake(30, 5, self.screen_W-60, 30)];
-    filed.borderStyle = UITextBorderStyleRoundedRect;
-    filed.keyboardType = UIKeyboardTypeWebSearch;
-    filed.placeholder = @"班级";
-    [headView addSubview:filed];
-    
+    _searchFiled = [[UITextField alloc] initWithFrame:CGRectMake(30, 5, self.screen_W-120, 30)];
+    _searchFiled.delegate = self;
+    _searchFiled.borderStyle = UITextBorderStyleRoundedRect;
+    _searchFiled.returnKeyType = UIReturnKeySearch;
+    _searchFiled.placeholder = @"班级";
+    [headView addSubview:_searchFiled];
+
+    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    searchBtn.frame = CGRectMake(self.screen_W-65, 5, 50, 30);
+    [searchBtn setTitle:@"搜索" forState:0];
+    searchBtn.layer.cornerRadius = 3;
+    searchBtn.backgroundColor = [UIColor colorAppBg];
+    [searchBtn setTitleColor:[UIColor whiteColor] forState:0];
+    [headView addSubview:searchBtn];
+    [searchBtn addTarget:self action:@selector(beginSearchAction) forControlEvents:UIControlEventTouchUpInside];
     return headView;
 }
 - (void)loadNewData{
@@ -98,15 +108,36 @@
     labTitle.textColor = [UIColor whiteColor];
     labTitle.font = [UIFont systemFontOfSize:14];
     labTitle.textAlignment = NSTextAlignmentCenter;
-    labTitle.layer.cornerRadius = 5;
+    labTitle.layer.cornerRadius = 3;
+    labTitle.clipsToBounds = YES;
     labTitle.text = self.dataSource[section][@"grade"];
     [headView addSubview:labTitle];
-    
     
     return headView;
 }
 
+- (void)beginSearchAction{
+    if ([_searchFiled isFirstResponder]) {
+        [_searchFiled resignFirstResponder];
+    }
+    //搜索
+    NSLog(@"search key = %@",_searchFiled.text);
+   
+    [self.view showHUDActivityView:@"正在搜索..." shade:YES];
+    //模拟登陆，后面需要与接口对接
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view removeHUDActivity];
+        [self.view showHUDTitleView:@"没有数据" image:nil];
 
+    });
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    _searchFiled = textField;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 /*
 #pragma mark - Navigation
 

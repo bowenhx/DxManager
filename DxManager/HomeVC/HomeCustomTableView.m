@@ -9,6 +9,8 @@
 #import "HomeCustomTableView.h"
 #import "TrendsTableViewCell.h"
 #import "AppDefine.h"
+#import "ItemVIewsHeight.h"
+#import "DetailViewController.h"
 
 @interface HomeCustomTableView ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -61,6 +63,11 @@
             //请求成功
             [self.dataSource setArray:model.data];
             [_tableView reloadData];
+            
+            if (self.dataSource.count == 0) {
+                [self showHUDTitleView:@"此分类暂无数据" image:nil];
+            }
+            
         }else{
             [self showHUDTitleView:model.message image:nil];
         }
@@ -87,12 +94,29 @@
     }
     
     cell.info = self.dataSource[indexPath.row];
-    
+    cell.btnCheck.tag = indexPath.row;
+    [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+- (void)didDetailAction:(UIButton *)btn{
+    DetailViewController *detailVC = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    detailVC.dataSource = self.dataSource;
+    [self.homeVC.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)itemsImages:(NSDictionary *)item{
+    NSArray *items = item[@"albums"];
+    return [ItemVIewsHeight loadItmesCounts:items.count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 175;
+    CGFloat height = [self itemsImages:self.dataSource[indexPath.row]];
+    return 172 + height;
 }
 
 

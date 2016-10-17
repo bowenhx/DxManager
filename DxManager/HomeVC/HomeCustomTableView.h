@@ -14,7 +14,10 @@
 
 @property (nonatomic , strong) NSMutableArray *dataSource;
 
+@property (nonatomic , strong) UIViewController *homeVC;
 
 - (void)loadNewData:(NSUInteger)index;
+
+
 
 @end

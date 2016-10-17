@@ -26,8 +26,8 @@
 }
 
 - (void)loadNewView{
-    _tableView.layer.borderWidth = 1;
-    _tableView.layer.borderColor = [UIColor redColor].CGColor;
+//    _tableView.layer.borderWidth = 1;
+//    _tableView.layer.borderColor = [UIColor redColor].CGColor;
     
     UINib *nibCell = [UINib nibWithNibName:@"TeacherTableViewCell" bundle:nil];
     [_tableView registerNib:nibCell forCellReuseIdentifier:@"teacherCell"];
@@ -75,6 +75,7 @@
     TeacherTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"teacherCell" forIndexPath:indexPath];
     if ([[self itemsArr:indexPath.section] count]) {
         cell.info = [self itemsArr:indexPath.section][indexPath.row];
+
     }
     return cell;
 }
@@ -83,13 +84,13 @@
     //headView.backgroundColor = [UIColor colorCellLineBg];
     UILabel *labTitle = [[UILabel alloc] initWithFrame:CGRectMake(8, 5, 60, 25)];
     labTitle.backgroundColor = [UIColor colorAppBg];
+    labTitle.layer.cornerRadius = 3;
+    labTitle.clipsToBounds = YES;
     labTitle.textColor = [UIColor whiteColor];
     labTitle.font = [UIFont systemFontOfSize:14];
     labTitle.textAlignment = NSTextAlignmentCenter;
-    labTitle.layer.cornerRadius = 5;
     labTitle.text = self.dataSource[section][@"grade"];
     [headView addSubview:labTitle];
-    
     
     return headView;
 }

@@ -12,6 +12,7 @@
 #import "ItemViewBtn.h"
 #import "CheckManageViewController.h"
 #import "AppDefine.h"
+#import "ClassesViewController.h"
 
 @interface WorkViewController ()
 
@@ -49,9 +50,6 @@
         float addBtnY = 84 + (SPACE + btn_wh) * (i/3);
         
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
-        iView.layer.borderWidth = 1;
-        iView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        iView.layer.cornerRadius = 6;
         iView.itemImgs = images[i][0];
         iView.titles = images[i][1];
         [self.view addSubview:iView];
@@ -72,58 +70,62 @@
     
     switch (btn.tag) {
         case 0:
-        {
+        {//通讯录
             
         }
             break;
         case 1:
-        {
+        {//考勤管理
             CheckManageViewController *checkVC = [[CheckManageViewController alloc] initWithNibName:@"CheckManageViewController" bundle:nil];
             [self.navigationController pushViewController:checkVC animated:YES];
         }
             break;
         case 2:
-        {
-            UIImage *image = [UIImage imageNamed:@"det_vi_dl"];
-            [[ANet share] upload:@"http://dx.sitemn.com/ser/Managers.ashx" params:@{@"action":@"saveFile"} image:image precent:^(float precent) {
-                
-            } completion:^(BNetData *model, NSString *netErr) {
-                
-            }];
+        {//班级圈管理
+            ClassesViewController *classesVC = [[ClassesViewController alloc] initWithNibName:@"ClassesViewController" bundle:nil];
+            classesVC.navigationItem.title = @"班级圈管理";
+            classesVC.index = 52;
+            [self.navigationController pushViewController:classesVC animated:YES];
         }
             break;
         case 3:
-        {
+        {//大象FM
             
         }
             break;
         case 4:
-        {
+        {//视频监控管理
             
         }
             break;
         case 5:
-        {
+        {//用药条管理
             
         }
             break;
         case 6:
-        {
-            
+        {//教学计划
+            ClassesViewController *classesVC = [[ClassesViewController alloc] initWithNibName:@"ClassesViewController" bundle:nil];
+            classesVC.index = 64;
+            classesVC.navigationItem.title = @"教学计划";
+            [self.navigationController pushViewController:classesVC animated:YES];
         }
             break;
         case 7:
-        {
-            
+        {//园所通知
+            ClassesViewController *classesVC = [[ClassesViewController alloc] initWithNibName:@"ClassesViewController" bundle:nil];
+            classesVC.index = 52;
+            classesVC.navigationItem.title = @"园所通知";
+            [self.navigationController pushViewController:classesVC animated:YES];
         }
             break;
         case 8:
-        {
+        {//互动投诉
             
         }
             break;
         case 9:
-        {
+        {//调查问卷
             
         }
             break;

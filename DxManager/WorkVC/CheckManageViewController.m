@@ -38,16 +38,16 @@
 }
 
 - (void)loadNewView{
-    _tableVeiw.layer.borderWidth = 1;
-    _tableVeiw.layer.borderColor = [UIColor redColor].CGColor;
+//    _tableVeiw.layer.borderWidth = 1;
+//    _tableVeiw.layer.borderColor = [UIColor redColor].CGColor;
     
     
     _roundBgView.layer.cornerRadius = 75;
     
     [_headView setW:self.screen_W];
     
-    _headView.layer.borderWidth = 2;
-    _headView.layer.borderColor = [UIColor greenColor].CGColor;
+//    _headView.layer.borderWidth = 2;
+//    _headView.layer.borderColor = [UIColor greenColor].CGColor;
     _tableVeiw.tableHeaderView = _headView;
 }
 

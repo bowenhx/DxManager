@@ -39,9 +39,6 @@
         float addBtnY = 84 + (SPACE + btn_wh) * (i/3);
         
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
-        iView.layer.borderWidth = 1;
-        iView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        iView.layer.cornerRadius = 6;
         iView.itemImgs = images[i][0];
         iView.titles = images[i][1];
         [self.view addSubview:iView];

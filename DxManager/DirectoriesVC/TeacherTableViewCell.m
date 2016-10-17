@@ -23,11 +23,16 @@
 }
 
 - (void)setInfo:(NSDictionary *)info{
+    _info = info;
     [self.icon img_setImageWithURL:info[@"avatar"] placeholderImage:nil];
     
     self.name.text = info[@"teachername"];
     self.job.text = info[@"teachertel"];
    
+}
+- (IBAction)playTelPhoneAction:(UIButton *)sender {
+    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",self.info[@"teachertel"]]];
+    [[UIApplication sharedApplication] openURL:phoneURL];
 }
 
 @end

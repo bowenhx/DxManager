@@ -33,6 +33,7 @@
     NSMutableArray *views = [[NSMutableArray alloc] initWithCapacity:4];
     for (int i =0; i<5; i++) {
         HomeCustomTableView *view = [[HomeCustomTableView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, self.screen_H-49-64)];
+        view.homeVC = self;
         [views addObject:view];
     }
     

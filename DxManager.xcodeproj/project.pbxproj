@@ -39,6 +39,16 @@
 		92627DEC1D7D41DC00DD509C /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92627DE91D7D41DC00DD509C /* Default@3x.png */; };
 		92627DF01D7D5AA400DD509C /* ForgetPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92627DEE1D7D5AA400DD509C /* ForgetPwViewController.m */; };
 		92627DF11D7D5AA400DD509C /* ForgetPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92627DEF1D7D5AA400DD509C /* ForgetPwViewController.xib */; };
+		929E7FCF1DB4AE5E00F1A10B /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FCE1DB4AE5E00F1A10B /* CustomImageView.m */; };
+		929E7FD21DB4B90300F1A10B /* ItemVIewsHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FD11DB4B90300F1A10B /* ItemVIewsHeight.m */; };
+		929E7FD61DB4BEDF00F1A10B /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FD41DB4BEDF00F1A10B /* ClassesViewController.m */; };
+		929E7FD71DB4BEDF00F1A10B /* ClassesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FD51DB4BEDF00F1A10B /* ClassesViewController.xib */; };
+		929E7FDB1DB4C23D00F1A10B /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FD91DB4C23D00F1A10B /* FMViewController.m */; };
+		929E7FDC1DB4C23D00F1A10B /* FMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FDA1DB4C23D00F1A10B /* FMViewController.xib */; };
+		929E7FE01DB4C62D00F1A10B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FDE1DB4C62D00F1A10B /* DetailViewController.m */; };
+		929E7FE11DB4C62D00F1A10B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FDF1DB4C62D00F1A10B /* DetailViewController.xib */; };
+		929E7FE51DB4C8C500F1A10B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */; };
+		929E7FE61DB4C8C500F1A10B /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */; };
 		B5B76D541D7BFA2100B06414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D531D7BFA2100B06414 /* main.m */; };
 		B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D561D7BFA2100B06414 /* AppDelegate.m */; };
 		B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D591D7BFA2100B06414 /* ViewController.m */; };
@@ -141,6 +151,22 @@
 		92627DED1D7D5AA400DD509C /* ForgetPwViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwViewController.h; sourceTree = "<group>"; };
 		92627DEE1D7D5AA400DD509C /* ForgetPwViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwViewController.m; sourceTree = "<group>"; };
 		92627DEF1D7D5AA400DD509C /* ForgetPwViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwViewController.xib; sourceTree = "<group>"; };
+		929E7FCD1DB4AE5E00F1A10B /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
+		929E7FCE1DB4AE5E00F1A10B /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
+		929E7FD01DB4B90300F1A10B /* ItemVIewsHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVIewsHeight.h; sourceTree = "<group>"; };
+		929E7FD11DB4B90300F1A10B /* ItemVIewsHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVIewsHeight.m; sourceTree = "<group>"; };
+		929E7FD31DB4BEDF00F1A10B /* ClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
+		929E7FD41DB4BEDF00F1A10B /* ClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassesViewController.m; sourceTree = "<group>"; };
+		929E7FD51DB4BEDF00F1A10B /* ClassesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassesViewController.xib; sourceTree = "<group>"; };
+		929E7FD81DB4C23D00F1A10B /* FMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
+		929E7FD91DB4C23D00F1A10B /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		929E7FDA1DB4C23D00F1A10B /* FMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMViewController.xib; sourceTree = "<group>"; };
+		929E7FDD1DB4C62D00F1A10B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		929E7FDE1DB4C62D00F1A10B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		929E7FDF1DB4C62D00F1A10B /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.release.xcconfig"; sourceTree = "<group>"; };
 		B5B76D4F1D7BFA2100B06414 /* DxManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -458,9 +484,19 @@
 				B5BECE501D9F9A8A00B30DA7 /* HomeCustomTableView.m */,
 				B5BECE511D9F9A8A00B30DA7 /* HomeViewController.h */,
 				B5BECE521D9F9A8A00B30DA7 /* HomeViewController.m */,
+				929E7FDD1DB4C62D00F1A10B /* DetailViewController.h */,
+				929E7FDE1DB4C62D00F1A10B /* DetailViewController.m */,
+				929E7FDF1DB4C62D00F1A10B /* DetailViewController.xib */,
 				B5BECE531D9F9A8A00B30DA7 /* TrendsTableViewCell.h */,
 				B5BECE541D9F9A8A00B30DA7 /* TrendsTableViewCell.m */,
 				B5BECE551D9F9A8A00B30DA7 /* TrendsTableViewCell.xib */,
+				929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */,
+				929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */,
+				929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */,
+				929E7FCD1DB4AE5E00F1A10B /* CustomImageView.h */,
+				929E7FCE1DB4AE5E00F1A10B /* CustomImageView.m */,
+				929E7FD01DB4B90300F1A10B /* ItemVIewsHeight.h */,
+				929E7FD11DB4B90300F1A10B /* ItemVIewsHeight.m */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -482,6 +518,12 @@
 				B5BECE9C1D9FBAE500B30DA7 /* CheckManageViewController.h */,
 				B5BECE9D1D9FBAE500B30DA7 /* CheckManageViewController.m */,
 				B5BECE9E1D9FBAE500B30DA7 /* CheckManageViewController.xib */,
+				929E7FD31DB4BEDF00F1A10B /* ClassesViewController.h */,
+				929E7FD41DB4BEDF00F1A10B /* ClassesViewController.m */,
+				929E7FD51DB4BEDF00F1A10B /* ClassesViewController.xib */,
+				929E7FD81DB4C23D00F1A10B /* FMViewController.h */,
+				929E7FD91DB4C23D00F1A10B /* FMViewController.m */,
+				929E7FDA1DB4C23D00F1A10B /* FMViewController.xib */,
 				B5BECE9F1D9FBAE500B30DA7 /* View */,
 			);
 			path = WorkVC;
@@ -610,6 +652,7 @@
 				TargetAttributes = {
 					B5B76D4E1D7BFA2100B06414 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RCNCA68CS6;
 					};
 				};
 			};
@@ -636,10 +679,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929E7FE11DB4C62D00F1A10B /* DetailViewController.xib in Resources */,
 				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
 				B5BECE5A1D9F9A8A00B30DA7 /* TrendsTableViewCell.xib in Resources */,
+				929E7FD71DB4BEDF00F1A10B /* ClassesViewController.xib in Resources */,
 				92627DF11D7D5AA400DD509C /* ForgetPwViewController.xib in Resources */,
 				924247031DA8DF1800AC2133 /* TeacherViewController.xib in Resources */,
+				929E7FE61DB4C8C500F1A10B /* DetailTableViewCell.xib in Resources */,
 				92627DEC1D7D41DC00DD509C /* Default@3x.png in Resources */,
 				B5BECEA81D9FBAE500B30DA7 /* CheckManageViewController.xib in Resources */,
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
@@ -650,6 +696,7 @@
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
 				B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */,
 				B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */,
+				929E7FDC1DB4C23D00F1A10B /* FMViewController.xib in Resources */,
 				92627DEB1D7D41DC00DD509C /* Default@2x.png in Resources */,
 				92627DEA1D7D41DC00DD509C /* Default-568h@2x.png in Resources */,
 			);
@@ -717,12 +764,16 @@
 				92627DDE1D7D1A1000DD509C /* MoreViewController.m in Sources */,
 				B5BECE571D9F9A8A00B30DA7 /* HomeCustomTableView.m in Sources */,
 				B5BECE9A1D9FAE4800B30DA7 /* UIImageView+WebCache.m in Sources */,
+				929E7FE51DB4C8C500F1A10B /* DetailTableViewCell.m in Sources */,
 				B5BECE901D9FAE4800B30DA7 /* SDWebImageDownloaderOperation.m in Sources */,
+				929E7FD21DB4B90300F1A10B /* ItemVIewsHeight.m in Sources */,
 				92627DD11D7D154D00DD509C /* SavaData.m in Sources */,
 				B5BECE961D9FAE4800B30DA7 /* UIImage+MultiFormat.m in Sources */,
 				925485941DAA182A00C3CE23 /* GenearchTableViewCell.m in Sources */,
 				92627DCF1D7D154D00DD509C /* BNetData.m in Sources */,
 				B5BECEA91D9FBAE500B30DA7 /* CheckTableViewCell.m in Sources */,
+				929E7FCF1DB4AE5E00F1A10B /* CustomImageView.m in Sources */,
+				929E7FDB1DB4C23D00F1A10B /* FMViewController.m in Sources */,
 				B5B76D781D7C1AA000B06414 /* LoginViewController.m in Sources */,
 				B5BECE8E1D9FAE4800B30DA7 /* SDWebImageDecoder.m in Sources */,
 				B5BECE8C1D9FAE4800B30DA7 /* SDImageCache.m in Sources */,
@@ -742,6 +793,7 @@
 				B5BECEAB1D9FBAE500B30DA7 /* ItemViewBtn.m in Sources */,
 				92627DCA1D7D154D00DD509C /* CustomBarButtonItem.m in Sources */,
 				92627DDB1D7D1A0300DD509C /* DirectorViewController.m in Sources */,
+				929E7FE01DB4C62D00F1A10B /* DetailViewController.m in Sources */,
 				92627DE51D7D406C00DD509C /* GuideViewController.m in Sources */,
 				B5BECEA71D9FBAE500B30DA7 /* CheckManageViewController.m in Sources */,
 				B5BECE9B1D9FAE4800B30DA7 /* UIView+WebCacheOperation.m in Sources */,
@@ -749,6 +801,7 @@
 				B5BECE911D9FAE4800B30DA7 /* SDWebImageManager+MJ.m in Sources */,
 				92627DF01D7D5AA400DD509C /* ForgetPwViewController.m in Sources */,
 				B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */,
+				929E7FD61DB4BEDF00F1A10B /* ClassesViewController.m in Sources */,
 				924247021DA8DF1800AC2133 /* TeacherViewController.m in Sources */,
 				B5BECE591D9F9A8A00B30DA7 /* TrendsTableViewCell.m in Sources */,
 				92627DCB1D7D154D00DD509C /* UIButton+EXCell.m in Sources */,
@@ -827,7 +880,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -866,7 +919,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -879,9 +932,10 @@
 			baseConfigurationReference = AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DxManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.person.DxManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -891,9 +945,10 @@
 			baseConfigurationReference = B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DxManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.person.DxManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

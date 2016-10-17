@@ -20,9 +20,15 @@
 
 - (void)setItemImgs:(NSString *)itemImgs{
     _itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _itemBtn.frame = CGRectMake(0, 0, self.w, self.h-30);
+    _itemBtn.frame = self.bounds;
     [_itemBtn setImage:[UIImage imageNamed:itemImgs] forState:0];
+    _itemBtn.imageEdgeInsets = UIEdgeInsetsMake(-15, 0, 15, 0);
+    _itemBtn.layer.borderWidth = 1;
+    _itemBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _itemBtn.layer.cornerRadius = 6;
+    
     [self addSubview:_itemBtn];
+
 }
 
 - (void)setTitles:(NSString *)titles{
