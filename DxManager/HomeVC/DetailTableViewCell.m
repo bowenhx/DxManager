@@ -14,7 +14,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.labVerify.textColor = @"ff0000".color;
+    self.labVerify.layer.borderWidth = 1;
+    self.labVerify.layer.borderColor = @"ff0000".color.CGColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -35,15 +37,23 @@
     //班级
     self.labClasses.text = info[@"fields"][@"source"];
     
-    //0表示已审核，其他都是未审核
-    self.labVerify.text = [info[@"status"] integerValue] ? @"未审核" : @"已审核";
+    //0已审核 1未审核 2审核不通过
+    NSInteger value = [info[@"status"] integerValue];
+    if (value == 0) {
+        self.labVerify.text = @"已审核";
+    }else if (value == 1){
+        self.labVerify.text = @"未审核";
+    }else if (value == 3){
+        self.labVerify.text = @"审核不通过";
+    }
+    
     
     //title
     self.labTitle.text = info[@"title"];
     
     //描述
     self.labDetial.text = info[@"zhaiyao"];
-    self.labDetial.layer.borderWidth = 1;
+    
     //计算图片height
     self.labDetailHeight.constant = [ItemVIewsHeight loadTextContents:info[@"zhaiyao"]];
 }

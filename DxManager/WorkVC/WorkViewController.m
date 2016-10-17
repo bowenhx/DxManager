@@ -13,6 +13,7 @@
 #import "CheckManageViewController.h"
 #import "AppDefine.h"
 #import "ClassesViewController.h"
+#import "FMViewController.h"
 
 @interface WorkViewController ()
 
@@ -90,7 +91,9 @@
             break;
         case 3:
         {//大象FM
+            FMViewController *fmVC = [[FMViewController alloc] initWithNibName:@"FMViewController" bundle:nil];
             
+            [self.navigationController pushViewController:fmVC animated:YES];
         }
             break;
         case 4:

@@ -50,8 +50,16 @@
     //班级
     self.labClass.text = info[@"fields"][@"source"];
     
-    //0表示已审核，其他都是未审核
-    self.labCheck.text = [info[@"status"] integerValue] ? @"未审核" : @"已审核";
+    //0已审核 1未审核 2审核不通过
+    NSInteger value = [info[@"status"] integerValue];
+    if (value == 0) {
+        self.labCheck.text = @"已审核";
+    }else if (value == 1){
+        self.labCheck.text = @"未审核";
+    }else if (value == 3){
+        self.labCheck.text = @"审核不通过";
+    }
+    
     
     //title
     self.labTitle.text = info[@"title"];

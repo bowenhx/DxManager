@@ -88,6 +88,11 @@
 		B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BECEA21D9FBAE500B30DA7 /* CheckTableViewCell.xib */; };
 		B5BECEAB1D9FBAE500B30DA7 /* ItemViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECEA41D9FBAE500B30DA7 /* ItemViewBtn.m */; };
 		B5BECEAC1D9FBAE500B30DA7 /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECEA61D9FBAE500B30DA7 /* WorkViewController.m */; };
+		B5DE3E711DB4FED600ABC0A0 /* FMVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DE3E6F1DB4FED600ABC0A0 /* FMVideoTableViewCell.m */; };
+		B5DE3E721DB4FED600ABC0A0 /* FMVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DE3E701DB4FED600ABC0A0 /* FMVideoTableViewCell.xib */; };
+		B5DE3E751DB5005900ABC0A0 /* VideoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DE3E741DB5005900ABC0A0 /* VideoItemView.m */; };
+		B5DE3E791DB5047000ABC0A0 /* FMAudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DE3E771DB5047000ABC0A0 /* FMAudioTableViewCell.m */; };
+		B5DE3E7A1DB5047000ABC0A0 /* FMAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DE3E781DB5047000ABC0A0 /* FMAudioTableViewCell.xib */; };
 		F9192936035667B22E570D7B /* libPods-DxManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4334DBE38CEA3D41125B098B /* libPods-DxManager.a */; };
 /* End PBXBuildFile section */
 
@@ -245,6 +250,14 @@
 		B5BECEA41D9FBAE500B30DA7 /* ItemViewBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewBtn.m; sourceTree = "<group>"; };
 		B5BECEA51D9FBAE500B30DA7 /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
 		B5BECEA61D9FBAE500B30DA7 /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
+		B5DE3E6E1DB4FED600ABC0A0 /* FMVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMVideoTableViewCell.h; sourceTree = "<group>"; };
+		B5DE3E6F1DB4FED600ABC0A0 /* FMVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMVideoTableViewCell.m; sourceTree = "<group>"; };
+		B5DE3E701DB4FED600ABC0A0 /* FMVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMVideoTableViewCell.xib; sourceTree = "<group>"; };
+		B5DE3E731DB5005900ABC0A0 /* VideoItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoItemView.h; sourceTree = "<group>"; };
+		B5DE3E741DB5005900ABC0A0 /* VideoItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItemView.m; sourceTree = "<group>"; };
+		B5DE3E761DB5047000ABC0A0 /* FMAudioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAudioTableViewCell.h; sourceTree = "<group>"; };
+		B5DE3E771DB5047000ABC0A0 /* FMAudioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAudioTableViewCell.m; sourceTree = "<group>"; };
+		B5DE3E781DB5047000ABC0A0 /* FMAudioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMAudioTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,8 +625,16 @@
 				B5BECEA01D9FBAE500B30DA7 /* CheckTableViewCell.h */,
 				B5BECEA11D9FBAE500B30DA7 /* CheckTableViewCell.m */,
 				B5BECEA21D9FBAE500B30DA7 /* CheckTableViewCell.xib */,
+				B5DE3E6E1DB4FED600ABC0A0 /* FMVideoTableViewCell.h */,
+				B5DE3E6F1DB4FED600ABC0A0 /* FMVideoTableViewCell.m */,
+				B5DE3E701DB4FED600ABC0A0 /* FMVideoTableViewCell.xib */,
+				B5DE3E761DB5047000ABC0A0 /* FMAudioTableViewCell.h */,
+				B5DE3E771DB5047000ABC0A0 /* FMAudioTableViewCell.m */,
+				B5DE3E781DB5047000ABC0A0 /* FMAudioTableViewCell.xib */,
 				B5BECEA31D9FBAE500B30DA7 /* ItemViewBtn.h */,
 				B5BECEA41D9FBAE500B30DA7 /* ItemViewBtn.m */,
+				B5DE3E731DB5005900ABC0A0 /* VideoItemView.h */,
+				B5DE3E741DB5005900ABC0A0 /* VideoItemView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -688,9 +709,11 @@
 				929E7FE61DB4C8C500F1A10B /* DetailTableViewCell.xib in Resources */,
 				92627DEC1D7D41DC00DD509C /* Default@3x.png in Resources */,
 				B5BECEA81D9FBAE500B30DA7 /* CheckManageViewController.xib in Resources */,
+				B5DE3E7A1DB5047000ABC0A0 /* FMAudioTableViewCell.xib in Resources */,
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
 				92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */,
 				925485901DA9EC2500C3CE23 /* GenearchViewController.xib in Resources */,
+				B5DE3E721DB4FED600ABC0A0 /* FMVideoTableViewCell.xib in Resources */,
 				924247081DA8DFAE00AC2133 /* TeacherTableViewCell.xib in Resources */,
 				925485951DAA182A00C3CE23 /* GenearchTableViewCell.xib in Resources */,
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
@@ -784,6 +807,7 @@
 				9254858F1DA9EC2500C3CE23 /* GenearchViewController.m in Sources */,
 				B5BECE8D1D9FAE4800B30DA7 /* SDWebImageCompat.m in Sources */,
 				92627DC61D7D154D00DD509C /* NSObject+BeeNotification.m in Sources */,
+				B5DE3E751DB5005900ABC0A0 /* VideoItemView.m in Sources */,
 				B5BECE981D9FAE4800B30DA7 /* UIImageView+HighlightedWebCache.m in Sources */,
 				92627DC71D7D154D00DD509C /* MBProgressHUD+Add.m in Sources */,
 				B5BECEAC1D9FBAE500B30DA7 /* WorkViewController.m in Sources */,
@@ -811,7 +835,9 @@
 				B5BECE561D9F9A8A00B30DA7 /* CustomItemView.m in Sources */,
 				B5BECE941D9FAE4800B30DA7 /* UIButton+WebCache.m in Sources */,
 				B5BECE8F1D9FAE4800B30DA7 /* SDWebImageDownloader.m in Sources */,
+				B5DE3E711DB4FED600ABC0A0 /* FMVideoTableViewCell.m in Sources */,
 				B5BECE8B1D9FAE4800B30DA7 /* NSData+ImageContentType.m in Sources */,
+				B5DE3E791DB5047000ABC0A0 /* FMAudioTableViewCell.m in Sources */,
 				B5BECE581D9F9A8A00B30DA7 /* HomeViewController.m in Sources */,
 				92627DC41D7D154D00DD509C /* NSString+UIColor.m in Sources */,
 				B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */,

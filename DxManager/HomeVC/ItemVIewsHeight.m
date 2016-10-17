@@ -29,7 +29,7 @@
 + (CGFloat)loadTextContents:(NSString *)str{
     float width = SCREEN_WIDTH - 86 - 8;
      CGRect rect = [str boundingRectWithSize:CGSizeMake(width , 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
-    return rect.size.height;
+    return rect.size.height+10;
 }
 
 @end

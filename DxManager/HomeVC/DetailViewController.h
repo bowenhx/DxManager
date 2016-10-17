@@ -10,4 +10,5 @@
 
 @interface DetailViewController : BaseViewController
 
+@property (nonatomic , strong) NSDictionary *info;
 @end

@@ -100,7 +100,7 @@
 }
 - (void)didDetailAction:(UIButton *)btn{
     DetailViewController *detailVC = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    detailVC.dataSource = self.dataSource;
+    detailVC.info = self.dataSource[btn.tag];
     [self.homeVC.navigationController pushViewController:detailVC animated:YES];
 }
 

@@ -27,13 +27,47 @@
 }
 - (void)loadNewView{
     
-    _tableView.layer.borderWidth = 1;
-    _tableView.layer.borderColor = [UIColor redColor].CGColor;
+//    _tableView.layer.borderWidth = 1;
+//    _tableView.layer.borderColor = [UIColor redColor].CGColor;
     
-    if (self.dataSource.count) {
+    [_tableView setTableFooterView:[self addFootView]];
+    
+    if (self.info) {
         [_tableView reloadData];
     }
     
+}
+
+- (UIView *)addFootView{
+    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, 100)];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(20, footView.h - 40, self.screen_W - 40, 40);
+    [btn setTitle:[self.info[@"status"] integerValue]? @"确认通过审核" : @"取消通过审核" forState:0];
+    btn.backgroundColor = [UIColor colorAppBg];
+    btn.layer.cornerRadius = 3;
+    [btn setTitleColor:[UIColor whiteColor] forState:0];
+    btn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [btn addTarget:self action:@selector(didSelectAction) forControlEvents:UIControlEventTouchUpInside];
+    [footView addSubview:btn];
+    return footView;
+}
+- (void)didSelectAction{
+    [self.view showHUDActivityView:@"正在加载" shade:NO];
+    NSInteger status = [self.info[@"status"] integerValue] ? 0 : 2;
+    [[ANet share] post:BASE_URL params:@{@"action":@"doReviewed",@"id":self.info[@"id"],@"state":@(status)} completion:^(BNetData *model, NSString *netErr) {
+        [self.view removeHUDActivity];
+        
+        NSLog(@"data = %@",model.data);
+        if (model.status == 0) {
+            [self.view showSuccess:model.message];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"updataHomeStatus" object:nil];
+            [self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
 }
 #pragma mark
 #pragma mark UITableViewDelegate
@@ -41,7 +75,7 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSource.count;
+    return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *xibName = @"DetailTableViewCell";
@@ -50,7 +84,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
     }
     
-    cell.info = self.dataSource[indexPath.row];
+    cell.info = self.info;
     
     return cell;
 }
@@ -59,13 +93,10 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-- (CGFloat)itemsImages:(NSDictionary *)item{
-    return [ItemVIewsHeight loadTextContents:item[@"zhaiyao"]];
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat height = [self itemsImages:self.dataSource[indexPath.row]];
-    return 172 + height;
+    CGFloat height = [ItemVIewsHeight loadTextContents:self.info[@"zhaiyao"]];
+    return 85 + height;
 }
 
 
