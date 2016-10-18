@@ -22,6 +22,7 @@
 - (void)loadNewView{
     HomeCustomTableView *tableView = [[HomeCustomTableView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, self.screen_H)];
     [tableView loadNewData:self.index];
+    tableView.homeVC = self;
     [self.view addSubview:tableView];
     
 }
