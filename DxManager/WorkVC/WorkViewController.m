@@ -14,6 +14,7 @@
 #import "AppDefine.h"
 #import "ClassesViewController.h"
 #import "FMViewController.h"
+#import "ReportViewController.h"
 
 @interface WorkViewController ()
 
@@ -124,7 +125,8 @@
             break;
         case 8:
         {//互动投诉
-            
+            ReportViewController *reportVC = [[ReportViewController alloc] initWithNibName:@"ReportViewController" bundle:nil];
+            [self.navigationController pushViewController:reportVC animated:YES];
         }
             break;
         case 9:

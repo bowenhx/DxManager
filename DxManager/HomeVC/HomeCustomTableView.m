@@ -92,9 +92,10 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.info = self.dataSource[indexPath.row];
     cell.btnCheck.tag = indexPath.row;
+    cell.imagesView.viewController = self.homeVC;
     [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
@@ -106,7 +107,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)itemsImages:(NSDictionary *)item{

@@ -95,6 +95,12 @@
     //[ViewController getSystemDateAndTime];// 得到系统时间
     return dateString;// 返回的字符串就是 2015-10-20 19:21 时间格式值
 }
++ (NSURL *)getPathByAppendString:(NSString *)string{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_IMG_URL,string]];
+    return url;
+}
+
+
 @end
 @implementation NSObject (string)
 

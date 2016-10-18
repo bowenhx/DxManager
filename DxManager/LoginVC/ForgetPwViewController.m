@@ -7,6 +7,7 @@
 //
 
 #import "ForgetPwViewController.h"
+#import "AppDefine.h"
 
 @interface ForgetPwViewController ()
 {
@@ -16,6 +17,10 @@
     __weak IBOutlet UITextField *_textFieldNewPw;
     __weak IBOutlet UITextField *_textFieldNewPw2;
     
+    
+    __weak IBOutlet UIButton *btnVerify;
+    
+    __weak IBOutlet UIButton *btnConfirm;
 }
 @end
 
@@ -25,10 +30,13 @@
     [super viewDidLoad];
     self.title = @"忘记密码";
     
-    for (UIView *view in self.view.subviews) {
-        view.layer.borderWidth = 1;
-    }
-
+ 
+    btnVerify.layer.borderWidth = .5;
+    btnVerify.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    btnVerify.layer.cornerRadius = 3;
+    
+    btnConfirm.backgroundColor = [UIColor colorAppBg];
+    btnConfirm.layer.cornerRadius = 3;
     
 }
 //获取验证码

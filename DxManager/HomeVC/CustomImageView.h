@@ -12,5 +12,5 @@
 
 @property (nonatomic , strong) NSArray *imgItems;
 
-
+@property (nonatomic , strong) UIViewController *viewController;
 @end

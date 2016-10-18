@@ -8,13 +8,13 @@
 
 #import "UIImageView+NSString.h"
 #import "UIImageView+WebCache.h"
-//图片 根地址
-#define BASE_IMG_URL  @"http://dx.sitemn.com"
+#import "NSString+UIColor.h"
 
 @implementation UIImageView (Image_URL)
 
 - (void)img_setImageWithURL:(NSString *)string placeholderImage:(UIImage *)img{
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_IMG_URL,string]];
+    NSURL *url = [NSString getPathByAppendString:string];
     [self sd_setImageWithURL:url placeholderImage:img];
 }
+
 @end

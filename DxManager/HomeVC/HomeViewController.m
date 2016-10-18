@@ -10,6 +10,8 @@
 #import "CustomItemView.h"
 #import "HomeCustomTableView.h"
 #import "AppDefine.h"
+#import "SendMegViewController.h"
+
 
 @interface HomeViewController ()
 
@@ -61,9 +63,17 @@
         
     };
     
+    
+    //添加发布通知按钮
+    [self.rightBtn setTitle:@"发布" forState:0];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewDataAction) name:@"updataHomeStatus" object:nil];
     
     
+}
+- (void)tapRightBtn{
+    SendMegViewController *sendMegVC = [[SendMegViewController alloc] initWithNibName:@"SendMegViewController" bundle:nil];
+    [self.navigationController pushViewController:sendMegVC animated:YES];
 }
 - (void)loadNewDataAction{
     //默认加载首页通知数据

@@ -29,7 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labLineBg;
 
 
-
+@property (nonatomic , strong) UIViewController *viewController;
 @property (nonatomic, copy) NSDictionary *info;
 
 

@@ -24,4 +24,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labLineBg;
 
+@property (nonatomic, copy) NSDictionary *info;
+
 @end

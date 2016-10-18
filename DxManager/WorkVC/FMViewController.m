@@ -18,15 +18,22 @@
 @end
 
 @implementation FMViewController
-
+- (void)dealloc{
+    NSLog(@"remove self");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"大象FM";
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"audioPlayCenter" object:nil];
+}
 - (void)loadNewView{
-    self.tableView.layer.borderWidth = 1;
-    self.tableView.layer.borderColor = [UIColor redColor].CGColor;
+//    self.tableView.layer.borderWidth = 1;
+//    self.tableView.layer.borderColor = [UIColor redColor].CGColor;
 }
 - (void)loadNewData{
     [self.view showHUDActivityView:@"正在加载" shade:NO];
@@ -67,6 +74,7 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.viewController = self;
         cell.info = self.dataSource[indexPath.row];
         return cell;
     }else{
@@ -77,6 +85,7 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.info = self.dataSource[indexPath.row];
         return cell;
     }
     
