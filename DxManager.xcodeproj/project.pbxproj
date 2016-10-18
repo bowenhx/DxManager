@@ -699,6 +699,47 @@
 			path = SaveData;
 			sourceTree = "<group>";
 		};
+		B5B572CD1DB64CF400D92B6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5BECE4D1D9F9A8A00B30DA7 /* CustomItemView.h */,
+				B5BECE4E1D9F9A8A00B30DA7 /* CustomItemView.m */,
+				B5BECE4F1D9F9A8A00B30DA7 /* HomeCustomTableView.h */,
+				B5BECE501D9F9A8A00B30DA7 /* HomeCustomTableView.m */,
+				B5BECE531D9F9A8A00B30DA7 /* TrendsTableViewCell.h */,
+				B5BECE541D9F9A8A00B30DA7 /* TrendsTableViewCell.m */,
+				B5BECE551D9F9A8A00B30DA7 /* TrendsTableViewCell.xib */,
+				929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */,
+				929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */,
+				929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */,
+				929E7FCD1DB4AE5E00F1A10B /* CustomImageView.h */,
+				929E7FCE1DB4AE5E00F1A10B /* CustomImageView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B5B572CE1DB64D2C00D92B6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929E7FD01DB4B90300F1A10B /* ItemVIewsHeight.h */,
+				929E7FD11DB4B90300F1A10B /* ItemVIewsHeight.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B5B572CF1DB64D6200D92B6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				924247041DA8DFAE00AC2133 /* TeacherTableViewCell.h */,
+				924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */,
+				924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */,
+				925485911DAA182A00C3CE23 /* GenearchTableViewCell.h */,
+				925485921DAA182A00C3CE23 /* GenearchTableViewCell.m */,
+				925485931DAA182A00C3CE23 /* GenearchTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		B5B76D461D7BFA2100B06414 = {
 			isa = PBXGroup;
 			children = (
@@ -762,12 +803,7 @@
 				9254858C1DA9EC2400C3CE23 /* GenearchViewController.h */,
 				9254858D1DA9EC2500C3CE23 /* GenearchViewController.m */,
 				9254858E1DA9EC2500C3CE23 /* GenearchViewController.xib */,
-				924247041DA8DFAE00AC2133 /* TeacherTableViewCell.h */,
-				924247051DA8DFAE00AC2133 /* TeacherTableViewCell.m */,
-				924247061DA8DFAE00AC2133 /* TeacherTableViewCell.xib */,
-				925485911DAA182A00C3CE23 /* GenearchTableViewCell.h */,
-				925485921DAA182A00C3CE23 /* GenearchTableViewCell.m */,
-				925485931DAA182A00C3CE23 /* GenearchTableViewCell.xib */,
+				B5B572CF1DB64D6200D92B6F /* View */,
 			);
 			path = DirectoriesVC;
 			sourceTree = "<group>";
@@ -775,10 +811,6 @@
 		B5B76D6A1D7C02FB00B06414 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				B5BECE4D1D9F9A8A00B30DA7 /* CustomItemView.h */,
-				B5BECE4E1D9F9A8A00B30DA7 /* CustomItemView.m */,
-				B5BECE4F1D9F9A8A00B30DA7 /* HomeCustomTableView.h */,
-				B5BECE501D9F9A8A00B30DA7 /* HomeCustomTableView.m */,
 				B5BECE511D9F9A8A00B30DA7 /* HomeViewController.h */,
 				B5BECE521D9F9A8A00B30DA7 /* HomeViewController.m */,
 				921AFA941DB5C6A500531A01 /* SendMegViewController.h */,
@@ -787,16 +819,8 @@
 				929E7FDD1DB4C62D00F1A10B /* DetailViewController.h */,
 				929E7FDE1DB4C62D00F1A10B /* DetailViewController.m */,
 				929E7FDF1DB4C62D00F1A10B /* DetailViewController.xib */,
-				B5BECE531D9F9A8A00B30DA7 /* TrendsTableViewCell.h */,
-				B5BECE541D9F9A8A00B30DA7 /* TrendsTableViewCell.m */,
-				B5BECE551D9F9A8A00B30DA7 /* TrendsTableViewCell.xib */,
-				929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */,
-				929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */,
-				929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */,
-				929E7FCD1DB4AE5E00F1A10B /* CustomImageView.h */,
-				929E7FCE1DB4AE5E00F1A10B /* CustomImageView.m */,
-				929E7FD01DB4B90300F1A10B /* ItemVIewsHeight.h */,
-				929E7FD11DB4B90300F1A10B /* ItemVIewsHeight.m */,
+				B5B572CE1DB64D2C00D92B6F /* Model */,
+				B5B572CD1DB64CF400D92B6F /* View */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -1285,10 +1309,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DxManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1298,10 +1324,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DxManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
