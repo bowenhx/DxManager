@@ -1,22 +1,21 @@
 //
-//  HomeCustomTableView.h
+//  CommentView.h
 //  DxManager
 //
-//  Created by ligb on 16/9/7.
+//  Created by ligb on 16/10/19.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HomeCustomTableView : UIView
+@interface CommentView : UIView
 
 @property (nonatomic , strong) UITableView *tableView;
 
 @property (nonatomic , strong) NSMutableArray *dataSource;
 
-@property (nonatomic , strong) UIViewController *homeVC;
+@property (nonatomic , assign) NSUInteger inputID;
 
-@property (nonatomic , assign) NSUInteger index;
-
+- (void)loadData;
 
 @end

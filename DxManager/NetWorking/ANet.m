@@ -2,7 +2,7 @@
 //  ANet.m
 //  ADemo
 //
-//  Created by hongyan on 16/4/13.
+//  Created by ligb on 16/4/13.
 //  Copyright © 2016年 hongyan. All rights reserved.
 //
 #import <SystemConfiguration/SystemConfiguration.h>

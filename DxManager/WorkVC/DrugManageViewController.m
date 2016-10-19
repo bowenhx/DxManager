@@ -1,31 +1,31 @@
 //
-//  ClassesViewController.m
+//  DrugManageViewController.m
 //  DxManager
 //
-//  Created by ligb on 16/10/17.
+//  Created by ligb on 16/10/19.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
 
-#import "ClassesViewController.h"
-#import "HomeCustomTableView.h"
+#import "DrugManageViewController.h"
 #import "AppDefine.h"
-@interface ClassesViewController ()
+@interface DrugManageViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation ClassesViewController
+@implementation DrugManageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-}
-- (void)loadNewView{
-    HomeCustomTableView *tableView = [[HomeCustomTableView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, self.screen_H)];
-    tableView.index = self.index;
-    tableView.homeVC = self;
-    [self.view addSubview:tableView];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.title = @"用药条管理";
     
 }
+
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

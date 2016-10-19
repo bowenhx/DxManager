@@ -15,6 +15,7 @@
 #import "ClassesViewController.h"
 #import "FMViewController.h"
 #import "ReportViewController.h"
+#import "DrugManageViewController.h"
 
 @interface WorkViewController ()
 
@@ -104,7 +105,8 @@
             break;
         case 5:
         {//用药条管理
-            
+            DrugManageViewController *drugMangerVC = [[DrugManageViewController alloc] initWithNibName:@"DrugManageViewController" bundle:nil];
+            [self.navigationController pushViewController:drugMangerVC animated:YES];
         }
             break;
         case 6:
@@ -125,8 +127,14 @@
             break;
         case 8:
         {//互动投诉
-            ReportViewController *reportVC = [[ReportViewController alloc] initWithNibName:@"ReportViewController" bundle:nil];
-            [self.navigationController pushViewController:reportVC animated:YES];
+            
+            ClassesViewController *classesVC = [[ClassesViewController alloc] initWithNibName:@"ClassesViewController" bundle:nil];
+            classesVC.index = 68;
+            classesVC.navigationItem.title = @"互动投诉";
+            [self.navigationController pushViewController:classesVC animated:YES];
+            
+            /*ReportViewController *reportVC = [[ReportViewController alloc] initWithNibName:@"ReportViewController" bundle:nil];
+            [self.navigationController pushViewController:reportVC animated:YES];*/
         }
             break;
         case 9:

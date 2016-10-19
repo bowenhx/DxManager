@@ -141,7 +141,7 @@
                 <outlet property="labTime" destination="L7R-Tf-Zjq" id="CM4-8Z-Jg0"/>
                 <outlet property="labTitle" destination="maC-g6-mSv" id="V8d-WZ-D5n"/>
             </connections>
-            <point key="canvasLocation" x="357" y="239"/>
+            <point key="canvasLocation" x="444" y="224"/>
         </tableViewCell>
     </objects>
 </document>

@@ -9,6 +9,7 @@
 #import "MoreViewController.h"
 #import "AppDefine.h"
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface MoreViewController ()
 
@@ -35,12 +36,21 @@
     //标记登陆
     [[SavaData shareInstance] savaDataInteger:1 KeyString:@"finishGuide"];
     
+    UINavigationController *navC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    if ([navC.viewControllers[0] isKindOfClass:[LoginViewController class]]) {
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+    }else{
+        //退出登陆代理
+        [[AppDelegate getAppDelegate] showLoginVC];
+    }
+    
     //清除用户信息
-    //TODO
+    [SavaData writeDicToFile:@{} FileName:User_File];
     
     
-    //退出登陆代理
-    [[AppDelegate getAppDelegate] showLoginVC];
+    
+    
 }
 /*
 #pragma mark - Navigation

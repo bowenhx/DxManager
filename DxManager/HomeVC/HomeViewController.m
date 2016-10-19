@@ -48,7 +48,7 @@
     
     //默认加载首页通知数据
     HomeCustomTableView *iView = _itemViews[0];
-    [iView loadNewData:52];
+    iView.index = 52;
     
     //item 变化数据加载处理
     _customView.itemsEcentAction = ^(NSInteger index){
@@ -56,9 +56,9 @@
         
         HomeCustomTableView *iView = _itemViews[index];
         if (index == 0) {
-            [iView loadNewData:52];
+            iView.index = 52;
         }else{
-            [iView loadNewData:index + 61];
+           iView.index = index + 61;
         }
         
     };
@@ -78,7 +78,7 @@
 - (void)loadNewDataAction{
     //默认加载首页通知数据
     HomeCustomTableView *iView = _itemViews[0];
-    [iView loadNewData:52];
+    iView.index = 52;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

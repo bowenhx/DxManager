@@ -88,7 +88,7 @@
                         <constraint firstAttribute="width" constant="199" id="P3U-ew-fIn"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="DMM-Xz-p2i"/>
                     </connections>
@@ -99,7 +99,7 @@
                         <constraint firstAttribute="width" constant="199" id="11v-f5-Oqb"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="p2i-Ar-hAl"/>
                     </connections>

@@ -45,7 +45,6 @@ static AppDelegate *_appDelegate;
 }
 
 - (void)showLoginVC{
-    
     if (self.window.rootViewController.view != nil) {
         [self.window.rootViewController.view removeFromSuperview];
     }

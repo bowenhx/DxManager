@@ -26,7 +26,7 @@
     [super viewDidLoad];
     _viewY = self.view.y;
     self.title = @"登陆";
-//    self.view.backgroundColor = [UIColor colorViewBg];
+    self.view.backgroundColor = [UIColor clearColor];
     
     UIImage *image = [[UIImage imageNamed:@"dte_nav_icon"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
@@ -54,6 +54,12 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
+}
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+//    [self changeViewSize];
+    
 }
 -(BOOL)isMobileNumber:(NSString *)mobileNum{
     NSString *MOBILE = @"^1(3[0-9]|4[57]|5[0-35-9]|7[01678]|8[0-9])\\d{8}$";
@@ -94,6 +100,9 @@
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             [self presentViewController:[mainStoryboard instantiateInitialViewController] animated:YES completion:^{
                 [[SavaData shareInstance] savaDataInteger:2 KeyString:@"finishGuide"];
+                _passwordTextField.text = @"";
+                _phoneNumTextField.text = @"";
+                
             }];
 
             
@@ -120,7 +129,7 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if ( self.view.y == _viewY ) {
-        [UIView animateWithDuration:.38f animations:^{
+        [UIView animateWithDuration:.3f animations:^{
             CGRect rect = self.view.frame;
             rect.origin.y -= 120;
             self.view.frame = rect;
@@ -140,7 +149,7 @@
 }
 - (void)changeViewSize{
     if (self.view.y != _viewY) {
-        [UIView animateWithDuration:.38f animations:^{
+        [UIView animateWithDuration:.3f animations:^{
             CGRect rect = self.view.frame;
             rect.origin.y += 120;
             self.view.frame = rect;

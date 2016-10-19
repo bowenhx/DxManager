@@ -14,6 +14,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
     self.labVerify.textColor = @"ff0000".color;
     self.labVerify.layer.borderWidth = 1;
     self.labVerify.layer.borderColor = @"ff0000".color.CGColor;

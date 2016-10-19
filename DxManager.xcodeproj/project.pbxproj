@@ -85,6 +85,14 @@
 		929E7FE11DB4C62D00F1A10B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FDF1DB4C62D00F1A10B /* DetailViewController.xib */; };
 		929E7FE51DB4C8C500F1A10B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */; };
 		929E7FE61DB4C8C500F1A10B /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */; };
+		92DBA74A1DB7080C0037B496 /* BKReplyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA7491DB7080C0037B496 /* BKReplyInputView.m */; };
+		92DBA74E1DB74A1D0037B496 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA74C1DB74A1D0037B496 /* ReportTableViewCell.m */; };
+		92DBA74F1DB74A1D0037B496 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA74D1DB74A1D0037B496 /* ReportTableViewCell.xib */; };
+		92DBA7521DB74EF60037B496 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA7511DB74EF60037B496 /* CommentView.m */; };
+		92DBA7591DB765040037B496 /* DrugManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA7571DB765040037B496 /* DrugManageViewController.m */; };
+		92DBA75A1DB765040037B496 /* DrugManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA7581DB765040037B496 /* DrugManageViewController.xib */; };
+		92DBA75E1DB766680037B496 /* DrugManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */; };
+		92DBA75F1DB766680037B496 /* DrugManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */; };
 		B5B76D541D7BFA2100B06414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D531D7BFA2100B06414 /* main.m */; };
 		B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D561D7BFA2100B06414 /* AppDelegate.m */; };
 		B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D591D7BFA2100B06414 /* ViewController.m */; };
@@ -279,6 +287,19 @@
 		929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		92DBA7481DB7080C0037B496 /* BKReplyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKReplyInputView.h; sourceTree = "<group>"; };
+		92DBA7491DB7080C0037B496 /* BKReplyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKReplyInputView.m; sourceTree = "<group>"; };
+		92DBA74B1DB74A1D0037B496 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
+		92DBA74C1DB74A1D0037B496 /* ReportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewCell.m; sourceTree = "<group>"; };
+		92DBA74D1DB74A1D0037B496 /* ReportTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
+		92DBA7501DB74EF60037B496 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		92DBA7511DB74EF60037B496 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		92DBA7561DB765040037B496 /* DrugManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugManageViewController.h; sourceTree = "<group>"; };
+		92DBA7571DB765040037B496 /* DrugManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugManageViewController.m; sourceTree = "<group>"; };
+		92DBA7581DB765040037B496 /* DrugManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageViewController.xib; sourceTree = "<group>"; };
+		92DBA75B1DB766680037B496 /* DrugManageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugManageTableViewCell.h; sourceTree = "<group>"; };
+		92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugManageTableViewCell.m; sourceTree = "<group>"; };
+		92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageTableViewCell.xib; sourceTree = "<group>"; };
 		AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.release.xcconfig"; sourceTree = "<group>"; };
 		B5B76D4F1D7BFA2100B06414 /* DxManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -702,6 +723,8 @@
 		B5B572CD1DB64CF400D92B6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92DBA7481DB7080C0037B496 /* BKReplyInputView.h */,
+				92DBA7491DB7080C0037B496 /* BKReplyInputView.m */,
 				B5BECE4D1D9F9A8A00B30DA7 /* CustomItemView.h */,
 				B5BECE4E1D9F9A8A00B30DA7 /* CustomItemView.m */,
 				B5BECE4F1D9F9A8A00B30DA7 /* HomeCustomTableView.h */,
@@ -709,11 +732,16 @@
 				B5BECE531D9F9A8A00B30DA7 /* TrendsTableViewCell.h */,
 				B5BECE541D9F9A8A00B30DA7 /* TrendsTableViewCell.m */,
 				B5BECE551D9F9A8A00B30DA7 /* TrendsTableViewCell.xib */,
+				92DBA74B1DB74A1D0037B496 /* ReportTableViewCell.h */,
+				92DBA74C1DB74A1D0037B496 /* ReportTableViewCell.m */,
+				92DBA74D1DB74A1D0037B496 /* ReportTableViewCell.xib */,
 				929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */,
 				929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */,
 				929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */,
 				929E7FCD1DB4AE5E00F1A10B /* CustomImageView.h */,
 				929E7FCE1DB4AE5E00F1A10B /* CustomImageView.m */,
+				92DBA7501DB74EF60037B496 /* CommentView.h */,
+				92DBA7511DB74EF60037B496 /* CommentView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -851,6 +879,9 @@
 				921AFB081DB615EC00531A01 /* ReportViewController.h */,
 				921AFB091DB615EC00531A01 /* ReportViewController.m */,
 				921AFB0A1DB615EC00531A01 /* ReportViewController.xib */,
+				92DBA7561DB765040037B496 /* DrugManageViewController.h */,
+				92DBA7571DB765040037B496 /* DrugManageViewController.m */,
+				92DBA7581DB765040037B496 /* DrugManageViewController.xib */,
 				B5BECE9F1D9FBAE500B30DA7 /* View */,
 			);
 			path = WorkVC;
@@ -945,6 +976,9 @@
 				B5DE3E761DB5047000ABC0A0 /* FMAudioTableViewCell.h */,
 				B5DE3E771DB5047000ABC0A0 /* FMAudioTableViewCell.m */,
 				B5DE3E781DB5047000ABC0A0 /* FMAudioTableViewCell.xib */,
+				92DBA75B1DB766680037B496 /* DrugManageTableViewCell.h */,
+				92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */,
+				92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */,
 				B5BECEA31D9FBAE500B30DA7 /* ItemViewBtn.h */,
 				B5BECEA41D9FBAE500B30DA7 /* ItemViewBtn.m */,
 				B5DE3E731DB5005900ABC0A0 /* VideoItemView.h */,
@@ -1016,6 +1050,7 @@
 			files = (
 				921AFB041DB5D34700531A01 /* ZLPhotoLib.bundle in Resources */,
 				929E7FE11DB4C62D00F1A10B /* DetailViewController.xib in Resources */,
+				92DBA75F1DB766680037B496 /* DrugManageTableViewCell.xib in Resources */,
 				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
 				B5BECE5A1D9F9A8A00B30DA7 /* TrendsTableViewCell.xib in Resources */,
 				929E7FD71DB4BEDF00F1A10B /* ClassesViewController.xib in Resources */,
@@ -1029,9 +1064,11 @@
 				B5B76D621D7BFA2100B06414 /* LaunchScreen.storyboard in Resources */,
 				92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */,
 				925485901DA9EC2500C3CE23 /* GenearchViewController.xib in Resources */,
+				92DBA74F1DB74A1D0037B496 /* ReportTableViewCell.xib in Resources */,
 				921AFB0C1DB615EC00531A01 /* ReportViewController.xib in Resources */,
 				B5DE3E721DB4FED600ABC0A0 /* FMVideoTableViewCell.xib in Resources */,
 				924247081DA8DFAE00AC2133 /* TeacherTableViewCell.xib in Resources */,
+				92DBA75A1DB765040037B496 /* DrugManageViewController.xib in Resources */,
 				925485951DAA182A00C3CE23 /* GenearchTableViewCell.xib in Resources */,
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
 				B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */,
@@ -1101,6 +1138,7 @@
 				921AFAEB1DB5D34700531A01 /* ZLCameraViewController.m in Sources */,
 				921AFAF61DB5D34700531A01 /* ZLPhotoPickerDatas.m in Sources */,
 				921AFAF21DB5D34700531A01 /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
+				92DBA75E1DB766680037B496 /* DrugManageTableViewCell.m in Sources */,
 				921AFB031DB5D34700531A01 /* DALabeledCircularProgressView.m in Sources */,
 				B5BECE991D9FAE4800B30DA7 /* UIImageView+MJWebCache.m in Sources */,
 				921AFAF51DB5D34700531A01 /* ZLPhotoAssets.m in Sources */,
@@ -1122,6 +1160,7 @@
 				92627DCF1D7D154D00DD509C /* BNetData.m in Sources */,
 				921AFB001DB5D34700531A01 /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
 				B5BECEA91D9FBAE500B30DA7 /* CheckTableViewCell.m in Sources */,
+				92DBA74A1DB7080C0037B496 /* BKReplyInputView.m in Sources */,
 				921AFB011DB5D34700531A01 /* ZLPhotoPickerImageView.m in Sources */,
 				929E7FCF1DB4AE5E00F1A10B /* CustomImageView.m in Sources */,
 				929E7FDB1DB4C23D00F1A10B /* FMViewController.m in Sources */,
@@ -1163,6 +1202,7 @@
 				921AFB071DB5E69600531A01 /* UploadingFormData.m in Sources */,
 				929E7FE01DB4C62D00F1A10B /* DetailViewController.m in Sources */,
 				92627DE51D7D406C00DD509C /* GuideViewController.m in Sources */,
+				92DBA7521DB74EF60037B496 /* CommentView.m in Sources */,
 				B5BECEA71D9FBAE500B30DA7 /* CheckManageViewController.m in Sources */,
 				921AFAE91DB5D34700531A01 /* ZLCameraImageView.m in Sources */,
 				B5BECE9B1D9FAE4800B30DA7 /* UIView+WebCacheOperation.m in Sources */,
@@ -1185,9 +1225,11 @@
 				B5BECE8F1D9FAE4800B30DA7 /* SDWebImageDownloader.m in Sources */,
 				B5DE3E711DB4FED600ABC0A0 /* FMVideoTableViewCell.m in Sources */,
 				921AFB0B1DB615EC00531A01 /* ReportViewController.m in Sources */,
+				92DBA74E1DB74A1D0037B496 /* ReportTableViewCell.m in Sources */,
 				921AFAEA1DB5D34700531A01 /* ZLCameraView.m in Sources */,
 				B5BECE8B1D9FAE4800B30DA7 /* NSData+ImageContentType.m in Sources */,
 				B5DE3E791DB5047000ABC0A0 /* FMAudioTableViewCell.m in Sources */,
+				92DBA7591DB765040037B496 /* DrugManageViewController.m in Sources */,
 				B5BECE581D9F9A8A00B30DA7 /* HomeViewController.m in Sources */,
 				92627DC41D7D154D00DD509C /* NSString+UIColor.m in Sources */,
 				B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */,
