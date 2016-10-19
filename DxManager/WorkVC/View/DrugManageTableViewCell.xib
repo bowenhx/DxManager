@@ -119,6 +119,18 @@
                     </view>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="btnPlay" destination="J0T-gb-A8T" id="3z5-aG-Mvr"/>
+                <outlet property="imgVideo" destination="scp-Ph-L9H" id="pL7-eh-wvg"/>
+                <outlet property="itemViewBg" destination="QYK-xp-iZd" id="a6v-cl-tl4"/>
+                <outlet property="labDrugName" destination="yPQ-Fk-oaQ" id="Frp-tV-1g7"/>
+                <outlet property="labDrugTime" destination="LJ3-fC-aAy" id="xoc-kC-6UX"/>
+                <outlet property="labNum" destination="rYJ-a6-bFR" id="ejx-Yz-uf7"/>
+                <outlet property="labPathogeny" destination="qHO-62-VMd" id="QXd-if-06s"/>
+                <outlet property="labPerson1" destination="AW7-lu-JT3" id="Rf4-xh-8FP"/>
+                <outlet property="labPerson2" destination="M84-bA-h5H" id="uRc-u8-sdh"/>
+                <outlet property="labTime" destination="dQC-41-avA" id="qBW-re-69u"/>
+            </connections>
             <point key="canvasLocation" x="293" y="321"/>
         </tableViewCell>
     </objects>
