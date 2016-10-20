@@ -133,6 +133,10 @@
 		B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BECEA21D9FBAE500B30DA7 /* CheckTableViewCell.xib */; };
 		B5BECEAB1D9FBAE500B30DA7 /* ItemViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECEA41D9FBAE500B30DA7 /* ItemViewBtn.m */; };
 		B5BECEAC1D9FBAE500B30DA7 /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BECEA61D9FBAE500B30DA7 /* WorkViewController.m */; };
+		B5C38BAB1DB8F3E800E1E57C /* DrugFormDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C38BA91DB8F3E800E1E57C /* DrugFormDataViewController.m */; };
+		B5C38BAC1DB8F3E800E1E57C /* DrugFormDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C38BAA1DB8F3E800E1E57C /* DrugFormDataViewController.xib */; };
+		B5C38BB01DB8F5B300E1E57C /* DrugFormDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C38BAE1DB8F5B300E1E57C /* DrugFormDataTableViewCell.m */; };
+		B5C38BB11DB8F5B300E1E57C /* DrugFormDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C38BAF1DB8F5B300E1E57C /* DrugFormDataTableViewCell.xib */; };
 		B5DE3E711DB4FED600ABC0A0 /* FMVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DE3E6F1DB4FED600ABC0A0 /* FMVideoTableViewCell.m */; };
 		B5DE3E721DB4FED600ABC0A0 /* FMVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DE3E701DB4FED600ABC0A0 /* FMVideoTableViewCell.xib */; };
 		B5DE3E751DB5005900ABC0A0 /* VideoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DE3E741DB5005900ABC0A0 /* VideoItemView.m */; };
@@ -381,6 +385,12 @@
 		B5BECEA41D9FBAE500B30DA7 /* ItemViewBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewBtn.m; sourceTree = "<group>"; };
 		B5BECEA51D9FBAE500B30DA7 /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
 		B5BECEA61D9FBAE500B30DA7 /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
+		B5C38BA81DB8F3E800E1E57C /* DrugFormDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugFormDataViewController.h; sourceTree = "<group>"; };
+		B5C38BA91DB8F3E800E1E57C /* DrugFormDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugFormDataViewController.m; sourceTree = "<group>"; };
+		B5C38BAA1DB8F3E800E1E57C /* DrugFormDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugFormDataViewController.xib; sourceTree = "<group>"; };
+		B5C38BAD1DB8F5B300E1E57C /* DrugFormDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugFormDataTableViewCell.h; sourceTree = "<group>"; };
+		B5C38BAE1DB8F5B300E1E57C /* DrugFormDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugFormDataTableViewCell.m; sourceTree = "<group>"; };
+		B5C38BAF1DB8F5B300E1E57C /* DrugFormDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugFormDataTableViewCell.xib; sourceTree = "<group>"; };
 		B5DE3E6E1DB4FED600ABC0A0 /* FMVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMVideoTableViewCell.h; sourceTree = "<group>"; };
 		B5DE3E6F1DB4FED600ABC0A0 /* FMVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMVideoTableViewCell.m; sourceTree = "<group>"; };
 		B5DE3E701DB4FED600ABC0A0 /* FMVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMVideoTableViewCell.xib; sourceTree = "<group>"; };
@@ -885,6 +895,9 @@
 				92DBA7561DB765040037B496 /* DrugManageViewController.h */,
 				92DBA7571DB765040037B496 /* DrugManageViewController.m */,
 				92DBA7581DB765040037B496 /* DrugManageViewController.xib */,
+				B5C38BA81DB8F3E800E1E57C /* DrugFormDataViewController.h */,
+				B5C38BA91DB8F3E800E1E57C /* DrugFormDataViewController.m */,
+				B5C38BAA1DB8F3E800E1E57C /* DrugFormDataViewController.xib */,
 				B5BECE9F1D9FBAE500B30DA7 /* View */,
 			);
 			path = WorkVC;
@@ -982,6 +995,9 @@
 				92DBA75B1DB766680037B496 /* DrugManageTableViewCell.h */,
 				92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */,
 				92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */,
+				B5C38BAD1DB8F5B300E1E57C /* DrugFormDataTableViewCell.h */,
+				B5C38BAE1DB8F5B300E1E57C /* DrugFormDataTableViewCell.m */,
+				B5C38BAF1DB8F5B300E1E57C /* DrugFormDataTableViewCell.xib */,
 				92039F1E1DB86D8400F9A17F /* SearchDrugHeadView.h */,
 				92039F1F1DB86D8400F9A17F /* SearchDrugHeadView.m */,
 				B5BECEA31D9FBAE500B30DA7 /* ItemViewBtn.h */,
@@ -1077,10 +1093,12 @@
 				925485951DAA182A00C3CE23 /* GenearchTableViewCell.xib in Resources */,
 				B5B76D5F1D7BFA2100B06414 /* Assets.xcassets in Resources */,
 				B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */,
+				B5C38BAC1DB8F3E800E1E57C /* DrugFormDataViewController.xib in Resources */,
 				B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */,
 				929E7FDC1DB4C23D00F1A10B /* FMViewController.xib in Resources */,
 				92627DEB1D7D41DC00DD509C /* Default@2x.png in Resources */,
 				92627DEA1D7D41DC00DD509C /* Default-568h@2x.png in Resources */,
+				B5C38BB11DB8F5B300E1E57C /* DrugFormDataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,6 +1195,7 @@
 				B5BECE8C1D9FAE4800B30DA7 /* SDImageCache.m in Sources */,
 				921AFAF81DB5D34700531A01 /* UIViewController+Alert.m in Sources */,
 				921AFB021DB5D34700531A01 /* DACircularProgressView.m in Sources */,
+				B5C38BAB1DB8F3E800E1E57C /* DrugFormDataViewController.m in Sources */,
 				921AFAF71DB5D34700531A01 /* ZLPhotoPickerGroup.m in Sources */,
 				92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */,
 				B5BECE951D9FAE4800B30DA7 /* UIImage+GIF.m in Sources */,
@@ -1242,6 +1261,7 @@
 				B5BECE8A1D9FAE4800B30DA7 /* NSData+GIF.m in Sources */,
 				B5B76D541D7BFA2100B06414 /* main.m in Sources */,
 				B5BECE971D9FAE4800B30DA7 /* UIImage+WebP.m in Sources */,
+				B5C38BB01DB8F5B300E1E57C /* DrugFormDataTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

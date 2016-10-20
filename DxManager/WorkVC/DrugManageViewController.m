@@ -10,6 +10,7 @@
 #import "AppDefine.h"
 #import "DrugManageTableViewCell.h"
 #import "SearchDrugHeadView.h"
+#import "DrugFormDataViewController.h"
 
 @interface DrugManageViewController ()
 {
@@ -17,10 +18,14 @@
     __weak IBOutlet UIDatePicker *_datePickerView;
     
     UIButton *_tempBtn;
+    
+    BOOL _isSearch;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic , strong) SearchDrugHeadView *searchView;
+@property (nonatomic , strong) UIView *footView;
+
 @end
 
 @implementation DrugManageViewController
@@ -35,10 +40,14 @@
 //    self.tableView.layer.borderWidth = 1;
 //    self.tableView.layer.borderColor = [UIColor redColor].CGColor;
     
+    _isSearch = NO;
+    
     [self.tableView setTableHeaderView:self.searchView];
     
+    [self footView];
     
     [self pickerDateView];
+    
 }
 - (void)pickerDateView
 {
@@ -69,10 +78,33 @@
     }
     return _searchView;
 }
+- (UIView *)footView{
+    if (!_footView) {
+        _footView = [[UIView alloc] initWithFrame:CGRectMake(0, self.screen_H - 40, self.screen_W, 40)];
+        //_footView.backgroundColor = [UIColor redColor];
+        UIButton *footBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        footBtn.frame = CGRectMake(20, 0, self.screen_W - 40, 35);
+        [footBtn setTitle:@"生成班级用药报告" forState:0];
+        [footBtn setTitleColor:[UIColor colorAppBg] forState:0];
+        footBtn.layer.borderWidth = .5;
+        footBtn.layer.cornerRadius = 6;
+        footBtn.layer.borderColor = [UIColor colorAppBg].CGColor;
+        [_footView addSubview:footBtn];
+        [self.view addSubview:_footView];
+        
+        [footBtn addTarget:self action:@selector(didPresentationAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _footView;
+}
+
+- (void)didPresentationAction{
+    DrugFormDataViewController *drugFormDataVC = [[DrugFormDataViewController alloc] initWithNibName:@"DrugFormDataViewController" bundle:nil];
+    [self.navigationController pushViewController:drugFormDataVC animated:YES];
+}
 
 - (void)loadNewData{
     [self.view showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] post:BASE_URL params:@{@"action":@"getDrugSearch"} completion:^(BNetData *model, NSString *netErr) {
+    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(69)} completion:^(BNetData *model, NSString *netErr) {
         [self.view removeHUDActivity];
         
         NSLog(@"data = %@",model.data);
@@ -100,9 +132,28 @@
         
     }else{
         //搜索
+        _isSearch = YES;
         
+        NSDictionary *info = @{@"action":@"getDrugSearch",
+                               @"grade":_searchView.textField.text,
+                               @"date1":_searchView.btnStart.titleLabel.text,
+                               @"date2":_searchView.btnEnd.titleLabel.text};
         
-        
+        [self.view showHUDActivityView:@"正在加载" shade:NO];
+        [[ANet share] post:BASE_URL params:info completion:^(BNetData *model, NSString *netErr) {
+            [self.view removeHUDActivity];
+            
+            NSLog(@"data = %@",model.data);
+            if (model.status == 0) {
+                //请求成功
+                [self.dataSource setArray:model.data];
+                [_tableView reloadData];
+                
+            }else{
+                [self.view showHUDTitleView:model.message image:nil];
+            }
+            
+        }];
         
     }
 }
@@ -118,8 +169,15 @@
     DrugManageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xibName];
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    cell.info = self.dataSource[indexPath.section];
+    if (_isSearch) {
+        cell.searchInfo = self.dataSource[indexPath.section];
+        
+    }else{
+        cell.info = self.dataSource[indexPath.section];
+    }
+   
     cell.viewController = self;
     return cell;
 }
@@ -193,16 +251,16 @@
         [self didHiddenDatePickerView];
     }
     
-    /*if (_floatAdView) {
-        float y = scrollView.contentOffset.y;
-        float h = scrollView.contentSize.height;
-        float height = HEIGHT(scrollView);
-        if (y > height || (y + height+20) >= h ) {
-            [_floatAdView setHidden:YES];
-        }else{
-            [_floatAdView setHidden:NO];
-        }
-    }*/
+//    if (self.footView) {
+//        float y = scrollView.contentOffset.y;
+//        float h = scrollView.contentSize.height;
+//        float height = scrollView.h;
+//        if (y > height || (y + height+20) >= h ) {
+//            [self.footView setHidden:YES];
+//        }else{
+//            [self.footView setHidden:NO];
+//        }
+//    }
 }
 
 

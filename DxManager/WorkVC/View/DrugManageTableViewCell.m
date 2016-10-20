@@ -12,7 +12,7 @@
 
 @interface DrugManageTableViewCell ()
 @property (nonatomic,strong) MPMoviePlayerViewController *moviePlayer;//视频播放控制器
-
+@property (nonatomic , strong)NSURL *videoURL;
 @end
 
 @implementation DrugManageTableViewCell
@@ -30,8 +30,7 @@
  */
 - (MPMoviePlayerViewController *)moviePlayer{
     if (!_moviePlayer) {
-        NSURL *url = [NSString getPathByAppendString:self.info[@"file_path"]];
-        _moviePlayer=[[MPMoviePlayerViewController alloc] initWithContentURL:url];
+        _moviePlayer=[[MPMoviePlayerViewController alloc] initWithContentURL:self.videoURL];
         _moviePlayer.view.frame = self.viewController.view.bounds;
         _moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         _moviePlayer.moviePlayer.shouldAutoplay = NO;
@@ -52,31 +51,32 @@
 
     // Configure the view for the selected state
 }
+- (void)setSearchInfo:(NSDictionary *)searchInfo{
+    _searchInfo = searchInfo;
 
-- (void)setInfo:(NSDictionary *)info{
-    _info = info;
     //要名
-    self.labDrugName.text = info[@"title"];
+    self.labDrugName.text = searchInfo[@"title"];
     
     //时间
-    self.labTime.text = info[@"drugs_date"];//[NSString getDateStringWithString:info[@"add_time"]];
+    self.labTime.text = searchInfo[@"drugs_date"];//[NSString getDateStringWithString:info[@"add_time"]];
     
     //数量
-    self.labNum.text = info[@"drugs_quantum"];
+    self.labNum.text = searchInfo[@"drugs_quantum"];
     
     //用药时间
-    self.labDrugTime.text = info[@"drugs_time"];
+    self.labDrugTime.text = searchInfo[@"drugs_time"];
     
     //送药人
-    self.labPerson1.text = info[@"drugs_sender"];
+    self.labPerson1.text = searchInfo[@"drugs_sender"];
     
     //责任人
-    self.labPerson2.text = info[@"drugs_manager"];
+    self.labPerson2.text = searchInfo[@"drugs_manager"];
     
     //病因
-    self.labPathogeny.text = info[@"drugs_reason"];
+    self.labPathogeny.text = searchInfo[@"drugs_reason"];
     
-    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:[NSString getPathByAppendString:self.info[@"file_path"]] options:nil];
+    self.videoURL = [NSString getPathByAppendString:self.searchInfo[@"file_path"]];
+    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
     AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
     generate1.appliesPreferredTrackTransform = YES;
     NSError *err = NULL;
@@ -86,6 +86,41 @@
     self.imgVideo.image = one;
 
 }
+
+- (void)setInfo:(NSDictionary *)info{
+    _info = info;
+    //要名
+    self.labDrugName.text = info[@"title"];
+    
+    //时间
+    self.labTime.text = info[@"fields"][@"drugs_date"];//[NSString getDateStringWithString:info[@"add_time"]];
+    
+    //数量
+    self.labNum.text = info[@"fields"][@"drugs_quantum"];
+    
+    //用药时间
+    self.labDrugTime.text = info[@"fields"][@"drugs_time"];
+    
+    //送药人
+    self.labPerson1.text = info[@"fields"][@"drugs_sender"];
+    
+    //责任人
+    self.labPerson2.text = info[@"fields"][@"drugs_manager"];
+    
+    //病因
+    self.labPathogeny.text = info[@"fields"][@"drugs_reason"];
+    
+    self.videoURL = [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
+    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
+    AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
+    generate1.appliesPreferredTrackTransform = YES;
+    NSError *err = NULL;
+    CMTime time = CMTimeMake(1, 2);
+    CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
+    UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
+    self.imgVideo.image = one;
+}
+
 - (IBAction)playVideoAction:(UIButton *)sender {
     //播放
     [self.moviePlayer.moviePlayer play];
