@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-OE-Zd3">
-                        <rect key="frame" x="78" y="11" width="71" height="21"/>
+                        <rect key="frame" x="78" y="11" width="82" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="GaJ-K8-1w9"/>
                         </constraints>
@@ -33,7 +33,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张晓明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tub-KQ-ThR">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张晓明" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tub-KQ-ThR">
                         <rect key="frame" x="276" y="11" width="36" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="ypK-BY-XAr"/>
@@ -43,7 +43,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2支" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dj7-As-ZdM">
-                        <rect key="frame" x="192" y="11" width="20" height="21"/>
+                        <rect key="frame" x="203" y="11" width="20" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="JaA-XD-IMv"/>
                             <constraint firstAttribute="width" constant="20" id="qzX-oP-Yss"/>
@@ -62,7 +62,7 @@
                     <constraint firstItem="Tub-KQ-ThR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="saK-St-gif"/>
                     <constraint firstItem="fHk-OE-Zd3" firstAttribute="leading" secondItem="T36-7c-yJp" secondAttribute="trailing" constant="2" id="tCP-XJ-z1q"/>
                     <constraint firstItem="T36-7c-yJp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="uHd-ZI-KLD"/>
-                    <constraint firstItem="Tub-KQ-ThR" firstAttribute="leading" secondItem="dj7-As-ZdM" secondAttribute="trailing" constant="64" id="zyz-cn-Em1"/>
+                    <constraint firstItem="Tub-KQ-ThR" firstAttribute="leading" secondItem="dj7-As-ZdM" secondAttribute="trailing" constant="53" id="zyz-cn-Em1"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
