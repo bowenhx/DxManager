@@ -19,13 +19,18 @@
     NSInteger       _commentId;
 }
 @property (nonatomic , strong)BKReplyInputView *replyView;
+@property (nonatomic , assign) BOOL addNotCent;
 @end
 
 @implementation HomeCustomTableView
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"reportNotificationCenter" object:nil];
+}
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        self.addNotCent = YES;
         [self addSubview:self.tableView];
     }
     return self;
@@ -40,7 +45,7 @@
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-     
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate = self;
         _tableView.dataSource = self;
 //        _tableView.layer.borderWidth = 1;
@@ -63,8 +68,6 @@
         _replyView.delegate = self;
         [self addSubview:_replyView];
         
-        //添加互动投诉 回复通知
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"reportNotificationCenter" object:nil];
     }
     return _replyView;
 }
@@ -93,6 +96,13 @@
     
     if (index == 68) {
         _commentId = 0;
+        
+        if (self.addNotCent) {
+            //添加互动投诉 回复通知
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"reportNotificationCenter" object:nil];
+            self.addNotCent = NO;
+        }
+       
     }
     
 }

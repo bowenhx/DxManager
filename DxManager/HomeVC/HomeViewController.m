@@ -22,6 +22,9 @@
 @end
 
 @implementation HomeViewController
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"updataHomeStatus" object:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

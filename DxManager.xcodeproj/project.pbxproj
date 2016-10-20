@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92039F201DB86D8400F9A17F /* SearchDrugHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92039F1F1DB86D8400F9A17F /* SearchDrugHeadView.m */; };
 		921AFA971DB5C6A500531A01 /* SendMegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921AFA951DB5C6A500531A01 /* SendMegViewController.m */; };
 		921AFA981DB5C6A500531A01 /* SendMegViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 921AFA961DB5C6A500531A01 /* SendMegViewController.xib */; };
 		921AFAE61DB5D34700531A01 /* UIImage+ZLPhotoLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 921AFA9E1DB5D34700531A01 /* UIImage+ZLPhotoLib.m */; };
@@ -142,6 +143,8 @@
 
 /* Begin PBXFileReference section */
 		4334DBE38CEA3D41125B098B /* libPods-DxManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DxManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92039F1E1DB86D8400F9A17F /* SearchDrugHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDrugHeadView.h; sourceTree = "<group>"; };
+		92039F1F1DB86D8400F9A17F /* SearchDrugHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDrugHeadView.m; sourceTree = "<group>"; };
 		921AFA941DB5C6A500531A01 /* SendMegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMegViewController.h; sourceTree = "<group>"; };
 		921AFA951DB5C6A500531A01 /* SendMegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMegViewController.m; sourceTree = "<group>"; };
 		921AFA961DB5C6A500531A01 /* SendMegViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMegViewController.xib; sourceTree = "<group>"; };
@@ -979,6 +982,8 @@
 				92DBA75B1DB766680037B496 /* DrugManageTableViewCell.h */,
 				92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */,
 				92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */,
+				92039F1E1DB86D8400F9A17F /* SearchDrugHeadView.h */,
+				92039F1F1DB86D8400F9A17F /* SearchDrugHeadView.m */,
 				B5BECEA31D9FBAE500B30DA7 /* ItemViewBtn.h */,
 				B5BECEA41D9FBAE500B30DA7 /* ItemViewBtn.m */,
 				B5DE3E731DB5005900ABC0A0 /* VideoItemView.h */,
@@ -1154,6 +1159,7 @@
 				B5BECE901D9FAE4800B30DA7 /* SDWebImageDownloaderOperation.m in Sources */,
 				929E7FD21DB4B90300F1A10B /* ItemVIewsHeight.m in Sources */,
 				921AFAEF1DB5D34700531A01 /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
+				92039F201DB86D8400F9A17F /* SearchDrugHeadView.m in Sources */,
 				92627DD11D7D154D00DD509C /* SavaData.m in Sources */,
 				B5BECE961D9FAE4800B30DA7 /* UIImage+MultiFormat.m in Sources */,
 				925485941DAA182A00C3CE23 /* GenearchTableViewCell.m in Sources */,

@@ -32,6 +32,8 @@
 
 
 
+@property (nonatomic , strong) UIViewController *viewController;
+@property (nonatomic , copy) NSDictionary *info;
 
 
 
