@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"通讯录";
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 

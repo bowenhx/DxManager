@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -92,21 +93,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOF-tc-lIg">
-                                <rect key="frame" x="270" y="190" width="60" height="30"/>
-                                <state key="normal" title="退出登陆"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-GG-c03">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="logOutAction:" destination="YY9-pe-hMF" eventType="touchUpInside" id="sgK-sK-9e8"/>
+                                    <outlet property="dataSource" destination="YY9-pe-hMF" id="s7y-Uy-pKZ"/>
+                                    <outlet property="delegate" destination="YY9-pe-hMF" id="P5g-lh-emR"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZOF-tc-lIg" firstAttribute="centerX" secondItem="6lC-g2-5em" secondAttribute="centerX" id="aWm-Lc-prb"/>
-                            <constraint firstItem="ZOF-tc-lIg" firstAttribute="top" secondItem="D7U-z4-2HM" secondAttribute="bottom" constant="126" id="gU3-QR-YVE"/>
+                            <constraint firstItem="5EN-GG-c03" firstAttribute="leading" secondItem="6lC-g2-5em" secondAttribute="leadingMargin" constant="-20" id="64y-4U-3zz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5EN-GG-c03" secondAttribute="trailing" constant="-20" id="cKS-bi-mOe"/>
+                            <constraint firstItem="IuX-Vi-W6a" firstAttribute="top" secondItem="5EN-GG-c03" secondAttribute="bottom" id="paJ-g6-JR3"/>
+                            <constraint firstItem="5EN-GG-c03" firstAttribute="top" secondItem="D7U-z4-2HM" secondAttribute="bottom" id="y8i-Gg-ibP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i2H-YZ-1me"/>
+                    <connections>
+                        <outlet property="tableView" destination="5EN-GG-c03" id="GGN-d7-tVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUz-cJ-C6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

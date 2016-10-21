@@ -94,6 +94,8 @@
 		92DBA75A1DB765040037B496 /* DrugManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA7581DB765040037B496 /* DrugManageViewController.xib */; };
 		92DBA75E1DB766680037B496 /* DrugManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */; };
 		92DBA75F1DB766680037B496 /* DrugManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */; };
+		B5A241031DBA00AB00065A4A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A241011DBA00AB00065A4A /* AboutViewController.m */; };
+		B5A241041DBA00AB00065A4A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A241021DBA00AB00065A4A /* AboutViewController.xib */; };
 		B5B76D541D7BFA2100B06414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D531D7BFA2100B06414 /* main.m */; };
 		B5B76D571D7BFA2100B06414 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D561D7BFA2100B06414 /* AppDelegate.m */; };
 		B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D591D7BFA2100B06414 /* ViewController.m */; };
@@ -309,6 +311,9 @@
 		92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageTableViewCell.xib; sourceTree = "<group>"; };
 		AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.release.xcconfig"; sourceTree = "<group>"; };
+		B5A241001DBA00AB00065A4A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		B5A241011DBA00AB00065A4A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B5A241021DBA00AB00065A4A /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		B5B76D4F1D7BFA2100B06414 /* DxManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B76D531D7BFA2100B06414 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5B76D551D7BFA2100B06414 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -871,6 +876,9 @@
 			children = (
 				92627DDC1D7D1A1000DD509C /* MoreViewController.h */,
 				92627DDD1D7D1A1000DD509C /* MoreViewController.m */,
+				B5A241001DBA00AB00065A4A /* AboutViewController.h */,
+				B5A241011DBA00AB00065A4A /* AboutViewController.m */,
+				B5A241021DBA00AB00065A4A /* AboutViewController.xib */,
 			);
 			path = MoreVC;
 			sourceTree = "<group>";
@@ -1070,6 +1078,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				921AFB041DB5D34700531A01 /* ZLPhotoLib.bundle in Resources */,
+				B5A241041DBA00AB00065A4A /* AboutViewController.xib in Resources */,
 				929E7FE11DB4C62D00F1A10B /* DetailViewController.xib in Resources */,
 				92DBA75F1DB766680037B496 /* DrugManageTableViewCell.xib in Resources */,
 				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
@@ -1233,6 +1242,7 @@
 				B5BECE9B1D9FAE4800B30DA7 /* UIView+WebCacheOperation.m in Sources */,
 				B5BECE5D1D9FADAF00B30DA7 /* UIImageView+NSString.m in Sources */,
 				B5BECE911D9FAE4800B30DA7 /* SDWebImageManager+MJ.m in Sources */,
+				B5A241031DBA00AB00065A4A /* AboutViewController.m in Sources */,
 				92627DF01D7D5AA400DD509C /* ForgetPwViewController.m in Sources */,
 				B5B76D5A1D7BFA2100B06414 /* ViewController.m in Sources */,
 				929E7FD61DB4BEDF00F1A10B /* ClassesViewController.m in Sources */,

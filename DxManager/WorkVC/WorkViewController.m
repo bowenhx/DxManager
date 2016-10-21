@@ -16,6 +16,7 @@
 #import "FMViewController.h"
 #import "ReportViewController.h"
 #import "DrugManageViewController.h"
+#import "DirectorViewController.h"
 
 @interface WorkViewController ()
 
@@ -74,7 +75,8 @@
     switch (btn.tag) {
         case 0:
         {//通讯录
-            
+            DirectorViewController *directorVC = [[DirectorViewController alloc] init];
+            [self.navigationController pushViewController:directorVC animated:YES];
         }
             break;
         case 1:

@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _viewY = self.view.y;
-    self.title = @"登陆";
+    self.title = @"登录";
     self.view.backgroundColor = [UIColor clearColor];
     
     UIImage *image = [[UIImage imageNamed:@"dte_nav_icon"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
@@ -82,7 +82,7 @@
      http://dx.sitemn.com/Ser/Managers.ashx?action=doLogin&username=manager&password=admin888
      */
     
-    [self.view showHUDActivityView:@"正在登錄..." shade:YES];
+    [self.view showHUDActivityView:@"正在登录..." shade:YES];
 //    
 //    [[ANet share] get:@"?action=doLogin&username=15806381115&password=admin888" completion:^(BNetData *model, NSString *netErr) {
 //         [self.view removeHUDActivity];

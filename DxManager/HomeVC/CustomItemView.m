@@ -33,7 +33,7 @@
     if (!_itemLab) {
         _itemLab = [[UILabel alloc] initWithFrame:self.bounds];
         _itemLab.textColor = ITEMCOLOR;
-        _itemLab.font = [UIFont systemFontOfSize:14];
+        _itemLab.font = [UIFont systemFontOfSize:15];
         [self addSubview:_itemLab];
     }
     return _itemLab;
@@ -117,7 +117,7 @@
         CustomHeadView *item = [[CustomHeadView alloc] initWithFrame:CGRectMake(0, 0, width, HEAD_H) title:titles[i]];
         if (i == 0) {
             item.itemLab.textColor = [UIColor colorBlue];
-            item.itemLab.font = [UIFont systemFontOfSize:16];
+            item.itemLab.font = [UIFont systemFontOfSize:18];
         }
         [_itemViews addObject:item];
     }
@@ -180,10 +180,10 @@
         CustomHeadView *iView = _itemViews[i];
         if (i == index) {
             iView.itemLab.textColor = [UIColor colorBlue];
-            iView.itemLab.font = [UIFont systemFontOfSize:16];
+            iView.itemLab.font = [UIFont systemFontOfSize:18];
         }else{
             iView.itemLab.textColor = ITEMCOLOR;
-            iView.itemLab.font = [UIFont systemFontOfSize:14];
+            iView.itemLab.font = [UIFont systemFontOfSize:15];
         }
     }
     

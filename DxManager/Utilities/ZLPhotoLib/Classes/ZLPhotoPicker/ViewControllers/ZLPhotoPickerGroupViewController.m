@@ -54,7 +54,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"選擇相冊";
+    self.title = @"选择相册";
 
     // 设置按钮
     [self setupButtons];
@@ -82,7 +82,7 @@
 }
 
 - (void) setupButtons{
-    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithTitle:@"關閉" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     
     self.navigationItem.rightBarButtonItem = barItem;
 }
