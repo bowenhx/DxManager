@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "AppDefine.h"
 #import "ForgetPwViewController.h"
-
+#define USERKEY @"User_Phone_Key"
 @interface LoginViewController ()<UITextFieldDelegate>
 {
     __weak IBOutlet UITextField *_phoneNumTextField;
@@ -46,14 +46,18 @@
     btn.layer.cornerRadius = 5;
     [[SavaData shareInstance] savaDataInteger:1 KeyString:@"finishGuide"];
    
-    
-    
+   
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
+    
+    NSString *phoneKey = [[SavaData shareInstance] printDataStr:USERKEY];
+    if (phoneKey) {
+        _phoneNumTextField.text = phoneKey;
+    }
 }
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
@@ -96,10 +100,13 @@
             NSDictionary *info = model.data;
             [SavaData writeDicToFile:info FileName:User_File];
             
+            [[SavaData shareInstance] savadataStr:_phoneNumTextField.text KeyString:USERKEY];
+            
             //跳转登陆页面
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             [self presentViewController:[mainStoryboard instantiateInitialViewController] animated:YES completion:^{
                 [[SavaData shareInstance] savaDataInteger:2 KeyString:@"finishGuide"];
+                [[SavaData shareInstance] savaDataInteger:1 KeyString:@"login_present"];
                 _passwordTextField.text = @"";
                 _phoneNumTextField.text = @"";
                 

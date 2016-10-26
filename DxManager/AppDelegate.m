@@ -37,6 +37,7 @@ static AppDelegate *_appDelegate;
         //使用Storyboard初始化根界面
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         self.window.rootViewController = [storyBoard instantiateInitialViewController];
+        [[SavaData shareInstance] savaDataInteger:2 KeyString:@"login_present"];
     }
     
    

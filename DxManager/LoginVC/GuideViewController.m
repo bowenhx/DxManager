@@ -35,9 +35,10 @@
     _scrollView.bounces = YES;
     _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(100, self.screen_H-45, self.screen_W-200, 30)];
+    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(100, self.screen_H-40, self.screen_W-200, 30)];
     _pageControl.numberOfPages = 3;
-    
+    _pageControl.currentPageIndicatorTintColor = [UIColor grayColor];
+    _pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     for (int i =0; i<3; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.screen_W*i, 0, _scrollView.bounds.size.width, _scrollView.bounds.size.height)];
         imageView.userInteractionEnabled = YES;

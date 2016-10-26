@@ -37,6 +37,7 @@
         float addBtnY = 2 + (SPACE + btn_wh) * (i/3);
         
         UIImageView *iView = [[UIImageView alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
+        iView.backgroundColor = [UIColor whiteColor];
         [iView img_setImageWithURL:imgItems[i][@"thumb_path"] placeholderImage:nil];
         [self addSubview:iView];
        

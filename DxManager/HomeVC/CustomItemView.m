@@ -102,8 +102,8 @@
         [_headView setTitleFont:[UIFont boldSystemFontOfSize:15] forState:UIControlStateSelected];
         [_headView setTitleFont:[UIFont boldSystemFontOfSize:15] forState:UIControlStateHighlighted];
         
-        UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, _headView.h-1, _headView.w, 0.5)];
-        line.backgroundColor = [UIColor lightGrayColor];
+        UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, _headView.h-1, _headView.w, 1)];
+        line.backgroundColor = [UIColor colorCellLineBg];
         [_headView addSubview:line];
         
         [self addSubview:_headView];

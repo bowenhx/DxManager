@@ -14,9 +14,8 @@
 #import "ZLCamera.h"
 #import "UploadingFormData.h"
 
-#define PHOTOS_WIDTH    80      //图片的宽
-#define PHOTOS_HEIGHT   80      //图片的高
-#define PHOTOS_X 10
+#define SPACE 20  //图片间隔20
+
 
 @interface SendMegViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ZLPhotoPickerBrowserViewControllerDelegate>
 {
@@ -25,6 +24,7 @@
     
     __weak IBOutlet UILabel *_labText;
     
+    float img_W;
     
 }
 @property (nonatomic , strong) UIButton *photoBtn; //添加照片btn
@@ -40,11 +40,14 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     
+       
 }
 
 - (void)loadNewView{
     [self.rightBtn setTitle:@"发布" forState:0];
     
+    
+    img_W = (self.screen_W - SPACE * 4) / 3;
     
     [self photoBtn];
     
@@ -53,7 +56,7 @@
 - (UIButton *)photoBtn{
     if (!_photoBtn) {
         _photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _photoBtn.frame = CGRectMake(PHOTOS_X,_textView.max_Y + 10, PHOTOS_WIDTH, PHOTOS_HEIGHT);
+        _photoBtn.frame = CGRectMake(SPACE,_textView.max_Y + 10, img_W, img_W);
         [_photoBtn setBackgroundImage:[UIImage imageNamed:@"3-1-2-3"] forState:UIControlStateNormal];
         [_photoBtn addTarget:self action:@selector(selectPhotoAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_photoBtn];
@@ -91,8 +94,10 @@
         if (model.status == 0) {
             
             [self.view showHUDTitleView:model.message image:nil];
-            [self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
             
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"updataHomeStatus" object:nil];
+            
+            [self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
         }else{
             [self.view showHUDTitleView:model.message image:nil];
         }
@@ -187,23 +192,23 @@
     // 加一是为了有个添加button
     NSInteger count = self.assets.count +1;
     for (int i=0;i < count; i++) {
-        float addBtnX = PHOTOS_X + (PHOTOS_X + PHOTOS_WIDTH) * (i%4);
-        float addBtnY = Y + (10 + PHOTOS_HEIGHT) * (i/4);
-        
+        float addBtnX = SPACE + (SPACE + img_W) * (i%3);
+        float addBtnY = Y + (SPACE + img_W) * (i/3);
+
         //多算一个frame确定添加按钮的坐标位置
         if (i == self.assets.count) {
             if (i>8) {
                 self.photoBtn.hidden = YES;
             }else{
                 self.photoBtn.hidden = NO;
-                self.photoBtn.frame = CGRectMake(addBtnX, addBtnY, PHOTOS_WIDTH, PHOTOS_HEIGHT);
+                self.photoBtn.frame = CGRectMake(addBtnX, addBtnY, img_W, img_W);
                 [self.view addSubview:_photoBtn];
             }
             break;
         }
         
         UIButton *btnImage = [UIButton buttonWithType:UIButtonTypeCustom];
-        btnImage.frame = CGRectMake(addBtnX, addBtnY, PHOTOS_WIDTH, PHOTOS_HEIGHT);
+        btnImage.frame = CGRectMake(addBtnX, addBtnY, img_W, img_W);
         btnImage.tag = i;
         UIImage *image = [self.assets[i] thumbImage];
         [btnImage setBackgroundImage:image forState:UIControlStateNormal];

@@ -31,6 +31,7 @@
     [self.dataSource setArray:@[@"修改密码",@"清空缓存",@"关于大象",@"退出登录"]];
     
     [self.tableView setTableHeaderView:[self headView]];
+    [self.tableView setTableFooterView:[[UIView alloc] init]];
 }
 - (UIView *)headView{
     NSDictionary *info = [SavaData parseDicFromFile:User_File];
@@ -71,14 +72,16 @@
     //标记登陆
     [[SavaData shareInstance] savaDataInteger:1 KeyString:@"finishGuide"];
     
-    UINavigationController *navC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    if ([navC.viewControllers[0] isKindOfClass:[LoginViewController class]]) {
+    NSInteger present = [[SavaData shareInstance] printDataInteger:@"login_present"];
+    if (present == 1) {
+        //表示刚登陆过
         [self dismissViewControllerAnimated:YES completion:^{
         }];
     }else{
         //退出登陆代理
         [[AppDelegate getAppDelegate] showLoginVC];
     }
+    
     
     //清除用户信息
     [SavaData writeDicToFile:@{} FileName:User_File];

@@ -73,6 +73,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TeacherTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"teacherCell" forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if ([[self itemsArr:indexPath.section] count]) {
         cell.info = [self itemsArr:indexPath.section][indexPath.row];
 
@@ -92,6 +93,10 @@
     labTitle.text = self.dataSource[section][@"grade"];
     [headView addSubview:labTitle];
     
+    //画线
+    UILabel *labLine = [[UILabel alloc] initWithFrame:CGRectMake(15, headView.h-1, self.screen_W-15, 1)];
+    labLine.backgroundColor = [UIColor colorCellLineBg];
+    [headView addSubview:labLine];
     return headView;
 }
 

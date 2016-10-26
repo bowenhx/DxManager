@@ -136,9 +136,9 @@
 
 - (BOOL)validatePhotoCount:(NSInteger)maxCount{
     if (self.selectAssets.count >= maxCount || maxCount < 0) {
-        NSString *format = [NSString stringWithFormat:@"最多只能選擇%zd張圖片",maxCount];
+        NSString *format = [NSString stringWithFormat:@"最多只能选择%zd张图片",maxCount];
         if (maxCount <= 0) {
-            format = [NSString stringWithFormat:@"您已經選滿了圖片."];
+            format = [NSString stringWithFormat:@"您已经选择择满了."];
         }
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提醒" message:format delegate:self cancelButtonTitle:nil otherButtonTitles:@"好的", nil];
         [alertView show];
