@@ -51,13 +51,14 @@
     
     //默认加载首页通知数据
     HomeCustomTableView *iView = _itemViews[0];
+    iView.page = 1;
     iView.index = 52;
     
     //item 变化数据加载处理
     _customView.itemsEcentAction = ^(NSInteger index){
         NSLog(@"index = %ld",(long)index);
-        
         HomeCustomTableView *iView = _itemViews[index];
+        iView.page = 1;
         if (index == 0) {
             iView.index = 52;
         }else{

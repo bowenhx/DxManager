@@ -18,5 +18,5 @@
 
 @property (nonatomic , assign) NSUInteger index;
 
-
+@property (nonatomic , assign) NSUInteger page;
 @end

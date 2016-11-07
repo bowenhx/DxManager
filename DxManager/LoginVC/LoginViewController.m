@@ -109,7 +109,6 @@
                 [[SavaData shareInstance] savaDataInteger:1 KeyString:@"login_present"];
                 _passwordTextField.text = @"";
                 _phoneNumTextField.text = @"";
-                
             }];
 
             

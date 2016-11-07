@@ -17,7 +17,7 @@
 #import "EKURL.h"
 #import "BNetData.h"
 #import "UIImageView+NSString.h"
-
+#import "MJRefresh.h"
 
 /**
  *  保存用户基本信息文件

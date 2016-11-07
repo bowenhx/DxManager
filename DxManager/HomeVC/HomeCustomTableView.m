@@ -17,6 +17,7 @@
 @interface HomeCustomTableView ()<UITableViewDelegate,UITableViewDataSource,InputDelegate>
 {
     NSInteger       _commentId;
+  
 }
 @property (nonatomic , strong)BKReplyInputView *replyView;
 @property (nonatomic , assign) BOOL addNotCent;
@@ -30,6 +31,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        _page = 1;
         self.addNotCent = YES;
         [self addSubview:self.tableView];
     }
@@ -59,6 +61,9 @@
         
         //高度
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_tableView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_tableView)]];
+        
+        _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(beginRefreshingAction)];
+        _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(uploadingAction)];
     }
     return _tableView;
 }
@@ -71,17 +76,42 @@
     }
     return _replyView;
 }
-
+//下拉刷新
+- (void)beginRefreshingAction{
+    _page = 1;
+    self.index = _index;
+}
+//上拉加载更多
+- (void)uploadingAction{
+    _page ++;
+    self.index = _index;
+}
 - (void)setIndex:(NSUInteger)index{
     _index = index;
     [self showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(index)} completion:^(BNetData *model, NSString *netErr) {
+    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(index),@"page":@(_page)} completion:^(BNetData *model, NSString *netErr) {
         [self removeHUDActivity];
         
         NSLog(@"data = %@",model.data);
         if (model.status == 0) {
             //请求成功
-            [self.dataSource setArray:model.data];
+            NSArray *array = model.data;
+            if ( _page == 1 ) {
+                if ([array isKindOfClass:[NSArray class]] && array.count) {
+                    [self.dataSource setArray:model.data];
+                    [_tableView.mj_footer resetNoMoreData];
+                }
+            }else{
+                if ([array isKindOfClass:[NSArray class]] && array.count) {
+                    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        [self.dataSource addObject:obj];
+                    }];
+                }else{
+                    [self showHUDTitleView:@"没有更多数据" image:nil];
+                    [_tableView.mj_footer endRefreshingWithNoMoreData];
+                }
+            }
+            
             [_tableView reloadData];
             
             if (self.dataSource.count == 0) {
@@ -91,6 +121,7 @@
         }else{
             [self showHUDTitleView:model.message image:nil];
         }
+        [_tableView endRefreshing];
         
     }];
     
