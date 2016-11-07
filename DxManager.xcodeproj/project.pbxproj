@@ -83,9 +83,6 @@
 		929E7FE11DB4C62D00F1A10B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FDF1DB4C62D00F1A10B /* DetailViewController.xib */; };
 		929E7FE51DB4C8C500F1A10B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */; };
 		929E7FE61DB4C8C500F1A10B /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */; };
-		92BAE8DF1DC08D6F00BFCF80 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BAE8DC1DC08D6F00BFCF80 /* Default-568h.png */; };
-		92BAE8E01DC08D6F00BFCF80 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BAE8DD1DC08D6F00BFCF80 /* Default@2x.png */; };
-		92BAE8E11DC08D6F00BFCF80 /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BAE8DE1DC08D6F00BFCF80 /* Default@3x.png */; };
 		92DBA74A1DB7080C0037B496 /* BKReplyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA7491DB7080C0037B496 /* BKReplyInputView.m */; };
 		92DBA74E1DB74A1D0037B496 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA74C1DB74A1D0037B496 /* ReportTableViewCell.m */; };
 		92DBA74F1DB74A1D0037B496 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA74D1DB74A1D0037B496 /* ReportTableViewCell.xib */; };
@@ -292,9 +289,6 @@
 		929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
-		92BAE8DC1DC08D6F00BFCF80 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
-		92BAE8DD1DC08D6F00BFCF80 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		92BAE8DE1DC08D6F00BFCF80 /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
 		92DBA7481DB7080C0037B496 /* BKReplyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKReplyInputView.h; sourceTree = "<group>"; };
 		92DBA7491DB7080C0037B496 /* BKReplyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKReplyInputView.m; sourceTree = "<group>"; };
 		92DBA74B1DB74A1D0037B496 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
@@ -818,9 +812,6 @@
 				B5B76D5B1D7BFA2100B06414 /* Main.storyboard */,
 				92627D5D1D7D11BE00DD509C /* Tools(工具) */,
 				B5B76D5E1D7BFA2100B06414 /* Assets.xcassets */,
-				92BAE8DC1DC08D6F00BFCF80 /* Default-568h.png */,
-				92BAE8DD1DC08D6F00BFCF80 /* Default@2x.png */,
-				92BAE8DE1DC08D6F00BFCF80 /* Default@3x.png */,
 				B5B76D631D7BFA2100B06414 /* Info.plist */,
 				B5B76D521D7BFA2100B06414 /* Supporting Files */,
 			);
@@ -1081,7 +1072,6 @@
 				B5B76D791D7C1AA000B06414 /* LoginViewController.xib in Resources */,
 				B5BECE5A1D9F9A8A00B30DA7 /* TrendsTableViewCell.xib in Resources */,
 				929E7FD71DB4BEDF00F1A10B /* ClassesViewController.xib in Resources */,
-				92BAE8E11DC08D6F00BFCF80 /* Default@3x.png in Resources */,
 				921AFA981DB5C6A500531A01 /* SendMegViewController.xib in Resources */,
 				92627DF11D7D5AA400DD509C /* ForgetPwViewController.xib in Resources */,
 				924247031DA8DF1800AC2133 /* TeacherViewController.xib in Resources */,
@@ -1091,7 +1081,6 @@
 				92627DC81D7D154D00DD509C /* MBProgressHUD.bundle in Resources */,
 				925485901DA9EC2500C3CE23 /* GenearchViewController.xib in Resources */,
 				92DBA74F1DB74A1D0037B496 /* ReportTableViewCell.xib in Resources */,
-				92BAE8DF1DC08D6F00BFCF80 /* Default-568h.png in Resources */,
 				921AFB0C1DB615EC00531A01 /* ReportViewController.xib in Resources */,
 				B5DE3E721DB4FED600ABC0A0 /* FMVideoTableViewCell.xib in Resources */,
 				924247081DA8DFAE00AC2133 /* TeacherTableViewCell.xib in Resources */,
@@ -1101,7 +1090,6 @@
 				B5BECEAA1D9FBAE500B30DA7 /* CheckTableViewCell.xib in Resources */,
 				B5C38BAC1DB8F3E800E1E57C /* DrugFormDataViewController.xib in Resources */,
 				B5B76D5D1D7BFA2100B06414 /* Main.storyboard in Resources */,
-				92BAE8E01DC08D6F00BFCF80 /* Default@2x.png in Resources */,
 				929E7FDC1DB4C23D00F1A10B /* FMViewController.xib in Resources */,
 				B5C38BB11DB8F5B300E1E57C /* DrugFormDataTableViewCell.xib in Resources */,
 			);
@@ -1377,6 +1365,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RCNCA68CS6;
 				INFOPLIST_FILE = DxManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
@@ -1394,6 +1383,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RCNCA68CS6;
 				INFOPLIST_FILE = DxManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
