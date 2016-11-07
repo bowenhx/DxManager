@@ -113,6 +113,8 @@
             }];
 
             
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
         }
         
     }];
