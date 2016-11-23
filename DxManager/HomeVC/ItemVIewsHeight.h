@@ -15,4 +15,7 @@
 + (CGFloat)loadItmesCounts:(NSInteger)count;
 
 + (CGFloat)loadTextContents:(NSString *)str;
+
++ (CGFloat)loadTextContentsMaxWidth:(CGFloat)width string:(NSString *)str;
+
 @end

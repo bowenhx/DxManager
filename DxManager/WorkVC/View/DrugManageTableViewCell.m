@@ -110,15 +110,23 @@
     //病因
     self.labPathogeny.text = info[@"fields"][@"drugs_reason"];
     
-    self.videoURL = [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
-    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
-    AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-    generate1.appliesPreferredTrackTransform = YES;
-    NSError *err = NULL;
-    CMTime time = CMTimeMake(1, 2);
-    CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-    UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
-    self.imgVideo.image = one;
+    NSArray *attach = self.info[@"attach"];
+    if ([attach isKindOfClass:[NSArray class]] && attach.count) {
+        self.videoURL = [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
+        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
+        AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
+        generate1.appliesPreferredTrackTransform = YES;
+        NSError *err = NULL;
+        CMTime time = CMTimeMake(1, 2);
+        CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
+        UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
+        self.imgVideo.image = one;
+        self.imgVideo.hidden = NO;
+        self.btnPlay.hidden = NO;
+    }else{
+        self.imgVideo.hidden = YES;
+        self.btnPlay.hidden = YES;
+    }
 }
 
 - (IBAction)playVideoAction:(UIButton *)sender {

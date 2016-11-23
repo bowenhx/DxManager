@@ -71,15 +71,22 @@
     
     self.labContent.text = info[@"title"];
     
-    
-    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:[NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]] options:nil];
-    AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-    generate1.appliesPreferredTrackTransform = YES;
-    NSError *err = NULL;
-    CMTime time = CMTimeMake(1, 2);
-    CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-    UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
-    self.imgVideo.image = one;
+    NSArray *attach = self.info[@"attach"];
+    if ([attach isKindOfClass:[NSArray class]] && attach.count) {
+        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL: [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]] options:nil];
+        AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
+        generate1.appliesPreferredTrackTransform = YES;
+        NSError *err = NULL;
+        CMTime time = CMTimeMake(1, 2);
+        CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
+        UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
+        self.imgVideo.image = one;
+        self.imgVideo.hidden = NO;
+        self.btnPlay.hidden = NO;
+    }else{
+        self.imgVideo.hidden = YES;
+        self.btnPlay.hidden = YES;
+    }
 }
 
 

@@ -21,9 +21,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labCheck;
 
-@property (weak, nonatomic) IBOutlet UILabel *labTitle;
-
 @property (weak, nonatomic) IBOutlet UILabel *labDescription;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeight;
 
 @property (weak, nonatomic) IBOutlet CustomImageView *imagesView;
 

@@ -62,10 +62,13 @@
     
     
     //title
-    self.labTitle.text = info[@"title"];
+//    self.labTitle.text = info[@"title"];
+    
+    
     
     //描述
     self.labDescription.text = info[@"zhaiyao"];
+    self.descriptionHeight.constant = [ItemVIewsHeight loadTextContentsMaxWidth:95 string:info[@"zhaiyao"]];
     
     NSArray *items = info[@"albums"];
     self.imagesView.imgItems = items;

@@ -31,5 +31,11 @@
      CGRect rect = [str boundingRectWithSize:CGSizeMake(width , 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
     return rect.size.height+10;
 }
++ (CGFloat)loadTextContentsMaxWidth:(CGFloat)width string:(NSString *)str{
+    float rectW = SCREEN_WIDTH - width;
+    CGRect rect = [str boundingRectWithSize:CGSizeMake(rectW , 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil];
+    return rect.size.height+10;
+}
+
 
 @end
