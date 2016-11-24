@@ -91,6 +91,8 @@
 		92DBA75A1DB765040037B496 /* DrugManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA7581DB765040037B496 /* DrugManageViewController.xib */; };
 		92DBA75E1DB766680037B496 /* DrugManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */; };
 		92DBA75F1DB766680037B496 /* DrugManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */; };
+		92F95D551DE681E700E152A7 /* VideoImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F95D541DE681E700E152A7 /* VideoImage.m */; };
+		92F95D591DE6924C00E152A7 /* FMVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F95D581DE6924C00E152A7 /* FMVideoModel.m */; };
 		B5A241031DBA00AB00065A4A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A241011DBA00AB00065A4A /* AboutViewController.m */; };
 		B5A241041DBA00AB00065A4A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A241021DBA00AB00065A4A /* AboutViewController.xib */; };
 		B5B76D541D7BFA2100B06414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D531D7BFA2100B06414 /* main.m */; };
@@ -302,6 +304,10 @@
 		92DBA75B1DB766680037B496 /* DrugManageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugManageTableViewCell.h; sourceTree = "<group>"; };
 		92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugManageTableViewCell.m; sourceTree = "<group>"; };
 		92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageTableViewCell.xib; sourceTree = "<group>"; };
+		92F95D531DE681E700E152A7 /* VideoImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoImage.h; sourceTree = "<group>"; };
+		92F95D541DE681E700E152A7 /* VideoImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoImage.m; sourceTree = "<group>"; };
+		92F95D571DE6924C00E152A7 /* FMVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMVideoModel.h; sourceTree = "<group>"; };
+		92F95D581DE6924C00E152A7 /* FMVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMVideoModel.m; sourceTree = "<group>"; };
 		AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.release.xcconfig"; sourceTree = "<group>"; };
 		B5A241001DBA00AB00065A4A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -730,6 +736,16 @@
 			path = SaveData;
 			sourceTree = "<group>";
 		};
+		92F95D561DE6922D00E152A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92F95D571DE6924C00E152A7 /* FMVideoModel.h */,
+				92F95D581DE6924C00E152A7 /* FMVideoModel.m */,
+			);
+			name = Model;
+			path = View/Model;
+			sourceTree = "<group>";
+		};
 		B5B572CD1DB64CF400D92B6F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -761,6 +777,8 @@
 			children = (
 				929E7FD01DB4B90300F1A10B /* ItemVIewsHeight.h */,
 				929E7FD11DB4B90300F1A10B /* ItemVIewsHeight.m */,
+				92F95D531DE681E700E152A7 /* VideoImage.h */,
+				92F95D541DE681E700E152A7 /* VideoImage.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -894,6 +912,7 @@
 				B5C38BA81DB8F3E800E1E57C /* DrugFormDataViewController.h */,
 				B5C38BA91DB8F3E800E1E57C /* DrugFormDataViewController.m */,
 				B5C38BAA1DB8F3E800E1E57C /* DrugFormDataViewController.xib */,
+				92F95D561DE6922D00E152A7 /* Model */,
 				B5BECE9F1D9FBAE500B30DA7 /* View */,
 			);
 			path = WorkVC;
@@ -1161,6 +1180,7 @@
 				B5BECE931D9FAE4800B30DA7 /* SDWebImagePrefetcher.m in Sources */,
 				921AFAFE1DB5D34700531A01 /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				921AFAED1DB5D34700531A01 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
+				92F95D551DE681E700E152A7 /* VideoImage.m in Sources */,
 				92627D5B1D7D10AA00DD509C /* BNavigationController.m in Sources */,
 				92627DDE1D7D1A1000DD509C /* MoreViewController.m in Sources */,
 				921AFAFA1DB5D34700531A01 /* ZLPhotoPickerAssetsViewController.m in Sources */,
@@ -1189,6 +1209,7 @@
 				921AFAF81DB5D34700531A01 /* UIViewController+Alert.m in Sources */,
 				921AFB021DB5D34700531A01 /* DACircularProgressView.m in Sources */,
 				B5C38BAB1DB8F3E800E1E57C /* DrugFormDataViewController.m in Sources */,
+				92F95D591DE6924C00E152A7 /* FMVideoModel.m in Sources */,
 				921AFAF71DB5D34700531A01 /* ZLPhotoPickerGroup.m in Sources */,
 				92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */,
 				B5BECE951D9FAE4800B30DA7 /* UIImage+GIF.m in Sources */,

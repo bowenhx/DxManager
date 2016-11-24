@@ -5,16 +5,16 @@
 //  Created by Stray on 16/10/17.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
-#import <AVFoundation/AVFoundation.h>
+
 #import <MediaPlayer/MediaPlayer.h>
 #import "FMVideoTableViewCell.h"
 #import "AppDefine.h"
-
+#import "VideoImage.h"
 
 @interface FMVideoTableViewCell ()
 
 @property (nonatomic,strong) MPMoviePlayerViewController *moviePlayer;//视频播放控制器
-
+@property (nonatomic , strong) NSURL *videoURL;
 @end
 
 @implementation FMVideoTableViewCell
@@ -73,20 +73,33 @@
     
     NSArray *attach = self.info[@"attach"];
     if ([attach isKindOfClass:[NSArray class]] && attach.count) {
-        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL: [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]] options:nil];
+        self.videoURL =  [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
+        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:_videoURL options:nil];
         AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
         generate1.appliesPreferredTrackTransform = YES;
         NSError *err = NULL;
         CMTime time = CMTimeMake(1, 2);
         CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-        UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
-        self.imgVideo.image = one;
-        self.imgVideo.hidden = NO;
-        self.btnPlay.hidden = NO;
+        UIImage *image = [[UIImage alloc] initWithCGImage:oneRef];
+        _imgVideo.image = image;
+        _imgVideo.hidden = NO;
+        _btnPlay.hidden = NO;
+//        [[VideoImage share] getVideoImageForURL:self.videoURL block:^(UIImage *image) {
+//            if (image) {
+//                _imgVideo.image = image;
+//                _imgVideo.hidden = NO;
+//                _btnPlay.hidden = NO;
+//            }else{
+//                _imgVideo.hidden = YES;
+//                _btnPlay.hidden = YES;
+//            }
+//        }];
     }else{
         self.imgVideo.hidden = YES;
         self.btnPlay.hidden = YES;
     }
+    
+//    _imgVideo.layer.borderWidth = 1;
 }
 
 
