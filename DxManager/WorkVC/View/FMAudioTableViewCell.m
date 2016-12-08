@@ -9,24 +9,15 @@
 #import <AVFoundation/AVFoundation.h>
 #import "FMAudioTableViewCell.h"
 #import "AppDefine.h"
+#import "FMAudioPlay.h"
 
 @interface FMAudioTableViewCell ()
-@property (nonatomic,strong) AVAudioPlayer *audioPlayer;//播放器
 
 @end
 
 @implementation FMAudioTableViewCell
 
 - (void)dealloc{
-   
-    [self removeAudioPlayer];
-}
-- (void)removeAudioPlayer{
-    if ([self.audioPlayer isPlaying]) {
-        [self.audioPlayer pause];
-        _audioPlayer = nil;
-    }
-
 }
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -37,33 +28,7 @@
     
     
 }
-/**
- *  创建播放器
- *
- *  @return 音频播放器
- */
-- (AVAudioPlayer *)audioPlayer{
-    if (!_audioPlayer) {
-        NSURL *url = [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
-        NSError *error=nil;
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        
-        //初始化播放器，注意这里的Url参数只能时文件路径，不支持HTTP Url
-        _audioPlayer=[[AVAudioPlayer alloc] initWithData:data error:&error];
-        //设置播放器属性
-        _audioPlayer.numberOfLoops=0;//设置为0不循环
-//        _audioPlayer.delegate = self;
-        [_audioPlayer prepareToPlay];//加载音频文件到缓存
-        if(error){
-            NSLog(@"初始化播放器过程发生错误,错误信息:%@",error.localizedDescription);
-            return nil;
-        }
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeAudioPlayer) name:@"audioPlayCenter" object:nil];
-        
-    }
-    return _audioPlayer;
-}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -86,14 +51,43 @@
 }
 
 - (IBAction)playAudioAction:(UIButton *)sender {
-    //播放
-    if ([self.audioPlayer isPlaying]) {
-        [self.audioPlayer pause];
-        [self.btnPlay setTitle:@"点击播放" forState:0];
-    }else{
-         [self.audioPlayer play];
-        [self.btnPlay setTitle:@"点击暂停" forState:0];
+    [sender setTitle:@"正在载入..." forState:UIControlStateNormal];
+    NSString *string = self.info[@"attach"][0][@"file_path"];
+    
+    FMAudioPlay *audioPlay = [FMAudioPlay share];
+    //播放器已有
+    if (audioPlay.audioPlayer) {
+        if ([audioPlay.playURL isEqualToString:string]) {
+            if ([audioPlay.audioPlayer isPlaying]) {
+                [audioPlay.audioPlayer pause];
+                [sender setTitle:@"点击播放" forState:UIControlStateNormal];
+            }else{
+                [audioPlay.audioPlayer play];
+                [sender setTitle:@"点击暂停" forState:UIControlStateNormal];
+            }
+            return;
+        }else{
+            audioPlay.audioPlayer = nil;
+            UIButton *tempBtn = [BRuntimeObj getTempObj];
+            [tempBtn setTitle:@"点击播放" forState:UIControlStateNormal];
+            
+        }
     }
+    
+    audioPlay.playURL = string;
+    
+    //初始化AVAudioPlayer播放器，并开始播放
+    [audioPlay loadPlayerDataBlock:^(AVAudioPlayer *play) {
+        if (play) {
+            [play play];
+            [BRuntimeObj tempSaveObj:sender];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [sender setTitle:@"点击暂停" forState:UIControlStateNormal];
+            });
+        }
+    }];
+    
+
     
     
 }

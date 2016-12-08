@@ -9,7 +9,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "FMVideoTableViewCell.h"
 #import "AppDefine.h"
-#import "VideoImage.h"
+#import "FMAudioPlay.h"
 
 @interface FMVideoTableViewCell ()
 
@@ -72,34 +72,25 @@
     self.labContent.text = info[@"title"];
     
     NSArray *attach = self.info[@"attach"];
+
+    
     if ([attach isKindOfClass:[NSArray class]] && attach.count) {
-        self.videoURL =  [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
-        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:_videoURL options:nil];
-        AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-        generate1.appliesPreferredTrackTransform = YES;
-        NSError *err = NULL;
-        CMTime time = CMTimeMake(1, 2);
-        CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-        UIImage *image = [[UIImage alloc] initWithCGImage:oneRef];
-        _imgVideo.image = image;
-        _imgVideo.hidden = NO;
-        _btnPlay.hidden = NO;
-//        [[VideoImage share] getVideoImageForURL:self.videoURL block:^(UIImage *image) {
-//            if (image) {
-//                _imgVideo.image = image;
-//                _imgVideo.hidden = NO;
-//                _btnPlay.hidden = NO;
-//            }else{
-//                _imgVideo.hidden = YES;
-//                _btnPlay.hidden = YES;
-//            }
-//        }];
+        NSString *path = attach[0][@"file_path"];
+        @WeakObj(self);
+        [FMAudioPlay videoPlayerURL:path block:^(UIImage *image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (image) {
+                    self.imgVideo.hidden = NO;
+                    self.btnPlay.hidden = NO;
+                    selfWeak.imgVideo.image = image;
+                }
+            });
+        }];
     }else{
         self.imgVideo.hidden = YES;
         self.btnPlay.hidden = YES;
     }
     
-//    _imgVideo.layer.borderWidth = 1;
 }
 
 

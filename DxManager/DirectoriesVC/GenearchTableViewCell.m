@@ -29,19 +29,59 @@
     [self.icon img_setImageWithURL:info[@"avatar"] placeholderImage:nil];
     
     self.name.text = info[@"childrenname"];
-    self.name2.text = info[@"family"][0][@"familyname"];
-    self.name3.text = info[@"family"][1][@"familyname"];
+    NSArray *family = info[@"family"];
+    if (family.count) {
+        self.name2.text = info[@"family"][0][@"familyname"];
+        if (family.count > 1) {
+            self.name3.text = info[@"family"][1][@"familyname"];
+        }else{
+            self.name3.text = @"";
+        }
+    }else{
+        self.name2.text = @"";
+        self.name3.text = @"";
+    }
+
 }
 
 - (IBAction)playTelPhoneAction:(UIButton *)sender {
     NSURL *phoneURL = nil;
     if (sender.tag == 100) {
-         phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",self.info[@"family"][0][@"familytel"]]];
+        NSArray *family = self.info[@"family"];
+        if (family.count) {
+            NSString *phoneNum = family[0][@"familytel"];
+            if (phoneNum.length>2) {
+                phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phoneNum]];
+            }else{
+                [self showHUDTitleView:@"没有电话可供拨打" image:nil];
+                return;
+            }
+            
+        }else{
+            [self showHUDTitleView:@"没有电话可供拨打" image:nil];
+            return;
+        }
+        
     }else{
-         phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",self.info[@"family"][1][@"familytel"]]];
+        NSArray *family = self.info[@"family"];
+        if (family.count>1) {
+            NSString *phoneNum = family[1][@"familytel"];
+            if (phoneNum.length>2) {
+                phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phoneNum]];
+            }else{
+                [self showHUDTitleView:@"没有电话可供拨打" image:nil];
+                return;
+            }
+        }else{
+            [self showHUDTitleView:@"没有电话可供拨打" image:nil];
+            return;
+        }
     }
    
     [[UIApplication sharedApplication] openURL:phoneURL];
+    
+    
+   
 }
 
 @end

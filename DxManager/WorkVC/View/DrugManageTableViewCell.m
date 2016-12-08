@@ -9,6 +9,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "DrugManageTableViewCell.h"
 #import "AppDefine.h"
+#import "FMAudioPlay.h"
 
 @interface DrugManageTableViewCell ()
 @property (nonatomic,strong) MPMoviePlayerViewController *moviePlayer;//视频播放控制器
@@ -76,15 +77,16 @@
     self.labPathogeny.text = searchInfo[@"drugs_reason"];
     
     self.videoURL = [NSString getPathByAppendString:self.searchInfo[@"file_path"]];
-    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
-    AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-    generate1.appliesPreferredTrackTransform = YES;
-    NSError *err = NULL;
-    CMTime time = CMTimeMake(1, 2);
-    CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-    UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
-    self.imgVideo.image = one;
-
+    NSString *path = self.searchInfo[@"file_path"];
+    @WeakObj(self);
+    [FMAudioPlay videoPlayerURL:path block:^(UIImage *image) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (image) {
+                selfWeak.imgVideo.image = image;
+            }
+        });
+    }];
+    
 }
 
 - (void)setInfo:(NSDictionary *)info{
@@ -112,17 +114,17 @@
     
     NSArray *attach = self.info[@"attach"];
     if ([attach isKindOfClass:[NSArray class]] && attach.count) {
-        self.videoURL = [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
-        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
-        AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-        generate1.appliesPreferredTrackTransform = YES;
-        NSError *err = NULL;
-        CMTime time = CMTimeMake(1, 2);
-        CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-        UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
-        self.imgVideo.image = one;
-        self.imgVideo.hidden = NO;
-        self.btnPlay.hidden = NO;
+        NSString *path = attach[0][@"file_path"];
+        @WeakObj(self);
+        [FMAudioPlay videoPlayerURL:path block:^(UIImage *image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (image) {
+                    self.imgVideo.hidden = NO;
+                    self.btnPlay.hidden = NO;
+                    selfWeak.imgVideo.image = image;
+                }
+            });
+        }];
     }else{
         self.imgVideo.hidden = YES;
         self.btnPlay.hidden = YES;

@@ -203,7 +203,7 @@
 
 - (CGFloat)itemsImages:(NSDictionary *)item{
     NSArray *items = item[@"albums"];
-    return [ItemVIewsHeight loadItmesCounts:items.count] + [ItemVIewsHeight loadTextContentsMaxWidth:95 string:item[@"zhaiyao"]];;
+    return [ItemVIewsHeight loadItmesCounts:items.count] + [ItemVIewsHeight loadTextContentsMaxWidth:95 string:item[@"zhaiyao"]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

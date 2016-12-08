@@ -83,6 +83,8 @@
 		929E7FE11DB4C62D00F1A10B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FDF1DB4C62D00F1A10B /* DetailViewController.xib */; };
 		929E7FE51DB4C8C500F1A10B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */; };
 		929E7FE61DB4C8C500F1A10B /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */; };
+		92AF59AE1DF95F2D00A1307A /* BRuntimeObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AF59AB1DF95F2D00A1307A /* BRuntimeObj.m */; };
+		92AF59AF1DF95F2D00A1307A /* FMAudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AF59AD1DF95F2D00A1307A /* FMAudioPlay.m */; };
 		92DBA74A1DB7080C0037B496 /* BKReplyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA7491DB7080C0037B496 /* BKReplyInputView.m */; };
 		92DBA74E1DB74A1D0037B496 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA74C1DB74A1D0037B496 /* ReportTableViewCell.m */; };
 		92DBA74F1DB74A1D0037B496 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA74D1DB74A1D0037B496 /* ReportTableViewCell.xib */; };
@@ -92,7 +94,6 @@
 		92DBA75E1DB766680037B496 /* DrugManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA75C1DB766680037B496 /* DrugManageTableViewCell.m */; };
 		92DBA75F1DB766680037B496 /* DrugManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */; };
 		92F95D551DE681E700E152A7 /* VideoImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F95D541DE681E700E152A7 /* VideoImage.m */; };
-		92F95D591DE6924C00E152A7 /* FMVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F95D581DE6924C00E152A7 /* FMVideoModel.m */; };
 		B5A241031DBA00AB00065A4A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A241011DBA00AB00065A4A /* AboutViewController.m */; };
 		B5A241041DBA00AB00065A4A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A241021DBA00AB00065A4A /* AboutViewController.xib */; };
 		B5B76D541D7BFA2100B06414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B76D531D7BFA2100B06414 /* main.m */; };
@@ -291,6 +292,10 @@
 		929E7FE21DB4C8C500F1A10B /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		929E7FE31DB4C8C500F1A10B /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		92AF59AA1DF95F2D00A1307A /* BRuntimeObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRuntimeObj.h; sourceTree = "<group>"; };
+		92AF59AB1DF95F2D00A1307A /* BRuntimeObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRuntimeObj.m; sourceTree = "<group>"; };
+		92AF59AC1DF95F2D00A1307A /* FMAudioPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAudioPlay.h; sourceTree = "<group>"; };
+		92AF59AD1DF95F2D00A1307A /* FMAudioPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAudioPlay.m; sourceTree = "<group>"; };
 		92DBA7481DB7080C0037B496 /* BKReplyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKReplyInputView.h; sourceTree = "<group>"; };
 		92DBA7491DB7080C0037B496 /* BKReplyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKReplyInputView.m; sourceTree = "<group>"; };
 		92DBA74B1DB74A1D0037B496 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
@@ -306,8 +311,6 @@
 		92DBA75D1DB766680037B496 /* DrugManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageTableViewCell.xib; sourceTree = "<group>"; };
 		92F95D531DE681E700E152A7 /* VideoImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoImage.h; sourceTree = "<group>"; };
 		92F95D541DE681E700E152A7 /* VideoImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoImage.m; sourceTree = "<group>"; };
-		92F95D571DE6924C00E152A7 /* FMVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMVideoModel.h; sourceTree = "<group>"; };
-		92F95D581DE6924C00E152A7 /* FMVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMVideoModel.m; sourceTree = "<group>"; };
 		AB469877EE91B235707723E9 /* Pods-DxManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E092E3574F3829C4A07EE /* Pods-DxManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxManager/Pods-DxManager.release.xcconfig"; sourceTree = "<group>"; };
 		B5A241001DBA00AB00065A4A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -739,8 +742,10 @@
 		92F95D561DE6922D00E152A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92F95D571DE6924C00E152A7 /* FMVideoModel.h */,
-				92F95D581DE6924C00E152A7 /* FMVideoModel.m */,
+				92AF59AA1DF95F2D00A1307A /* BRuntimeObj.h */,
+				92AF59AB1DF95F2D00A1307A /* BRuntimeObj.m */,
+				92AF59AC1DF95F2D00A1307A /* FMAudioPlay.h */,
+				92AF59AD1DF95F2D00A1307A /* FMAudioPlay.m */,
 			);
 			name = Model;
 			path = View/Model;
@@ -1198,6 +1203,7 @@
 				921AFB001DB5D34700531A01 /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
 				B5BECEA91D9FBAE500B30DA7 /* CheckTableViewCell.m in Sources */,
 				92DBA74A1DB7080C0037B496 /* BKReplyInputView.m in Sources */,
+				92AF59AE1DF95F2D00A1307A /* BRuntimeObj.m in Sources */,
 				921AFB011DB5D34700531A01 /* ZLPhotoPickerImageView.m in Sources */,
 				929E7FCF1DB4AE5E00F1A10B /* CustomImageView.m in Sources */,
 				929E7FDB1DB4C23D00F1A10B /* FMViewController.m in Sources */,
@@ -1209,7 +1215,6 @@
 				921AFAF81DB5D34700531A01 /* UIViewController+Alert.m in Sources */,
 				921AFB021DB5D34700531A01 /* DACircularProgressView.m in Sources */,
 				B5C38BAB1DB8F3E800E1E57C /* DrugFormDataViewController.m in Sources */,
-				92F95D591DE6924C00E152A7 /* FMVideoModel.m in Sources */,
 				921AFAF71DB5D34700531A01 /* ZLPhotoPickerGroup.m in Sources */,
 				92627D5A1D7D10AA00DD509C /* BaseViewController.m in Sources */,
 				B5BECE951D9FAE4800B30DA7 /* UIImage+GIF.m in Sources */,
@@ -1240,6 +1245,7 @@
 				92627DDB1D7D1A0300DD509C /* DirectorViewController.m in Sources */,
 				921AFB071DB5E69600531A01 /* UploadingFormData.m in Sources */,
 				929E7FE01DB4C62D00F1A10B /* DetailViewController.m in Sources */,
+				92AF59AF1DF95F2D00A1307A /* FMAudioPlay.m in Sources */,
 				92627DE51D7D406C00DD509C /* GuideViewController.m in Sources */,
 				92DBA7521DB74EF60037B496 /* CommentView.m in Sources */,
 				B5BECEA71D9FBAE500B30DA7 /* CheckManageViewController.m in Sources */,
