@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PraiseItemView.h"
 
 @interface FMAudioTableViewCell : UITableViewCell
 
@@ -23,6 +24,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *labContent;
 
 @property (weak, nonatomic) IBOutlet UILabel *labLineBg;
+
+@property (weak, nonatomic) IBOutlet PraiseItemView *moreViewBg;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *btnDZ;
+
+@property (weak, nonatomic) IBOutlet UILabel *labNumDZ;
+
+
 
 @property (nonatomic, copy) NSDictionary *info;
 

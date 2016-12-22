@@ -85,6 +85,7 @@
 		929E7FE61DB4C8C500F1A10B /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E7FE41DB4C8C500F1A10B /* DetailTableViewCell.xib */; };
 		92AF59AE1DF95F2D00A1307A /* BRuntimeObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AF59AB1DF95F2D00A1307A /* BRuntimeObj.m */; };
 		92AF59AF1DF95F2D00A1307A /* FMAudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AF59AD1DF95F2D00A1307A /* FMAudioPlay.m */; };
+		92B347441E02643F0041D1D6 /* PraiseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B347431E02643F0041D1D6 /* PraiseItemView.m */; };
 		92DBA74A1DB7080C0037B496 /* BKReplyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA7491DB7080C0037B496 /* BKReplyInputView.m */; };
 		92DBA74E1DB74A1D0037B496 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBA74C1DB74A1D0037B496 /* ReportTableViewCell.m */; };
 		92DBA74F1DB74A1D0037B496 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DBA74D1DB74A1D0037B496 /* ReportTableViewCell.xib */; };
@@ -296,6 +297,8 @@
 		92AF59AB1DF95F2D00A1307A /* BRuntimeObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRuntimeObj.m; sourceTree = "<group>"; };
 		92AF59AC1DF95F2D00A1307A /* FMAudioPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAudioPlay.h; sourceTree = "<group>"; };
 		92AF59AD1DF95F2D00A1307A /* FMAudioPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAudioPlay.m; sourceTree = "<group>"; };
+		92B347421E02643F0041D1D6 /* PraiseItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PraiseItemView.h; sourceTree = "<group>"; };
+		92B347431E02643F0041D1D6 /* PraiseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PraiseItemView.m; sourceTree = "<group>"; };
 		92DBA7481DB7080C0037B496 /* BKReplyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKReplyInputView.h; sourceTree = "<group>"; };
 		92DBA7491DB7080C0037B496 /* BKReplyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKReplyInputView.m; sourceTree = "<group>"; };
 		92DBA74B1DB74A1D0037B496 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
@@ -1003,6 +1006,8 @@
 		B5BECE9F1D9FBAE500B30DA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92B347421E02643F0041D1D6 /* PraiseItemView.h */,
+				92B347431E02643F0041D1D6 /* PraiseItemView.m */,
 				B5BECEA01D9FBAE500B30DA7 /* CheckTableViewCell.h */,
 				B5BECEA11D9FBAE500B30DA7 /* CheckTableViewCell.m */,
 				B5BECEA21D9FBAE500B30DA7 /* CheckTableViewCell.xib */,
@@ -1063,6 +1068,7 @@
 					B5B76D4E1D7BFA2100B06414 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = RCNCA68CS6;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1271,6 +1277,7 @@
 				B5BECE8F1D9FAE4800B30DA7 /* SDWebImageDownloader.m in Sources */,
 				B5DE3E711DB4FED600ABC0A0 /* FMVideoTableViewCell.m in Sources */,
 				921AFB0B1DB615EC00531A01 /* ReportViewController.m in Sources */,
+				92B347441E02643F0041D1D6 /* PraiseItemView.m in Sources */,
 				92DBA74E1DB74A1D0037B496 /* ReportTableViewCell.m in Sources */,
 				921AFAEA1DB5D34700531A01 /* ZLCameraView.m in Sources */,
 				B5BECE8B1D9FAE4800B30DA7 /* NSData+ImageContentType.m in Sources */,
@@ -1390,7 +1397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: service@qcjy-group.com (68KX94VQGZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RCNCA68CS6;
 				INFOPLIST_FILE = DxManager/Info.plist;
@@ -1398,7 +1405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1408,7 +1415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: QI CHENG JIA YE(BEIJING)EDUCATIONAL CO.,LTD. (RCNCA68CS6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RCNCA68CS6;
 				INFOPLIST_FILE = DxManager/Info.plist;
@@ -1416,7 +1423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxmanager.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

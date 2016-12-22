@@ -47,7 +47,15 @@
     self.labBrowse.text = [NSString stringWithFormat:@"已浏览%@次",info[@"click"]];
     
     self.labContent.text = info[@"title"];
+   
+    self.btnDZ.selected = [info[@"is_dianzan"] boolValue];
     
+    NSArray *itemDZ =  info[@"article_zan"];
+    if ([itemDZ isKindOfClass:[NSArray class]]) {
+        self.moreViewBg.items = itemDZ;
+        self.labNumDZ.text = [NSString stringWithFormat:@"%ld",(long)itemDZ.count];
+    }
+
 }
 
 - (IBAction)playAudioAction:(UIButton *)sender {

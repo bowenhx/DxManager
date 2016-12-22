@@ -91,6 +91,14 @@
         self.btnPlay.hidden = YES;
     }
     
+    self.btnDZ.selected = [info[@"is_dianzan"] boolValue];
+    self.moreViewBg.items = info[@"article_zan"];
+    NSArray *itemDZ =  info[@"article_zan"];
+    if ([itemDZ isKindOfClass:[NSArray class]]) {
+        self.moreViewBg.items = itemDZ;
+        self.labNumDZ.text = [NSString stringWithFormat:@"%ld",(long)itemDZ.count];
+    }
+
 }
 
 

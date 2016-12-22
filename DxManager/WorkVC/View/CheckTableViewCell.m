@@ -14,8 +14,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
    
-    self.classesName.layer.borderWidth = .5;
-    self.classesName.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    self.classesName.layer.borderWidth = .5;
+//    self.classesName.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     self.peopleNum1.textColor = [UIColor colorRed];
     self.peopleNum2.textColor = [UIColor colorRed];

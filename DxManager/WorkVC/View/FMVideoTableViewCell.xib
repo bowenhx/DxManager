@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="225"/>
+                <frame key="frameInset" width="320" height="224"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBW-wH-RMl">
@@ -30,8 +30,7 @@
                         <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="刘老师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j67-no-rN8">
-                        <frame key="frameInset" minX="86" minY="8" width="51" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刘老师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j67-no-rN8">
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="zUl-wo-Vc2"/>
                         </constraints>
@@ -39,8 +38,7 @@
                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="已浏览2992人次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXM-jU-8P0">
-                        <frame key="frameInset" minX="229" minY="26" width="83" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已浏览2992人次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXM-jU-8P0">
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="jOk-5g-843"/>
                         </constraints>
@@ -48,8 +46,7 @@
                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-CL-Ssh">
-                        <frame key="frameInset" minX="270" minY="8" width="42" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-CL-Ssh">
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="E3f-A6-FpN"/>
                         </constraints>
@@ -83,13 +80,14 @@
                             <action selector="playVideoAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XF3-1s-RxE"/>
                         </connections>
                     </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-bB-nsV">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-bB-nsV" customClass="PraiseItemView">
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ej4-9V-tdj">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="Eee-DN-15P"/>
                                 </constraints>
                                 <state key="normal" image="vi_dz"/>
+                                <state key="selected" image="vi_dz_lan"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rze-O5-rvQ">
                                 <constraints>
@@ -146,6 +144,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnDZ" destination="Ej4-9V-tdj" id="c6O-Da-7rN"/>
                 <outlet property="btnPlay" destination="2oK-Sm-g6b" id="i6W-ze-qU9"/>
                 <outlet property="headView" destination="JBW-wH-RMl" id="BdD-b4-UyA"/>
                 <outlet property="imgVideo" destination="DDN-oe-Jff" id="AGd-FH-42j"/>
@@ -153,14 +152,17 @@
                 <outlet property="labContent" destination="nyE-qK-fFV" id="SPh-Qb-OTr"/>
                 <outlet property="labLineBg" destination="2HB-cB-nFS" id="Dkb-aZ-RgE"/>
                 <outlet property="labName" destination="j67-no-rN8" id="j6p-I4-BTu"/>
+                <outlet property="labNumDZ" destination="rze-O5-rvQ" id="Z5Q-Zc-tHE"/>
                 <outlet property="labTime" destination="Ljl-iK-qIL" id="GQK-M8-PQn"/>
+                <outlet property="moreViewBg" destination="iVR-bB-nsV" id="mTj-3g-S8s"/>
             </connections>
-            <point key="canvasLocation" x="376" y="239.5"/>
+            <point key="canvasLocation" x="-55" y="89"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bofang" width="45" height="45"/>
         <image name="vi_dz" width="20" height="20"/>
+        <image name="vi_dz_lan" width="20" height="20"/>
         <image name="vi_sp" width="20" height="20"/>
     </resources>
 </document>

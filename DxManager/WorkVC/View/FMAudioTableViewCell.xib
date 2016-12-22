@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,56 +13,50 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                <frame key="frameInset" width="320" height="169"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-66-RNR">
-                        <rect key="frame" x="8" y="8" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="H2k-nt-m6o"/>
                             <constraint firstAttribute="width" constant="70" id="ew5-Un-hty"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-6P-aAC">
-                        <rect key="frame" x="270" y="8" width="42" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="pr5-qP-JLK"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="视频" image="vi_yp">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刘老师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="See-cR-mdn">
-                        <rect key="frame" x="86" y="8" width="51" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="KAj-YD-WeM"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYC-Bp-dBs">
-                        <rect key="frame" x="0.0" y="165" width="320" height="5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="5" id="e81-B2-any"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016.09.28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRz-eB-dgx">
-                        <rect key="frame" x="86" y="31" width="64" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="3gV-F8-REo"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irw-eb-Z9Q">
-                        <rect key="frame" x="86" y="84" width="110" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="3i5-gX-FhK"/>
                             <constraint firstAttribute="width" constant="110" id="Jqt-Te-3Vk"/>
@@ -73,35 +68,31 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已浏览2992人次" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPF-7s-fKs">
-                        <rect key="frame" x="229" y="26" width="83" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="jyz-1e-hVg"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-69-eeD">
-                        <rect key="frame" x="86" y="59" width="226" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="WKc-82-S1H"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEZ-Hi-JLg">
-                        <rect key="frame" x="86" y="122" width="226" height="35"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEZ-Hi-JLg" customClass="PraiseItemView">
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vl2-5V-Qma">
-                                <rect key="frame" x="195" y="0.0" width="30" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="BFf-gn-ejR"/>
                                 </constraints>
                                 <state key="normal" image="vi_dz"/>
+                                <state key="selected" image="vi_dz_lan"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhV-Id-Jzz">
-                                <rect key="frame" x="188" y="7" width="9" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="1oW-O6-W58"/>
                                 </constraints>
@@ -146,19 +137,23 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnDZ" destination="Vl2-5V-Qma" id="4mk-CO-D6E"/>
                 <outlet property="btnPlay" destination="irw-eb-Z9Q" id="Qb0-25-aur"/>
                 <outlet property="headView" destination="lNK-66-RNR" id="Jqj-H9-jDI"/>
                 <outlet property="labBrowse" destination="uPF-7s-fKs" id="kVW-ts-PLw"/>
                 <outlet property="labContent" destination="s4t-69-eeD" id="oyk-pj-blk"/>
                 <outlet property="labLineBg" destination="SYC-Bp-dBs" id="ErT-YJ-jZY"/>
                 <outlet property="labName" destination="See-cR-mdn" id="h8b-1h-Cwk"/>
+                <outlet property="labNumDZ" destination="XhV-Id-Jzz" id="6ds-Xk-vUx"/>
                 <outlet property="labTime" destination="rRz-eB-dgx" id="BUF-X0-47O"/>
+                <outlet property="moreViewBg" destination="AEZ-Hi-JLg" id="kzm-tk-Qrc"/>
             </connections>
             <point key="canvasLocation" x="269" y="252"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="vi_dz" width="20" height="20"/>
+        <image name="vi_dz_lan" width="20" height="20"/>
         <image name="vi_yp" width="20" height="20"/>
     </resources>
 </document>
