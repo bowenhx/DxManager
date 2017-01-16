@@ -92,6 +92,11 @@
 //         [self.view removeHUDActivity];
 //    }];
 
+    /* 
+     13911672028
+     111111
+     */
+    
     [[ANet share] post:BASE_URL params:@{@"action":@"doLogin",@"username":_phoneNumTextField.text,@"password":_passwordTextField.text} completion:^(BNetData *model, NSString *netErr) {
          [self.view removeHUDActivity];
         //保存用户信息

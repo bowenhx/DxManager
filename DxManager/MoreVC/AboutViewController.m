@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"关于大象";
+    self.title = @"关于萌玛稚童";
     self.automaticallyAdjustsScrollViewInsets = NO;
     
 //    self.textView.layer.borderWidth = 1;

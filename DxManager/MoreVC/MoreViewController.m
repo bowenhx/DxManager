@@ -28,7 +28,7 @@
 - (void)loadNewData{
     
     
-    [self.dataSource setArray:@[@"修改密码",@"清空缓存",@"关于大象",@"退出登录"]];
+    [self.dataSource setArray:@[@"修改密码",@"清空缓存",@"关于萌玛稚童",@"退出登录"]];
     
     [self.tableView setTableHeaderView:[self headView]];
     [self.tableView setTableFooterView:[[UIView alloc] init]];
