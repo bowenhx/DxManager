@@ -71,9 +71,9 @@
     return _assets;
 }
 - (void)tapRightBtn{
-    if ([@"" isStringBlank:_textView.text]) {
-        [self.view showHUDTitleView:@"请输入内容再发布" image:nil];
-    }
+//    if ([@"" isStringBlank:_textView.text]) {
+//        [self.view showHUDTitleView:@"请输入内容再发布" image:nil];
+//    }
    
     NSArray *files = [NSArray uploadingImageFiles:self.assets];
     
